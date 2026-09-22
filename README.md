@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.13-blue) ![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-green) ![License](https://img.shields.io/badge/License-MIT-yellow) ![NCI](https://img.shields.io/badge/NCI-MSc%20AI-navy)
 
 > MSc Artificial Intelligence Research Practicum — National College of Ireland, August 2026  
-> **Author:** Srinivasan Dillikumar (x24285951) | **Supervisor:** Abdul Shahid
+> **Author:** Srinivasan Dillikumar (x24285951) | National College of Ireland
 
 ---
 
@@ -189,11 +189,5 @@ National College of Ireland.
 
 ---
 
-## Acknowledgements
-
-Supervisor: Abdul Shahid, National College of Ireland  
-Data: Synthea (MITRE Corporation) · CMS Medicare (Centers for Medicare and Medicaid Services)
-
----
 
 *MSc Artificial Intelligence · School of Computing · National College of Ireland · August 2026*
