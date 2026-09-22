@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_070",
+  "claim": {
+    "claim_id": "CLAIM_070",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, requesting mental health counselling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided about a treatment plan | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Requesting mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must meet the frequency and duration requirements | PATIENT: No information provided about the frequency and duration of services | MET: NO\n\nCRITERION: Patient must not have a condition that is excluded from coverage, such as severe and profound mental retardation | PATIENT: Diagnosis of depression and anxiety disorder, no mention of mental retardation | MET: YES\n\nCRITERION: Patient must have a condition that can benefit from psychotherapy services, and must have the capacity to recall the therapeutic encounter from one session to another | PATIENT: Diagnosis of depression and anxiety disorder, no mention of dementia or cognitive defects | MET: YES\n\nCRITERION: Services must be provided in a distinct outpatient setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: Services must not be excluded from coverage, such as day care programs or vocational training | PATIENT: Requesting mental health counselling for depression and anxiety disorder | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's eligibility cannot be fully determined due to lack of information about the provider, treatment plan, frequency and duration of services, and setting. However, based on the provided information, the patient's condition and requested services appear to be covered, but additional information is needed to confirm eligibility.",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to lack of information about the provider, treatment plan, frequency and duration of services, and setting, which are necessary to confirm coverage.",
+  "explanation": "We have reviewed your insurance claim for mental health counselling, and unfortunately, we are unable to approve it at this time. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider, treatment plan, and the services you received to determine if you are eligible for coverage. We are missing some important details that are required to confirm coverage under this policy. We will need you to provide this additional information so we can re-evaluate your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:53:04.399391",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 58",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 58"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:53:31.510484",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 58, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, requesting mental health counselling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided about a treatment plan | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Requesting mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must meet the frequency and duration requirements | PATIENT: No information provided about the frequency and duration of services | MET: NO\n\nCRITERION: Patient must not have a condition that is excluded from coverage, such as severe and profound mental retardation | PATIENT: Diagnosis of depression and anxiety disorder, no mention of mental retardation | MET: YES\n\nCRITERION: Patient must have a condition that can benefit from psychotherapy services, and must have the capacity to recall the therapeutic encounter from one session to another | PATIENT: Diagnosis of depression and anxiety disorder, no mention of dementia or cognitive defects | MET: YES\n\nCRITERION: Services must be provided in a distinct outpatient setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: Services must not be excluded from coverage, such as day care programs or vocational training | PATIENT: Requesting mental health counselling for depression and anxiety disorder | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's eligibility cannot be fully determined due to lack of information about the provider, treatment plan, frequency and duration of services, and setting. However, based on the provided information, the patient's condition and requested services appear to be covered, but additional information is needed to confirm eligibility.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:53:34.755684",
+      "input": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's serv",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to lack of information about the provider, treatment plan, frequency and duration of services, and setting, which are necessary to confirm coverage.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:53:35.182522",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to lack of information about the provider, treatment plan, frequency and duration of services, and setting, which are necessary to confirm coverage.",
+      "output": "We have reviewed your insurance claim for mental health counselling, and unfortunately, we are unable to approve it at this time. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider, treatment plan, and the services you received to determine if you are eligible for coverage. We are missing some important details that are required to confirm coverage under this policy. We will need you to provide this additional information so we can re-evaluate your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

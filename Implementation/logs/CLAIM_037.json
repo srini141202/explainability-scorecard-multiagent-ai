@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_037",
+  "claim": {
+    "claim_id": "CLAIM_037",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Lower Extremity Major Joint Replacement (Hip and Knee)",
+  "criteria_check": "CRITERION: Patient must have advanced joint disease demonstrated by radiographic supported evidence or MRI | PATIENT: Mild joint discomfort, no evidence of advanced joint disease | MET: NO\n\nCRITERION: Patient must have a history of unsuccessful conservative therapy | PATIENT: No information provided on conservative therapy | MET: NO\n\nCRITERION: Patient must have pain with functional disability due to arthritis or trauma | PATIENT: Mild joint discomfort, no information on functional disability | MET: NO\n\nCRITERION: Patient must have distinct structural abnormalities | PATIENT: No information on structural abnormalities | MET: NO\n\nCRITERION: Patient must have failed previous joint replacement/arthroplasty | PATIENT: No previous joint replacement/arthroplasty | MET: NO\n\nCRITERION: Active infection of the hip or knee joint or active systemic bacteremia | PATIENT: No information on infection | MET: NO (assuming no infection)\n\nCRITERION: Active skin infection or open wound within the planned surgical site | PATIENT: No information on skin infection or open wound | MET: NO (assuming no skin infection or open wound)\n\nCRITERION: Progressive neurological disease | PATIENT: No information on neurological disease | MET: NO (assuming no neurological disease)\n\nSince the patient is requesting a hip replacement, we also need to check the criteria specific to Total Hip Arthroplasty (THA):\n\nCRITERION: Patient must have advanced joint disease demonstrated by radiographic supported evidence or MRI | PATIENT: Mild joint discomfort, no evidence of advanced joint disease | MET: NO\n\nCRITERION: Patient must have pain and functional disability from injury due to trauma or arthritis | PATIENT: Mild joint discomfort, no information on functional disability | MET: NO\n\nCRITERION: Patient must have a history of unsuccessful conservative treatment | PATIENT: No information provided on conservative treatment | MET: NO\n\nCRITERION: Patient must have distinct structural abnormalities | PATIENT: No information on structural abnormalities | MET: NO\n\nCRITERION: Patient must have failed previous Hip Arthroplasty | PATIENT: No previous Hip Arthroplasty | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for a hip replacement due to lack of evidence of advanced joint disease, unsuccessful conservative therapy, and functional disability.",
+  "explanation": "We have reviewed your insurance claim for hip replacement surgery, and unfortunately, it has been denied. According to our Lower Extremity Major Joint Replacement (Hip and Knee) policy, we require more severe joint problems and proof that other treatments have not worked before approving surgery. Since your joint discomfort is mild and we didn't see evidence that other treatments were tried, we cannot cover the surgery at this time. This decision was made based on the guidelines outlined in the Lower Extremity Major Joint Replacement (Hip and Knee) policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:20:25.479123",
+      "input": "Hip replacement surgery coverage Mild joint discomfort patient age 18",
+      "output": "Lower Extremity Major Joint Replacement (Hip and Knee)",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Mild joint discomfort patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:20:35.772052",
+      "input": "Policy: Lower Extremity Major Joint Replacement (Hip and Knee), Patient age: 18, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Patient must have advanced joint disease demonstrated by radiographic supported evidence or MRI | PATIENT: Mild joint discomfort, no evidence of advanced joint disease | MET: NO\n\nCRITERION: Patient must have a history of unsuccessful conservative therapy | PATIENT: No information provided on conservative therapy | MET: NO\n\nCRITERION: Patient must have pain with functional disability due to arthritis or trauma | PATIENT: Mild joint discomfort, no information on functional disability | MET: NO\n\nCRITERION: Patient must have distinct structural abnormalities | PATIENT: No information on structural abnormalities | MET: NO\n\nCRITERION: Patient must have failed previous joint replacement/arthroplasty | PATIENT: No previous joint replacement/arthroplasty | MET: NO\n\nCRITERION: Active infection of the hip or knee joint or active systemic bacteremia | PATIENT: No information on infection | MET: NO (assuming no infection)\n\nCRITERION: Active skin infection or open wound within the planned surgical site | PATIENT: No information on skin infection or open wound | MET: NO (assuming no skin infection or open wound)\n\nCRITERION: Progressive neurological disease | PATIENT: No information on neurological disease | MET: NO (assuming no neurological disease)\n\nSince the patient is requesting a hip replacement, we also need to check the criteria specific to Total Hip Arthroplasty (THA):\n\nCRITERION: Patient must have advanced joint disease demonstrated by radiographic supported evidence or MRI | PATIENT: Mild joint discomfort, no evidence of advanced joint disease | MET: NO\n\nCRITERION: Patient must have pain and functional disability from injury due to trauma or arthritis | PATIENT: Mild joint discomfort, no information on functional disability | MET: NO\n\nCRITERION: Patient must have a history of unsuccessful conservative treatment | PATIENT: No information provided on conservative treatment | MET: NO\n\nCRITERION: Patient must have distinct structural abnormalities | PATIENT: No information on structural abnormalities | MET: NO\n\nCRITERION: Patient must have failed previous Hip Arthroplasty | PATIENT: No previous Hip Arthroplasty | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:20:39.179590",
+      "input": "CRITERION: Patient must have advanced joint disease demonstrated by radiographic supported evidence or MRI | PATIENT: Mild joint discomfort, no evidence of advanced joint disease | MET: NO\n\nCRITERION:",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for a hip replacement due to lack of evidence of advanced joint disease, unsuccessful conservative therapy, and functional disability.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:20:39.767739",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for a hip replacement due to lack of evidence of advanced joint disease, unsuccessful conservative therapy, and functional disability.",
+      "output": "We have reviewed your insurance claim for hip replacement surgery, and unfortunately, it has been denied. According to our Lower Extremity Major Joint Replacement (Hip and Knee) policy, we require more severe joint problems and proof that other treatments have not worked before approving surgery. Since your joint discomfort is mild and we didn't see evidence that other treatments were tried, we cannot cover the surgery at this time. This decision was made based on the guidelines outlined in the Lower Extremity Major Joint Replacement (Hip and Knee) policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

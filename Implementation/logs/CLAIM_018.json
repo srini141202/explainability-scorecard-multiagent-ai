@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_018",
+  "claim": {
+    "claim_id": "CLAIM_018",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Total Hip Arthroplasty",
+  "criteria_check": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Severe osteoarthritis, but no specific imaging results provided | MET: NO (no specific imaging results provided, but severe osteoarthritis can be considered as advanced joint disease)\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Severe osteoarthritis, implying significant pain and functional disability | MET: YES\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No information provided on conservative therapy | MET: NO (no information provided)\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Active skin infection (exception recurrent cutaneous staph infections) or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: YES (no neurological disease mentioned)\n\nOVERALL: NOT ELIGIBLE (due to lack of information on imaging results and conservative therapy)",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for coverage cannot be determined due to lack of specific imaging results and information on conservative therapy, requiring further review and authorization.",
+  "explanation": "We've reviewed your request for hip replacement surgery under our Total Hip Arthroplasty policy. Unfortunately, we need more information about your condition and the treatments you've tried before we can make a decision about covering the surgery. This is because we don't have all the necessary details, such as specific imaging results and information on other therapies you've attempted. We'll need to take a closer look and get authorization before we can move forward with your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:12:18.284795",
+      "input": "Hip replacement surgery coverage Severe osteoarthritis patient age 50",
+      "output": "Total Hip Arthroplasty",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Severe osteoarthritis patient age 50"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:12:19.655245",
+      "input": "Policy: Total Hip Arthroplasty, Patient age: 50, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Severe osteoarthritis, but no specific imaging results provided | MET: NO (no specific imaging results provided, but severe osteoarthritis can be considered as advanced joint disease)\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Severe osteoarthritis, implying significant pain and functional disability | MET: YES\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No information provided on conservative therapy | MET: NO (no information provided)\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Active skin infection (exception recurrent cutaneous staph infections) or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: YES (no infection mentioned)\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: YES (no neurological disease mentioned)\n\nOVERALL: NOT ELIGIBLE (due to lack of information on imaging results and conservative therapy)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:12:20.375082",
+      "input": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) sup",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for coverage cannot be determined due to lack of specific imaging results and information on conservative therapy, requiring further review and authorization.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:12:20.889771",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for coverage cannot be determined due to lack of specific imaging results and information on conservative therapy, requiring further review and authorization.",
+      "output": "We've reviewed your request for hip replacement surgery under our Total Hip Arthroplasty policy. Unfortunately, we need more information about your condition and the treatments you've tried before we can make a decision about covering the surgery. This is because we don't have all the necessary details, such as specific imaging results and information on other therapies you've attempted. We'll need to take a closer look and get authorization before we can move forward with your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

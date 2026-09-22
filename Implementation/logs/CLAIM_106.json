@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_106",
+  "claim": {
+    "claim_id": "CLAIM_106",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Pulmonary Stress Testing",
+  "criteria_check": "CRITERION: Patient must have a condition that requires evaluation of exercise tolerance | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Patient must have a condition that requires evaluation of undiagnosed exercise intolerance | PATIENT: Chronic heart failure, no mention of unexplained dyspnea or nondiagnostic cardiopulmonary testing | MET: NO\n\nCRITERION: Patient must have a condition that requires evaluation of patients with cardiovascular disease | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Patient must have a condition that requires evaluation of patients with respiratory disease | PATIENT: No respiratory disease mentioned | MET: NO\n\nCRITERION: Patient must have a specific clinical application, such as preoperative evaluation or clinical decision making | PATIENT: Cardiac rehabilitation | MET: YES\n\nCRITERION: Patient must not have any absolute contraindications to exercise testing | PATIENT: No absolute contraindications mentioned | MET: YES\n\nCRITERION: Patient must not have any relative contraindications to exercise testing | PATIENT: No relative contraindications mentioned | MET: YES\n\nCRITERION: Patient's age must be considered for coverage | PATIENT: 19 years old | MET: YES, as there's no specific age restriction mentioned for cardiac rehabilitation in the given policy\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage, including having a condition that requires evaluation of exercise tolerance and having no absolute or relative contraindications to exercise testing.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation to help manage your chronic heart failure. According to our Pulmonary Stress Testing policy, we are pleased to inform you that your claim has been approved. This decision was made because you meet all the necessary requirements, including having a condition that needs to be evaluated through exercise and having no reasons that would prevent you from safely participating in exercise testing. We are happy to provide you with the coverage you need, as outlined in the Pulmonary Stress Testing policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:23:37.903418",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 19",
+      "output": "Pulmonary Stress Testing",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:23:38.979738",
+      "input": "Policy: Pulmonary Stress Testing, Patient age: 19, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Patient must have a condition that requires evaluation of exercise tolerance | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Patient must have a condition that requires evaluation of undiagnosed exercise intolerance | PATIENT: Chronic heart failure, no mention of unexplained dyspnea or nondiagnostic cardiopulmonary testing | MET: NO\n\nCRITERION: Patient must have a condition that requires evaluation of patients with cardiovascular disease | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Patient must have a condition that requires evaluation of patients with respiratory disease | PATIENT: No respiratory disease mentioned | MET: NO\n\nCRITERION: Patient must have a specific clinical application, such as preoperative evaluation or clinical decision making | PATIENT: Cardiac rehabilitation | MET: YES\n\nCRITERION: Patient must not have any absolute contraindications to exercise testing | PATIENT: No absolute contraindications mentioned | MET: YES\n\nCRITERION: Patient must not have any relative contraindications to exercise testing | PATIENT: No relative contraindications mentioned | MET: YES\n\nCRITERION: Patient's age must be considered for coverage | PATIENT: 19 years old | MET: YES, as there's no specific age restriction mentioned for cardiac rehabilitation in the given policy\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:23:39.188264",
+      "input": "CRITERION: Patient must have a condition that requires evaluation of exercise tolerance | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Patient must have a condition that requires evaluation o",
+      "output": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage, including having a condition that requires evaluation of exercise tolerance and having no absolute or relative contraindications to exercise testing.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:23:39.647003",
+      "input": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage, including having a condition that requires evaluation of exercise tolerance and having no absolute or relative contraindications to exercise testing.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation to help manage your chronic heart failure. According to our Pulmonary Stress Testing policy, we are pleased to inform you that your claim has been approved. This decision was made because you meet all the necessary requirements, including having a condition that needs to be evaluated through exercise and having no reasons that would prevent you from safely participating in exercise testing. We are happy to provide you with the coverage you need, as outlined in the Pulmonary Stress Testing policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

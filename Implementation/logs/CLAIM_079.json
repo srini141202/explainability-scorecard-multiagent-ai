@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_079",
+  "claim": {
+    "claim_id": "CLAIM_079",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Immunizations",
+  "criteria_check": "CRITERION: Patient requires a vaccination or inoculation directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention | MET: NO\n\nCRITERION: Patient requires a preventive immunization for pneumococcal, hepatitis B, or influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n\nCRITERION: Patient has a specific immunization with specific coverage criteria (e.g., Tetanus, Diphtheria and Pertussis, Hepatitis A, Rabies) | PATIENT: Influenza vaccination | MET: NO\n\nCRITERION: Patient has been exposed to a disease or condition (e.g., Hepatitis A, Rabies) | PATIENT: No exposure mentioned | MET: NO\n\nCRITERION: Patient requires a vaccination for Influenza, pneumococcal pneumonia, or hepatitis B | PATIENT: Influenza vaccination | MET: YES\n\nCRITERION: Patient's age is relevant for certain vaccinations (e.g., Hepatitis A for adults, children, and adolescents) | PATIENT: 67 years old | MET: YES (as there is no age restriction mentioned for influenza vaccination)\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient is eligible for the influenza vaccination as it meets the criteria for a preventive immunization and there are no age restrictions mentioned for this type of vaccination.",
+  "explanation": "We have reviewed your insurance claim for the seasonal flu vaccination. According to our Immunizations policy, we are pleased to inform you that your claim has been approved. This decision was made because the influenza vaccination is considered a preventive measure and is covered under our policy with no age restrictions. You can now receive the vaccination as a preventive measure to help keep you healthy during flu season.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:55:59.333425",
+      "input": "Influenza vaccination coverage Seasonal flu prevention patient age 67",
+      "output": "Immunizations",
+      "reasoning": "Searched vector store for: Influenza vaccination coverage Seasonal flu prevention patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:56:00.291424",
+      "input": "Policy: Immunizations, Patient age: 67, Procedure: Influenza vaccination",
+      "output": "CRITERION: Patient requires a vaccination or inoculation directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention | MET: NO\n\nCRITERION: Patient requires a preventive immunization for pneumococcal, hepatitis B, or influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n\nCRITERION: Patient has a specific immunization with specific coverage criteria (e.g., Tetanus, Diphtheria and Pertussis, Hepatitis A, Rabies) | PATIENT: Influenza vaccination | MET: NO\n\nCRITERION: Patient has been exposed to a disease or condition (e.g., Hepatitis A, Rabies) | PATIENT: No exposure mentioned | MET: NO\n\nCRITERION: Patient requires a vaccination for Influenza, pneumococcal pneumonia, or hepatitis B | PATIENT: Influenza vaccination | MET: YES\n\nCRITERION: Patient's age is relevant for certain vaccinations (e.g., Hepatitis A for adults, children, and adolescents) | PATIENT: 67 years old | MET: YES (as there is no age restriction mentioned for influenza vaccination)\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:56:00.530125",
+      "input": "CRITERION: Patient requires a vaccination or inoculation directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention | MET: NO\n\nCRITE",
+      "output": "DECISION: APPROVE\nREASON: The patient is eligible for the influenza vaccination as it meets the criteria for a preventive immunization and there are no age restrictions mentioned for this type of vaccination.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:56:00.911346",
+      "input": "DECISION: APPROVE\nREASON: The patient is eligible for the influenza vaccination as it meets the criteria for a preventive immunization and there are no age restrictions mentioned for this type of vaccination.",
+      "output": "We have reviewed your insurance claim for the seasonal flu vaccination. According to our Immunizations policy, we are pleased to inform you that your claim has been approved. This decision was made because the influenza vaccination is considered a preventive measure and is covered under our policy with no age restrictions. You can now receive the vaccination as a preventive measure to help keep you healthy during flu season.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_052",
+  "claim": {
+    "claim_id": "CLAIM_052",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy",
+  "criteria_check": "CRITERION: Patient is under evaluation of an abnormality discovered on barium enema and/or other imaging technique | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has unexplained gastrointestinal (GI) bleeding | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has unexplained iron deficiency anemia | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires surveillance of colonic neoplasia | PATIENT: Diagnosis is colorectal cancer screening | MET: NO (colorectal cancer screening is a separate benefit)\n\nCRITERION: Patient has chronic inflammatory bowel disease (IBD) of the colon | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has clinically significant diarrhea of unexplained origin | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires intraoperative identification of the site of a lesion | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has acute colonic ischemia/ischemic bowel disease | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has Streptococcus bovis (S. bovis) endocarditis or bacteremia | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires treatment of bleeding from lesions | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires removal of a foreign body | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires excision of colonic polyps | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has decompression of pseudo-obstruction of the colon (Ogilvie\u2019s Syndrome) | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires treatment of colonic volvulus or stricture | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has evaluation of an unexplained, new-onset constipation | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has an anorectal polyp (adenomatous polyp only) | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires palliative treatment of stenosing, bleeding neoplasms | PATIENT: Diagnosis is colorectal cancer screening | MET: NO (this is for treatment, not screening)\n\nCRITERION: Patient is 30 years old and requires colorectal cancer screening | PATIENT: 30-year-old female | MET: NO (policy does not explicitly state the age for colorectal cancer screening, but generally, screening starts at 45 or 50 for average-risk individuals)\n\nOVERALL: NOT ELIGIBLE (the patient's diagnosis is for colorectal cancer screening, which is a separate benefit with specific guidelines not outlined in this policy)",
+  "decision": "DECISION: DENY\nREASON: The patient's diagnosis is for colorectal cancer screening, which is a separate benefit with specific guidelines not outlined in this policy, and does not meet any of the criteria listed for coverage.",
+  "explanation": "We've reviewed your insurance claim for a colonoscopy screening, and unfortunately, it has been denied. According to our Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy policy, this procedure is not covered for colorectal cancer screening because it has its own set of guidelines. This policy does not include the specific criteria needed for this type of screening. We will help you explore other options and provide more information on the separate benefit for colorectal cancer screening.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:46:14.806658",
+      "input": "Colonoscopy screening coverage Colorectal cancer screening patient age 30",
+      "output": "Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy",
+      "reasoning": "Searched vector store for: Colonoscopy screening coverage Colorectal cancer screening patient age 30"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:46:16.636528",
+      "input": "Policy: Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy, Patient age: 30, Procedure: Colonoscopy screening",
+      "output": "CRITERION: Patient is under evaluation of an abnormality discovered on barium enema and/or other imaging technique | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has unexplained gastrointestinal (GI) bleeding | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has unexplained iron deficiency anemia | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires surveillance of colonic neoplasia | PATIENT: Diagnosis is colorectal cancer screening | MET: NO (colorectal cancer screening is a separate benefit)\n\nCRITERION: Patient has chronic inflammatory bowel disease (IBD) of the colon | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has clinically significant diarrhea of unexplained origin | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires intraoperative identification of the site of a lesion | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has acute colonic ischemia/ischemic bowel disease | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has Streptococcus bovis (S. bovis) endocarditis or bacteremia | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires treatment of bleeding from lesions | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires removal of a foreign body | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires excision of colonic polyps | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has decompression of pseudo-obstruction of the colon (Ogilvie\u2019s Syndrome) | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires treatment of colonic volvulus or stricture | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has evaluation of an unexplained, new-onset constipation | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has an anorectal polyp (adenomatous polyp only) | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient requires palliative treatment of stenosing, bleeding neoplasms | PATIENT: Diagnosis is colorectal cancer screening | MET: NO (this is for treatment, not screening)\n\nCRITERION: Patient is 30 years old and requires colorectal cancer screening | PATIENT: 30-year-old female | MET: NO (policy does not explicitly state the age for colorectal cancer screening, but generally, screening starts at 45 or 50 for average-risk individuals)\n\nOVERALL: NOT ELIGIBLE (the patient's diagnosis is for colorectal cancer screening, which is a separate benefit with specific guidelines not outlined in this policy)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:46:16.937975",
+      "input": "CRITERION: Patient is under evaluation of an abnormality discovered on barium enema and/or other imaging technique | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has unexplained gast",
+      "output": "DECISION: DENY\nREASON: The patient's diagnosis is for colorectal cancer screening, which is a separate benefit with specific guidelines not outlined in this policy, and does not meet any of the criteria listed for coverage.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:46:17.510485",
+      "input": "DECISION: DENY\nREASON: The patient's diagnosis is for colorectal cancer screening, which is a separate benefit with specific guidelines not outlined in this policy, and does not meet any of the criteria listed for coverage.",
+      "output": "We've reviewed your insurance claim for a colonoscopy screening, and unfortunately, it has been denied. According to our Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy policy, this procedure is not covered for colorectal cancer screening because it has its own set of guidelines. This policy does not include the specific criteria needed for this type of screening. We will help you explore other options and provide more information on the separate benefit for colorectal cancer screening.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

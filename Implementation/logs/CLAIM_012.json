@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_012",
+  "claim": {
+    "claim_id": "CLAIM_012",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "CRITERION: Patient age for screening mammography | PATIENT: 50 | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over.)\n\nCRITERION: Patient has signs or symptoms of breast disease for diagnostic mammography | PATIENT: No | MET: NO \n(The patient is undergoing routine breast cancer screening.)\n\nCRITERION: Procedure requested is screening mammography | PATIENT: Yes | MET: YES \n(The patient is requesting a mammography screening.)\n\nCRITERION: Minimum requirements for screening mammogram are met (cranio-caudal and medio-lateral oblique views) | PATIENT: Not specified, but implied as this is a standard screening procedure | MET: YES \n(This is assumed as part of the standard screening mammography procedure.)\n\nCRITERION: Screening mammography is not subject to the Part B deductible and coinsurance | PATIENT: Not applicable, as this is about coverage | MET: YES \n(This is a policy rule regarding payment, not patient eligibility.)\n\nCRITERION: Physician's referral is not required for screening mammography | PATIENT: No referral mentioned | MET: YES \n(A physician's referral is not required for screening mammography.)\n\nCRITERION: Supplier meets certification requirements in 21 CFR Section 900.11 | PATIENT: Not specified, assumed yes as this is a standard requirement for reimbursement | MET: YES \n(This is an assumption based on standard practice for Medicare reimbursement.)\n\nCRITERION: Time since last screening mammography | PATIENT: Not specified | MET: YES \n(There is no information provided about when the last screening was, but it's not relevant to determining eligibility based on age and procedure type alone.)\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets all relevant criteria for coverage of screening mammography, including age and procedure type, and there are no indications that any requirements for coverage are unmet.",
+  "explanation": "We have reviewed your insurance claim for a mammography screening, and we are pleased to inform you that it has been approved. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, you meet all the necessary criteria for coverage, including your age and the type of procedure. This means that your insurance will cover the cost of the screening. We made this decision based on the guidelines outlined in this policy, and we are happy to provide you with this coverage.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:16:35.183931",
+      "input": "Mammography screening coverage Routine breast cancer screening patient age 50",
+      "output": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+      "reasoning": "Searched vector store for: Mammography screening coverage Routine breast cancer screening patient age 50"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:16:36.949973",
+      "input": "Policy: Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography, Patient age: 50, Procedure: Mammography screening",
+      "output": "CRITERION: Patient age for screening mammography | PATIENT: 50 | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over.)\n\nCRITERION: Patient has signs or symptoms of breast disease for diagnostic mammography | PATIENT: No | MET: NO \n(The patient is undergoing routine breast cancer screening.)\n\nCRITERION: Procedure requested is screening mammography | PATIENT: Yes | MET: YES \n(The patient is requesting a mammography screening.)\n\nCRITERION: Minimum requirements for screening mammogram are met (cranio-caudal and medio-lateral oblique views) | PATIENT: Not specified, but implied as this is a standard screening procedure | MET: YES \n(This is assumed as part of the standard screening mammography procedure.)\n\nCRITERION: Screening mammography is not subject to the Part B deductible and coinsurance | PATIENT: Not applicable, as this is about coverage | MET: YES \n(This is a policy rule regarding payment, not patient eligibility.)\n\nCRITERION: Physician's referral is not required for screening mammography | PATIENT: No referral mentioned | MET: YES \n(A physician's referral is not required for screening mammography.)\n\nCRITERION: Supplier meets certification requirements in 21 CFR Section 900.11 | PATIENT: Not specified, assumed yes as this is a standard requirement for reimbursement | MET: YES \n(This is an assumption based on standard practice for Medicare reimbursement.)\n\nCRITERION: Time since last screening mammography | PATIENT: Not specified | MET: YES \n(There is no information provided about when the last screening was, but it's not relevant to determining eligibility based on age and procedure type alone.)\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:16:37.250673",
+      "input": "CRITERION: Patient age for screening mammography | PATIENT: 50 | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over.)\n\nCRITERION: Patient has signs or symptoms of ",
+      "output": "DECISION: APPROVE\nREASON: The patient meets all relevant criteria for coverage of screening mammography, including age and procedure type, and there are no indications that any requirements for coverage are unmet.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:16:37.703547",
+      "input": "DECISION: APPROVE\nREASON: The patient meets all relevant criteria for coverage of screening mammography, including age and procedure type, and there are no indications that any requirements for coverage are unmet.",
+      "output": "We have reviewed your insurance claim for a mammography screening, and we are pleased to inform you that it has been approved. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, you meet all the necessary criteria for coverage, including your age and the type of procedure. This means that your insurance will cover the cost of the screening. We made this decision based on the guidelines outlined in this policy, and we are happy to provide you with this coverage.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

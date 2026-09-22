@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_040",
+  "claim": {
+    "claim_id": "CLAIM_040",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient must have a diagnosis that is covered under the policy | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient must require hemodialysis for a covered indication | PATIENT: Kidney dialysis for end stage renal disease | MET: YES\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on the number of sessions per week | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on the planned duration of dialysis | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on the reason for performing sessions | MET: NO (insufficient information)\n\nCRITERION: Medical documentation must support the need for additional sessions | PATIENT: No information provided on medical documentation | MET: NO (insufficient information)\n\nCRITERION: Patient must have a Patient Plan of Care (POC) that includes the necessary care and services to manage the patient's volume status and achieve and sustain the prescribed dose of dialysis | PATIENT: No information provided on POC | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to insufficient information provided regarding the number of dialysis sessions per week, planned duration of dialysis, reason for performing sessions, medical documentation, and Patient Plan of Care.",
+  "explanation": "We have reviewed your insurance claim for kidney dialysis, and unfortunately, we are unable to approve it at this time. According to our \"Frequency of Hemodialysis\" policy, we need more information about your treatment plan, including how often you will receive dialysis and for how long. We are missing important details, such as your schedule and medical records, which are required to determine if your treatment is covered. We will need this additional information to re-evaluate your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:45:11.228470",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 18",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:45:15.300080",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 18, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient must have a diagnosis that is covered under the policy | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient must require hemodialysis for a covered indication | PATIENT: Kidney dialysis for end stage renal disease | MET: YES\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on the number of sessions per week | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on the planned duration of dialysis | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on the reason for performing sessions | MET: NO (insufficient information)\n\nCRITERION: Medical documentation must support the need for additional sessions | PATIENT: No information provided on medical documentation | MET: NO (insufficient information)\n\nCRITERION: Patient must have a Patient Plan of Care (POC) that includes the necessary care and services to manage the patient's volume status and achieve and sustain the prescribed dose of dialysis | PATIENT: No information provided on POC | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:45:19.394632",
+      "input": "CRITERION: Patient must have a diagnosis that is covered under the policy | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient must require hemodialysis for a covered indication | PATIENT",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to insufficient information provided regarding the number of dialysis sessions per week, planned duration of dialysis, reason for performing sessions, medical documentation, and Patient Plan of Care.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:45:21.955637",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to insufficient information provided regarding the number of dialysis sessions per week, planned duration of dialysis, reason for performing sessions, medical documentation, and Patient Plan of Care.",
+      "output": "We have reviewed your insurance claim for kidney dialysis, and unfortunately, we are unable to approve it at this time. According to our \"Frequency of Hemodialysis\" policy, we need more information about your treatment plan, including how often you will receive dialysis and for how long. We are missing important details, such as your schedule and medical records, which are required to determine if your treatment is covered. We will need this additional information to re-evaluate your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

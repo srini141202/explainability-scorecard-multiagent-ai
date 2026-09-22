@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_071",
+  "claim": {
+    "claim_id": "CLAIM_071",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient must have a covered indication for additional dialysis sessions | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Sessions furnished in excess of 3 sessions per week must be fully supported in the medical documentation | PATIENT: No information provided on number of sessions per week | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on planned dialysis adequacy | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on reason for sessions | MET: NO (insufficient information)\n\nCRITERION: Metabolic conditions (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease (may be associated with these conditions, but not explicitly stated) | MET: NO (insufficient information)\n\nCRITERION: Fluid positive status not controlled with routine dialysis | PATIENT: No information provided on fluid status | MET: NO (insufficient information)\n\nCRITERION: Pregnancy | PATIENT: 58-year-old female (unlikely to be pregnant, but not explicitly stated) | MET: NO (insufficient information)\n\nCRITERION: Heart Failure | PATIENT: No information provided on heart failure diagnosis | MET: NO (insufficient information)\n\nCRITERION: Pericarditis | PATIENT: No information provided on pericarditis diagnosis | MET: NO (insufficient information)\n\nCRITERION: Incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided on dialysis completion or issues | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+  "decision": "DECISION: DENY\nREASON: The claim is denied due to insufficient information in the medical documentation to determine the medical necessity of the additional dialysis sessions.",
+  "explanation": "We have made a decision about your insurance claim for kidney dialysis. Unfortunately, we are unable to approve the claim because we didn't receive enough information from your doctor to show that the extra dialysis sessions are necessary. This decision is based on our \"Frequency of Hemodialysis\" policy, which requires us to have certain information to approve claims. We need more details from your doctor to understand why you need the additional sessions.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:53:47.513054",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 58",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 58"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:53:48.592299",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 58, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient must have a covered indication for additional dialysis sessions | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Sessions furnished in excess of 3 sessions per week must be fully supported in the medical documentation | PATIENT: No information provided on number of sessions per week | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on planned dialysis adequacy | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on reason for sessions | MET: NO (insufficient information)\n\nCRITERION: Metabolic conditions (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease (may be associated with these conditions, but not explicitly stated) | MET: NO (insufficient information)\n\nCRITERION: Fluid positive status not controlled with routine dialysis | PATIENT: No information provided on fluid status | MET: NO (insufficient information)\n\nCRITERION: Pregnancy | PATIENT: 58-year-old female (unlikely to be pregnant, but not explicitly stated) | MET: NO (insufficient information)\n\nCRITERION: Heart Failure | PATIENT: No information provided on heart failure diagnosis | MET: NO (insufficient information)\n\nCRITERION: Pericarditis | PATIENT: No information provided on pericarditis diagnosis | MET: NO (insufficient information)\n\nCRITERION: Incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided on dialysis completion or issues | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:53:48.805556",
+      "input": "CRITERION: Patient must have a covered indication for additional dialysis sessions | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Sessions furnished in excess of 3 sessions per week must be",
+      "output": "DECISION: DENY\nREASON: The claim is denied due to insufficient information in the medical documentation to determine the medical necessity of the additional dialysis sessions.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:53:49.227682",
+      "input": "DECISION: DENY\nREASON: The claim is denied due to insufficient information in the medical documentation to determine the medical necessity of the additional dialysis sessions.",
+      "output": "We have made a decision about your insurance claim for kidney dialysis. Unfortunately, we are unable to approve the claim because we didn't receive enough information from your doctor to show that the extra dialysis sessions are necessary. This decision is based on our \"Frequency of Hemodialysis\" policy, which requires us to have certain information to approve claims. We need more details from your doctor to understand why you need the additional sessions.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_093",
+  "claim": {
+    "claim_id": "CLAIM_093",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient is pregnant | PATIENT: 100-year-old female | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient's condition requires additional sessions during the month | PATIENT: End stage renal disease | MET: YES\n\nOVERALL: ELIGIBLE (based on the metabolic condition of end stage renal disease, which may require kidney dialysis)",
+  "decision": "DECISION: APPROVE\nREASON: The patient's end stage renal disease meets the criteria for a metabolic condition that may require kidney dialysis, making them eligible for the treatment.",
+  "explanation": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we are pleased to inform you that your claim has been approved. This decision was made because your condition requires regular dialysis treatment, which is covered under this policy. We are happy to support your treatment needs.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:51:33.910082",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 100",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:51:34.945795",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 100, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient is pregnant | PATIENT: 100-year-old female | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions | MET: NO (insufficient information)\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient's condition requires additional sessions during the month | PATIENT: End stage renal disease | MET: YES\n\nOVERALL: ELIGIBLE (based on the metabolic condition of end stage renal disease, which may require kidney dialysis)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:51:35.252540",
+      "input": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with",
+      "output": "DECISION: APPROVE\nREASON: The patient's end stage renal disease meets the criteria for a metabolic condition that may require kidney dialysis, making them eligible for the treatment.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:51:35.763835",
+      "input": "DECISION: APPROVE\nREASON: The patient's end stage renal disease meets the criteria for a metabolic condition that may require kidney dialysis, making them eligible for the treatment.",
+      "output": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we are pleased to inform you that your claim has been approved. This decision was made because your condition requires regular dialysis treatment, which is covered under this policy. We are happy to support your treatment needs.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_085",
+  "claim": {
+    "claim_id": "CLAIM_085",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: Cardiopulmonary conditions | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided, but patient age is 100 | MET: NO (insufficient information)\n\nCRITERION: Documentation of structural/functional impairments | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of activity limitations | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of environmental factors | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Identification of secondary conditions | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Identification of comorbid conditions | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No information provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the required criteria.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation. Unfortunately, we are unable to approve your claim at this time because we don't have enough information to determine if you are eligible. According to our Hospice Cardiopulmonary Conditions policy, we need more details to make a decision. We will need to gather more information from you or your healthcare provider to further review your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:49:30.089733",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 100",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:49:30.849784",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 100, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Cardiopulmonary conditions | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided, but patient age is 100 | MET: NO (insufficient information)\n\nCRITERION: Documentation of structural/functional impairments | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of activity limitations | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of environmental factors | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Identification of secondary conditions | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Identification of comorbid conditions | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No information provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:49:31.179495",
+      "input": "CRITERION: Cardiopulmonary conditions | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided, but patient age is 100 | MET: NO (insuff",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the required criteria.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:49:31.609071",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the required criteria.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation. Unfortunately, we are unable to approve your claim at this time because we don't have enough information to determine if you are eligible. According to our Hospice Cardiopulmonary Conditions policy, we need more details to make a decision. We will need to gather more information from you or your healthcare provider to further review your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

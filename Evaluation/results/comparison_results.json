@@ -1,0 +1,26 @@
+{
+  "baseline1_avg": {
+    "D1 Agent Transparency": 1.25,
+    "D2 Communication Clarity": 1.65,
+    "D3 Outcome Attribution": 3.4,
+    "D4 Human Oversight": 3.79,
+    "D5 Temporal Accountability": 0.0,
+    "COMPOSITE SCORE": 2.02
+  },
+  "baseline2_avg": {
+    "D1 Agent Transparency": 7.12,
+    "D2 Communication Clarity": 4.44,
+    "D3 Outcome Attribution": 6.7,
+    "D4 Human Oversight": 7.92,
+    "D5 Temporal Accountability": 5.0,
+    "COMPOSITE SCORE": 6.24
+  },
+  "your_system": {
+    "D1 Agent Transparency": 9.62,
+    "D2 Communication Clarity": 6.74,
+    "D3 Outcome Attribution": 10.0,
+    "D4 Human Oversight": 9.13,
+    "D5 Temporal Accountability": 10.0,
+    "COMPOSITE SCORE": 9.1
+  }
+}

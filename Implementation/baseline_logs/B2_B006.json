@@ -1,0 +1,25 @@
+{
+  "claim_id": "B006",
+  "claim": {
+    "claim_id": "B006",
+    "age": 45,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: The patient has a diagnosis of chronic heart failure and is undergoing cardiac rehabilitation. The pulmonary stress test is medically necessary to evaluate exercise tolerance, determine functional impairment or capacity, and assess the severity and type of impairment. This test will help healthcare providers to develop an effective rehabilitation plan and monitor the patient's progress. According to the coverage rules, the pulmonary stress test is indicated for the evaluation of exercise tolerance and determination of functional impairment or capacity, which aligns with the patient's diagnosis and current procedure of cardiac rehabilitation. Therefore, the request for a pulmonary stress test is approved.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:42:17.851816",
+      "input": "Cardiac rehabilitation Chronic heart failure",
+      "output": "**APPROVE**\n\nExplanation: The patient has a diagnosis of chronic heart failure and is undergoing car",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Pulmonary Stress Testing",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: The patient has a diagnosis of chronic heart failure and is undergoing cardiac rehabilitation. The pulmonary stress test is medically necessary to evaluate exercise tolerance, determine functional impairment or capacity, and assess the severity and type of impairment. This test will help healthcare providers to develop an effective rehabilitation plan and monitor the patient's progress. According to the coverage rules, the pulmonary stress test is indicated for the evaluation of exercise tolerance and determination of functional impairment or capacity, which aligns with the patient's diagnosis and current procedure of cardiac rehabilitation. Therefore, the request for a pulmonary stress test is approved."
+}

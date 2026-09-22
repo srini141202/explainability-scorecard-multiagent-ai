@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_118",
+  "claim": {
+    "claim_id": "CLAIM_118",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Epidural Steroid Injections for Pain Management",
+  "criteria_check": "CRITERION: Age is not explicitly stated as a criterion, but it's mentioned that low back pain is highly prevalent in adults 65 and older | PATIENT: 80 years old | MET: YES\n\nCRITERION: Diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Diagnosis of post-laminectomy syndrome | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of acute herpes zoster associated pain | PATIENT: No information provided | MET: NO\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication is severe enough to greatly impact quality of life or function | PATIENT: No information provided | MET: NO\n\nCRITERION: Pain duration of at least 4 weeks | PATIENT: No information provided | MET: NO\n\nCRITERION: Inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a noninvasive conservative care | MET: NO\n\nCRITERION: ESI must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not ESI | MET: NO\n\nCRITERION: Patient is part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which is part of a rehabilitation program | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's requested procedure is physical therapy, which does not match the policy's requirements for epidural steroid injections. The policy does not provide clear guidelines for physical therapy as a treatment for lower back pain. A different policy or guideline may be applicable to this patient's situation.",
+  "decision": "DECISION: DENY\nREASON: The patient's requested procedure, physical therapy, does not align with the policy's requirements, which are specifically tailored for epidural steroid injections, and therefore does not meet the necessary criteria for approval.",
+  "explanation": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve this claim because it does not fit the requirements of our Epidural Steroid Injections for Pain Management policy. This policy is specifically designed for a different type of treatment, and physical therapy does not meet the necessary criteria. We understand this may be disappointing, and we are happy to discuss other options with you.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-29T00:11:32.241639",
+      "input": "Physical therapy coverage Lower back pain patient age 80",
+      "output": "Epidural Steroid Injections for Pain Management",
+      "reasoning": "Searched vector store for: Physical therapy coverage Lower back pain patient age 80"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-29T00:11:34.557959",
+      "input": "Policy: Epidural Steroid Injections for Pain Management, Patient age: 80, Procedure: Physical therapy",
+      "output": "CRITERION: Age is not explicitly stated as a criterion, but it's mentioned that low back pain is highly prevalent in adults 65 and older | PATIENT: 80 years old | MET: YES\n\nCRITERION: Diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Diagnosis of post-laminectomy syndrome | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of acute herpes zoster associated pain | PATIENT: No information provided | MET: NO\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication is severe enough to greatly impact quality of life or function | PATIENT: No information provided | MET: NO\n\nCRITERION: Pain duration of at least 4 weeks | PATIENT: No information provided | MET: NO\n\nCRITERION: Inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a noninvasive conservative care | MET: NO\n\nCRITERION: ESI must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not ESI | MET: NO\n\nCRITERION: Patient is part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which is part of a rehabilitation program | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's requested procedure is physical therapy, which does not match the policy's requirements for epidural steroid injections. The policy does not provide clear guidelines for physical therapy as a treatment for lower back pain. A different policy or guideline may be applicable to this patient's situation.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-29T00:11:34.857549",
+      "input": "CRITERION: Age is not explicitly stated as a criterion, but it's mentioned that low back pain is highly prevalent in adults 65 and older | PATIENT: 80 years old | MET: YES\n\nCRITERION: Diagnosis of lum",
+      "output": "DECISION: DENY\nREASON: The patient's requested procedure, physical therapy, does not align with the policy's requirements, which are specifically tailored for epidural steroid injections, and therefore does not meet the necessary criteria for approval.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-29T00:11:35.265606",
+      "input": "DECISION: DENY\nREASON: The patient's requested procedure, physical therapy, does not align with the policy's requirements, which are specifically tailored for epidural steroid injections, and therefore does not meet the necessary criteria for approval.",
+      "output": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve this claim because it does not fit the requirements of our Epidural Steroid Injections for Pain Management policy. This policy is specifically designed for a different type of treatment, and physical therapy does not meet the necessary criteria. We understand this may be disappointing, and we are happy to discuss other options with you.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

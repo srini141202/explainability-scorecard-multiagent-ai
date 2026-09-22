@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_088",
+  "claim": {
+    "claim_id": "CLAIM_088",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Total Hip Arthroplasty",
+  "criteria_check": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Severe osteoarthritis | MET: YES\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Severe osteoarthritis, implying significant pain and disability | MET: YES\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No information provided about previous conservative therapy | MET: NO (insufficient information)\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No mal-union mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Active skin infection or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: NO\n\nSince the patient meets the first two criteria and there is no information about previous conservative therapy, we cannot definitively conclude that the patient meets all the necessary criteria. However, based on the provided information, the patient's condition (severe osteoarthritis) aligns with the policy's coverage rules for total hip arthroplasty.\n\nOVERALL: ELIGIBLE (pending confirmation of unsuccessful conservative therapy)",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for total hip arthroplasty cannot be fully determined without confirmation of unsuccessful conservative therapy, requiring additional information or prior authorization.",
+  "explanation": "We've reviewed your insurance claim for hip replacement surgery. According to our Total Hip Arthroplasty policy, we need more information to confirm that you've tried other treatments before considering surgery. This is to ensure that surgery is the best option for you. We require prior authorization, which means we need to review more details about your treatment history before making a final decision.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:50:17.020101",
+      "input": "Hip replacement surgery coverage Severe osteoarthritis patient age 100",
+      "output": "Total Hip Arthroplasty",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Severe osteoarthritis patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:50:18.509604",
+      "input": "Policy: Total Hip Arthroplasty, Patient age: 100, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Severe osteoarthritis | MET: YES\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Severe osteoarthritis, implying significant pain and disability | MET: YES\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No information provided about previous conservative therapy | MET: NO (insufficient information)\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No mal-union mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Active skin infection or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: NO\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: NO\n\nSince the patient meets the first two criteria and there is no information about previous conservative therapy, we cannot definitively conclude that the patient meets all the necessary criteria. However, based on the provided information, the patient's condition (severe osteoarthritis) aligns with the policy's coverage rules for total hip arthroplasty.\n\nOVERALL: ELIGIBLE (pending confirmation of unsuccessful conservative therapy)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:50:18.861218",
+      "input": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) sup",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for total hip arthroplasty cannot be fully determined without confirmation of unsuccessful conservative therapy, requiring additional information or prior authorization.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:50:19.287037",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for total hip arthroplasty cannot be fully determined without confirmation of unsuccessful conservative therapy, requiring additional information or prior authorization.",
+      "output": "We've reviewed your insurance claim for hip replacement surgery. According to our Total Hip Arthroplasty policy, we need more information to confirm that you've tried other treatments before considering surgery. This is to ensure that surgery is the best option for you. We require prior authorization, which means we need to review more details about your treatment history before making a final decision.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

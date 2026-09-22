@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_100",
+  "claim": {
+    "claim_id": "CLAIM_100",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+  "criteria_check": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: The test must be used in the medical decision making for the patient | PATIENT: Diabetic retinopathy eye examination is necessary for medical decision making | MET: YES\n\nCRITERION: Fundus photography may be indicated to document abnormalities of disease processes affecting the eye, or to follow the progress of such disease | PATIENT: Has diabetic retinopathy, a condition that affects the eye | MET: YES\n\nCRITERION: Extended ophthalmoscopy is indicated when the level of examination requires a complete view of the posterior segment of the eye and documentation is greater than that required for general ophthalmoscopy | PATIENT: Diabetic retinopathy may require a detailed examination of the retina | MET: YES\n\nCRITERION: The patient must have a condition that is listed as an indication for extended ophthalmoscopy | PATIENT: Diabetic retinopathy is listed as an indication | MET: YES\n\nCRITERION: The study must not be performed as a screening service | PATIENT: The patient has a diagnosed condition (diabetic retinopathy) and the study is not for screening | MET: YES\n\nCRITERION: All tests must include a written interpretation | PATIENT: Assuming the test will include a written interpretation | MET: YES\n\nCRITERION: Fundus photography is not a substitute for an annual dilated examination by a qualified professional | PATIENT: The patient is undergoing a diabetic retinopathy eye examination, not a screening test | MET: YES\n\nCRITERION: Extended ophthalmoscopy of a fellow eye without signs or symptoms or new abnormalities on general ophthalmoscopic exam will be denied as not medically necessary | PATIENT: The patient has diabetic retinopathy, which is a sign/symptom | MET: YES\n\nCRITERION: The medical record must include the interpretation and report | PATIENT: Assuming the medical record will include the interpretation and report | MET: YES\n\nCRITERION: Extended ophthalmoscopy will be denied as not medically necessary when it is done in lieu of routine ophthalmoscopy unless the indication for this more extensive examination is documented in the medical record | PATIENT: The patient's condition (diabetic retinopathy) requires a detailed examination | MET: YES\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient's diagnosed condition of diabetic retinopathy and the medical necessity for a detailed examination of the retina meet all the required criteria for coverage of fundus photography or extended ophthalmoscopy.",
+  "explanation": "We have reviewed your insurance claim for a diabetic retinopathy eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we are pleased to inform you that your claim has been approved. This decision was made because your condition requires a detailed examination of the retina, which meets the necessary criteria for coverage. This means that the cost of your eye examination will be covered under your insurance plan.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T23:20:39.185533",
+      "input": "Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 67",
+      "output": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+      "reasoning": "Searched vector store for: Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T23:20:40.681832",
+      "input": "Policy: Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography), Patient age: 67, Procedure: Diabetic retinopathy eye examination",
+      "output": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: The test must be used in the medical decision making for the patient | PATIENT: Diabetic retinopathy eye examination is necessary for medical decision making | MET: YES\n\nCRITERION: Fundus photography may be indicated to document abnormalities of disease processes affecting the eye, or to follow the progress of such disease | PATIENT: Has diabetic retinopathy, a condition that affects the eye | MET: YES\n\nCRITERION: Extended ophthalmoscopy is indicated when the level of examination requires a complete view of the posterior segment of the eye and documentation is greater than that required for general ophthalmoscopy | PATIENT: Diabetic retinopathy may require a detailed examination of the retina | MET: YES\n\nCRITERION: The patient must have a condition that is listed as an indication for extended ophthalmoscopy | PATIENT: Diabetic retinopathy is listed as an indication | MET: YES\n\nCRITERION: The study must not be performed as a screening service | PATIENT: The patient has a diagnosed condition (diabetic retinopathy) and the study is not for screening | MET: YES\n\nCRITERION: All tests must include a written interpretation | PATIENT: Assuming the test will include a written interpretation | MET: YES\n\nCRITERION: Fundus photography is not a substitute for an annual dilated examination by a qualified professional | PATIENT: The patient is undergoing a diabetic retinopathy eye examination, not a screening test | MET: YES\n\nCRITERION: Extended ophthalmoscopy of a fellow eye without signs or symptoms or new abnormalities on general ophthalmoscopic exam will be denied as not medically necessary | PATIENT: The patient has diabetic retinopathy, which is a sign/symptom | MET: YES\n\nCRITERION: The medical record must include the interpretation and report | PATIENT: Assuming the medical record will include the interpretation and report | MET: YES\n\nCRITERION: Extended ophthalmoscopy will be denied as not medically necessary when it is done in lieu of routine ophthalmoscopy unless the indication for this more extensive examination is documented in the medical record | PATIENT: The patient's condition (diabetic retinopathy) requires a detailed examination | MET: YES\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T23:20:40.981156",
+      "input": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION",
+      "output": "DECISION: APPROVE\nREASON: The patient's diagnosed condition of diabetic retinopathy and the medical necessity for a detailed examination of the retina meet all the required criteria for coverage of fundus photography or extended ophthalmoscopy.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T23:20:41.376370",
+      "input": "DECISION: APPROVE\nREASON: The patient's diagnosed condition of diabetic retinopathy and the medical necessity for a detailed examination of the retina meet all the required criteria for coverage of fundus photography or extended ophthalmoscopy.",
+      "output": "We have reviewed your insurance claim for a diabetic retinopathy eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we are pleased to inform you that your claim has been approved. This decision was made because your condition requires a detailed examination of the retina, which meets the necessary criteria for coverage. This means that the cost of your eye examination will be covered under your insurance plan.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

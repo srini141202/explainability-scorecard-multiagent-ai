@@ -1,0 +1,25 @@
+{
+  "claim_id": "B010",
+  "claim": {
+    "claim_id": "B010",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: Based on the provided information, the patient is a 50-year-old female diagnosed with depression and anxiety disorder, and the procedure is mental health counseling, which is a form of outpatient psychotherapy. According to the coverage rules outlined in the Local Coverage Determination (LCD), psychotherapy is a covered service for the treatment of mental health disorders, including depression and anxiety disorder.\n\nThe patient's diagnosis and the procedure align with the medical necessity requirements for Part A and Part B services, as outlined in the LCD. The treatment of mental illness and behavioral disturbances through therapeutic communication and techniques is a recognized standard of care for patients with depression and anxiety disorder.\n\nTherefore, the outpatient psychotherapy services provided to the patient are considered medically necessary, and the claim is approved for coverage under the policy.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:43:03.713477",
+      "input": "Mental health counselling Depression and anxiety disorder",
+      "output": "**APPROVE**\n\nExplanation: Based on the provided information, the patient is a 50-year-old female dia",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Outpatient Psychotherapy",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: Based on the provided information, the patient is a 50-year-old female diagnosed with depression and anxiety disorder, and the procedure is mental health counseling, which is a form of outpatient psychotherapy. According to the coverage rules outlined in the Local Coverage Determination (LCD), psychotherapy is a covered service for the treatment of mental health disorders, including depression and anxiety disorder.\n\nThe patient's diagnosis and the procedure align with the medical necessity requirements for Part A and Part B services, as outlined in the LCD. The treatment of mental illness and behavioral disturbances through therapeutic communication and techniques is a recognized standard of care for patients with depression and anxiety disorder.\n\nTherefore, the outpatient psychotherapy services provided to the patient are considered medically necessary, and the claim is approved for coverage under the policy."
+}

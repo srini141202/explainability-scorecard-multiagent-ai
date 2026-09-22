@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_032",
+  "claim": {
+    "claim_id": "CLAIM_032",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is Diabetes self-management training, no information on insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information on plan of care or monitoring of glucose and HbA1c levels | MET: NO\n\nCRITERION: Patient must have stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) for less frequent HbA1c testing | PATIENT: No information on glycemic control or HbA1c results | MET: NO\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: No information on eligibility for Medicare Home Health benefit | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information on insulin injections, plan of care, glycemic control, and eligibility for the Medicare Home Health benefit.",
+  "explanation": "We have reviewed your insurance claim for diabetes self-management training, and unfortunately, it has been denied. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information about your care plan and how you manage your diabetes. We are missing details about your insulin injections and how well your diabetes is being controlled. This information is necessary to determine if you are eligible for coverage under this policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:19:00.710758",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 18",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:19:01.569907",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 18, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is Diabetes self-management training, no information on insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information on plan of care or monitoring of glucose and HbA1c levels | MET: NO\n\nCRITERION: Patient must have stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) for less frequent HbA1c testing | PATIENT: No information on glycemic control or HbA1c results | MET: NO\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: No information on eligibility for Medicare Home Health benefit | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:19:04.874415",
+      "input": "CRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injectio",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information on insulin injections, plan of care, glycemic control, and eligibility for the Medicare Home Health benefit.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:19:05.316645",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information on insulin injections, plan of care, glycemic control, and eligibility for the Medicare Home Health benefit.",
+      "output": "We have reviewed your insurance claim for diabetes self-management training, and unfortunately, it has been denied. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information about your care plan and how you manage your diabetes. We are missing details about your insulin injections and how well your diabetes is being controlled. This information is necessary to determine if you are eligible for coverage under this policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

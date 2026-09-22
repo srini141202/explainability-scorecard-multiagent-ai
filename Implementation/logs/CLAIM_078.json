@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_078",
+  "claim": {
+    "claim_id": "CLAIM_078",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+  "criteria_check": "CRITERION: Patient must have a medical condition that requires fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: Fundus photography must be used in medical decision making for the patient | PATIENT: Diabetic retinopathy eye examination requested | MET: YES\n\nCRITERION: Extended ophthalmoscopy must include a true drawing of the retina, with interpretation and report | PATIENT: No information provided on whether a drawing will be included | MET: NO (insufficient information)\n\nCRITERION: The test must not be performed as a screening service | PATIENT: Patient has Type 2 diabetes mellitus with eye complications, indicating a diagnostic rather than screening purpose | MET: YES\n\nCRITERION: Fundus photography must include a written interpretation | PATIENT: No information provided on whether a written interpretation will be included | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy of a fellow eye without signs or symptoms or new abnormalities on general ophthalmoscopic exam will be denied | PATIENT: Patient has diabetic retinopathy, a condition that affects the eyes | MET: YES\n\nCRITERION: Repeated extended ophthalmoscopy at each visit without change in signs, symptoms or condition may be denied | PATIENT: No information provided on whether this is a repeated examination | MET: NO (insufficient information)\n\nCRITERION: If indirect ophthalmoscopy is done without a drawing or does not meet the standards, the service is not separately payable | PATIENT: No information provided on whether indirect ophthalmoscopy will be done with a drawing | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy performed during the global surgery period of an ophthalmologic surgery procedure will not be separately payable | PATIENT: No information provided on whether surgery is planned | MET: NO (insufficient information)\n\nCRITERION: If the medical record does not include the interpretation and report, the extended ophthalmoscopy will be denied | PATIENT: No information provided on whether an interpretation and report will be included in the medical record | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy will be denied when done in lieu of routine ophthalmoscopy unless the indication is documented | PATIENT: Patient has diabetic retinopathy, which may require extended ophthalmoscopy | MET: YES\n\nCRITERION: When other ophthalmological tests have been performed, extended ophthalmoscopy will be denied unless there was a reasonable medical expectation that the multiple imaging services might provide additive information | PATIENT: No information provided on whether other tests have been performed | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to meet all criteria)",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The claim requires prior authorization due to insufficient information provided to determine whether all criteria for coverage of fundus photography or extended ophthalmoscopy are met.",
+  "explanation": "We have reviewed your insurance claim for a diabetic eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we need more information to determine if the treatment is covered. We are requiring prior authorization, which means we need to review more details before making a final decision. This is to ensure that we follow the rules outlined in our policy to provide the best possible coverage for you.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:55:41.108071",
+      "input": "Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 67",
+      "output": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+      "reasoning": "Searched vector store for: Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:55:42.767368",
+      "input": "Policy: Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography), Patient age: 67, Procedure: Diabetic retinopathy eye examination",
+      "output": "CRITERION: Patient must have a medical condition that requires fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: Fundus photography must be used in medical decision making for the patient | PATIENT: Diabetic retinopathy eye examination requested | MET: YES\n\nCRITERION: Extended ophthalmoscopy must include a true drawing of the retina, with interpretation and report | PATIENT: No information provided on whether a drawing will be included | MET: NO (insufficient information)\n\nCRITERION: The test must not be performed as a screening service | PATIENT: Patient has Type 2 diabetes mellitus with eye complications, indicating a diagnostic rather than screening purpose | MET: YES\n\nCRITERION: Fundus photography must include a written interpretation | PATIENT: No information provided on whether a written interpretation will be included | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy of a fellow eye without signs or symptoms or new abnormalities on general ophthalmoscopic exam will be denied | PATIENT: Patient has diabetic retinopathy, a condition that affects the eyes | MET: YES\n\nCRITERION: Repeated extended ophthalmoscopy at each visit without change in signs, symptoms or condition may be denied | PATIENT: No information provided on whether this is a repeated examination | MET: NO (insufficient information)\n\nCRITERION: If indirect ophthalmoscopy is done without a drawing or does not meet the standards, the service is not separately payable | PATIENT: No information provided on whether indirect ophthalmoscopy will be done with a drawing | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy performed during the global surgery period of an ophthalmologic surgery procedure will not be separately payable | PATIENT: No information provided on whether surgery is planned | MET: NO (insufficient information)\n\nCRITERION: If the medical record does not include the interpretation and report, the extended ophthalmoscopy will be denied | PATIENT: No information provided on whether an interpretation and report will be included in the medical record | MET: NO (insufficient information)\n\nCRITERION: Extended ophthalmoscopy will be denied when done in lieu of routine ophthalmoscopy unless the indication is documented | PATIENT: Patient has diabetic retinopathy, which may require extended ophthalmoscopy | MET: YES\n\nCRITERION: When other ophthalmological tests have been performed, extended ophthalmoscopy will be denied unless there was a reasonable medical expectation that the multiple imaging services might provide additive information | PATIENT: No information provided on whether other tests have been performed | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to meet all criteria)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:55:45.094936",
+      "input": "CRITERION: Patient must have a medical condition that requires fundus photography or extended ophthalmoscopy | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: Fundus ph",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The claim requires prior authorization due to insufficient information provided to determine whether all criteria for coverage of fundus photography or extended ophthalmoscopy are met.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:55:46.555777",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The claim requires prior authorization due to insufficient information provided to determine whether all criteria for coverage of fundus photography or extended ophthalmoscopy are met.",
+      "output": "We have reviewed your insurance claim for a diabetic eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we need more information to determine if the treatment is covered. We are requiring prior authorization, which means we need to review more details before making a final decision. This is to ensure that we follow the rules outlined in our policy to provide the best possible coverage for you.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

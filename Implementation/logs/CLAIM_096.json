@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_096",
+  "claim": {
+    "claim_id": "CLAIM_096",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Patient has chronic heart failure, which is a cardiopulmonary condition | MET: YES\n\nCRITERION: The impact of the condition on the individual's overall health status, including functioning, physical illness, and mental well-being | PATIENT: No information provided on the patient's overall health status, but chronic heart failure can significantly impact health status | MET: NO (insufficient information)\n\nCRITERION: The availability of palliative care services | PATIENT: No information provided on the availability of palliative care services | MET: NO (insufficient information)\n\nCRITERION: Documentation of sufficient clinical information to support a prognosis of 6 months or less | PATIENT: No information provided on the patient's prognosis | MET: NO (insufficient information)\n\nCRITERION: Identification of specific structural/functional impairments, activity limitations, and environmental factors | PATIENT: Patient has chronic heart failure, but no specific impairments or limitations are mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of secondary conditions, such as delirium, pneumonia, stasis ulcers, and pressure ulcers | PATIENT: No secondary conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of comorbid conditions, such as end-stage renal disease (ESRD) | PATIENT: No comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: The combined effects of the primary condition and any secondary or comorbid conditions should result in a prognosis of 6 months or less | PATIENT: No information provided on the patient's prognosis | MET: NO (insufficient information)\n\nCRITERION: The patient is requesting cardiac rehabilitation, which is not typically a hospice service | PATIENT: Patient is requesting cardiac rehabilitation | MET: NO (cardiac rehabilitation is not a hospice service)\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient's request for cardiac rehabilitation and lack of sufficient information on their overall health status, prognosis, and other relevant factors make them not eligible for hospice services at this time.",
+  "explanation": "We've reviewed your request for cardiac rehabilitation for your chronic heart failure. According to our Hospice Cardiopulmonary Conditions policy, we cannot approve your claim at this time. The reason for this decision is that we don't have enough information about your overall health and well-being to determine if hospice services are right for you. We need more details about your condition and prognosis to make a decision that's best for your care.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:52:18.640020",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 67",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:52:20.109986",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 67, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Patient has chronic heart failure, which is a cardiopulmonary condition | MET: YES\n\nCRITERION: The impact of the condition on the individual's overall health status, including functioning, physical illness, and mental well-being | PATIENT: No information provided on the patient's overall health status, but chronic heart failure can significantly impact health status | MET: NO (insufficient information)\n\nCRITERION: The availability of palliative care services | PATIENT: No information provided on the availability of palliative care services | MET: NO (insufficient information)\n\nCRITERION: Documentation of sufficient clinical information to support a prognosis of 6 months or less | PATIENT: No information provided on the patient's prognosis | MET: NO (insufficient information)\n\nCRITERION: Identification of specific structural/functional impairments, activity limitations, and environmental factors | PATIENT: Patient has chronic heart failure, but no specific impairments or limitations are mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of secondary conditions, such as delirium, pneumonia, stasis ulcers, and pressure ulcers | PATIENT: No secondary conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of comorbid conditions, such as end-stage renal disease (ESRD) | PATIENT: No comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: The combined effects of the primary condition and any secondary or comorbid conditions should result in a prognosis of 6 months or less | PATIENT: No information provided on the patient's prognosis | MET: NO (insufficient information)\n\nCRITERION: The patient is requesting cardiac rehabilitation, which is not typically a hospice service | PATIENT: Patient is requesting cardiac rehabilitation | MET: NO (cardiac rehabilitation is not a hospice service)\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:52:20.376128",
+      "input": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Patient has chronic heart failure, which is a cardiopulmonary condition | MET: YE",
+      "output": "DECISION: DENY\nREASON: The patient's request for cardiac rehabilitation and lack of sufficient information on their overall health status, prognosis, and other relevant factors make them not eligible for hospice services at this time.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:52:20.820903",
+      "input": "DECISION: DENY\nREASON: The patient's request for cardiac rehabilitation and lack of sufficient information on their overall health status, prognosis, and other relevant factors make them not eligible for hospice services at this time.",
+      "output": "We've reviewed your request for cardiac rehabilitation for your chronic heart failure. According to our Hospice Cardiopulmonary Conditions policy, we cannot approve your claim at this time. The reason for this decision is that we don't have enough information about your overall health and well-being to determine if hospice services are right for you. We need more details about your condition and prognosis to make a decision that's best for your care.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

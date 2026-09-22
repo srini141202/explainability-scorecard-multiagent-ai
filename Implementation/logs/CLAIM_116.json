@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_116",
+  "claim": {
+    "claim_id": "CLAIM_116",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\nCRITERION: Patient requires skilled nurse visits for administration of daily insulin injections and is physically or mentally unable to self-inject insulin | PATIENT: No information provided regarding physical or mental ability to self-inject insulin | MET: NO\nCRITERION: Patient has a plan of care that includes monitoring glucose and hemoglobin A1c (HbA1c) levels | PATIENT: Requested procedure is diabetes self-management training, which may include monitoring | MET: YES\nCRITERION: Patient has stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) | PATIENT: No information provided regarding HbA1c results or glycemic control | MET: NO\nCRITERION: Patient is eligible for the Medicare Home Health benefit | PATIENT: No information provided regarding eligibility for Medicare Home Health benefit, but patient is 80 years old and has Type 2 diabetes mellitus | MET: NO (insufficient information)\nCRITERION: Patient requires diabetes self-management training | PATIENT: Requested procedure is diabetes self-management training | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to insufficient information regarding skilled nurse visits, plan of care, glycemic control, and eligibility for Medicare Home Health benefit)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and eligibility for the Medicare Home Health benefit.",
+  "explanation": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim because we don't have enough information about your care. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more details about your nurse visits and blood sugar control to determine if you are eligible. We will need to get more information before we can make a final decision about your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-29T00:11:01.705236",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 80",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 80"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-29T00:11:02.812530",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 80, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\nCRITERION: Patient requires skilled nurse visits for administration of daily insulin injections and is physically or mentally unable to self-inject insulin | PATIENT: No information provided regarding physical or mental ability to self-inject insulin | MET: NO\nCRITERION: Patient has a plan of care that includes monitoring glucose and hemoglobin A1c (HbA1c) levels | PATIENT: Requested procedure is diabetes self-management training, which may include monitoring | MET: YES\nCRITERION: Patient has stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) | PATIENT: No information provided regarding HbA1c results or glycemic control | MET: NO\nCRITERION: Patient is eligible for the Medicare Home Health benefit | PATIENT: No information provided regarding eligibility for Medicare Home Health benefit, but patient is 80 years old and has Type 2 diabetes mellitus | MET: NO (insufficient information)\nCRITERION: Patient requires diabetes self-management training | PATIENT: Requested procedure is diabetes self-management training | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to insufficient information regarding skilled nurse visits, plan of care, glycemic control, and eligibility for Medicare Home Health benefit)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-29T00:11:03.122904",
+      "input": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\nCRITERION: Patient requires skilled nurse visits for administration of daily insulin injections and is p",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and eligibility for the Medicare Home Health benefit.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-29T00:11:03.642926",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and eligibility for the Medicare Home Health benefit.",
+      "output": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim because we don't have enough information about your care. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more details about your nurse visits and blood sugar control to determine if you are eligible. We will need to get more information before we can make a final decision about your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_042",
+  "claim": {
+    "claim_id": "CLAIM_042",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: 36-year-old male (eligible for Medicare if disabled, but exact disability status not provided) | MET: NO (age and disability status not explicitly stated as meeting Medicare eligibility criteria)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Diagnosed with Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, no information on insulin injections or inability to self-inject | MET: NO\n\nCRITERION: Patient's plan of care must include monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information provided on current plan of care or HbA1c levels | MET: NO\n\nCRITERION: HbA1c testing must be performed quarterly for patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided on current therapy or glycemic goals | MET: NO\n\nCRITERION: For patients with stable glycemic control, HbA1c testing must be performed at least 2 times a year | PATIENT: No information provided on glycemic control or HbA1c testing frequency | MET: NO\n\nOVERALL: NOT ELIGIBLE (due to lack of information on Medicare eligibility, inability to self-inject insulin, and HbA1c testing)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility for Medicare and required criteria for diabetes management, including inability to self-inject insulin and HbA1c testing frequency, are not adequately documented to support approval of the requested procedure.",
+  "explanation": "We've made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim at this time. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information to show that you meet the requirements for this training, such as your ability to manage your insulin and track your blood sugar levels. We need more documentation to support your claim, and we will be happy to help you with the next steps.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:36:46.536602",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 36",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 36"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:36:47.594107",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 36, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: 36-year-old male (eligible for Medicare if disabled, but exact disability status not provided) | MET: NO (age and disability status not explicitly stated as meeting Medicare eligibility criteria)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Diagnosed with Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, no information on insulin injections or inability to self-inject | MET: NO\n\nCRITERION: Patient's plan of care must include monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information provided on current plan of care or HbA1c levels | MET: NO\n\nCRITERION: HbA1c testing must be performed quarterly for patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided on current therapy or glycemic goals | MET: NO\n\nCRITERION: For patients with stable glycemic control, HbA1c testing must be performed at least 2 times a year | PATIENT: No information provided on glycemic control or HbA1c testing frequency | MET: NO\n\nOVERALL: NOT ELIGIBLE (due to lack of information on Medicare eligibility, inability to self-inject insulin, and HbA1c testing)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:36:47.943552",
+      "input": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: 36-year-old male (eligible for Medicare if disabled, but exact disability status not provided) | MET: NO (age and disability status not exp",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility for Medicare and required criteria for diabetes management, including inability to self-inject insulin and HbA1c testing frequency, are not adequately documented to support approval of the requested procedure.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:36:48.424660",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility for Medicare and required criteria for diabetes management, including inability to self-inject insulin and HbA1c testing frequency, are not adequately documented to support approval of the requested procedure.",
+      "output": "We've made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim at this time. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information to show that you meet the requirements for this training, such as your ability to manage your insulin and track your blood sugar levels. We need more documentation to support your claim, and we will be happy to help you with the next steps.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

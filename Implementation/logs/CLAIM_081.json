@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_081",
+  "claim": {
+    "claim_id": "CLAIM_081",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, but no specific mention of acidosis, hyperkalemia, or hyperphosphatemia | MET: NO\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided about fluid status | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Male, so pregnancy is not applicable | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided about heart failure | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided about pericarditis | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided about incomplete dialysis | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided about planned inadequate or short dialysis | MET: NO\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided about sessions performed for convenience | MET: NO\n\nCRITERION: Patient has a condition that requires additional dialysis sessions | PATIENT: End stage renal disease, which may require additional sessions | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's end-stage renal disease may require additional dialysis sessions, but the policy requires specific conditions to be met, such as metabolic conditions, fluid positive status, or other conditions listed. Since the patient's information does not specify any of these conditions, the patient is not eligible for additional payments based on the provided information. However, the patient may still be eligible for the standard 3 times per week hemodialysis treatment.",
+  "decision": "DECISION: DENY\nREASON: The patient's information does not specify any of the required conditions that would necessitate additional dialysis sessions beyond the standard treatment.",
+  "explanation": "We have made a decision about your insurance claim for kidney dialysis. According to our \"Frequency of Hemodialysis\" policy, we cannot approve your claim because your information does not show that you need more dialysis sessions than what is typically given. This policy helps us decide how often dialysis is needed, and in your case, the standard treatment is what is covered. We understand this may be disappointing, and we are here to answer any questions you may have.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:56:55.288978",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 67",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:56:56.437687",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 67, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, but no specific mention of acidosis, hyperkalemia, or hyperphosphatemia | MET: NO\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided about fluid status | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Male, so pregnancy is not applicable | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided about heart failure | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided about pericarditis | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided about incomplete dialysis | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided about planned inadequate or short dialysis | MET: NO\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided about sessions performed for convenience | MET: NO\n\nCRITERION: Patient has a condition that requires additional dialysis sessions | PATIENT: End stage renal disease, which may require additional sessions | MET: YES\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's end-stage renal disease may require additional dialysis sessions, but the policy requires specific conditions to be met, such as metabolic conditions, fluid positive status, or other conditions listed. Since the patient's information does not specify any of these conditions, the patient is not eligible for additional payments based on the provided information. However, the patient may still be eligible for the standard 3 times per week hemodialysis treatment.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:56:56.672956",
+      "input": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, but no specific mention of acidosis, hyperkalemia, or hyperphosphatemia | M",
+      "output": "DECISION: DENY\nREASON: The patient's information does not specify any of the required conditions that would necessitate additional dialysis sessions beyond the standard treatment.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:56:57.165271",
+      "input": "DECISION: DENY\nREASON: The patient's information does not specify any of the required conditions that would necessitate additional dialysis sessions beyond the standard treatment.",
+      "output": "We have made a decision about your insurance claim for kidney dialysis. According to our \"Frequency of Hemodialysis\" policy, we cannot approve your claim because your information does not show that you need more dialysis sessions than what is typically given. This policy helps us decide how often dialysis is needed, and in your case, the standard treatment is what is covered. We understand this may be disappointing, and we are here to answer any questions you may have.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

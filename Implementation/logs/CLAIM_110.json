@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_110",
+  "claim": {
+    "claim_id": "CLAIM_110",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Total Hip Arthroplasty",
+  "criteria_check": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Mild joint discomfort, no mention of radiographic evidence | MET: NO\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Mild joint discomfort, no mention of pain that cannot be controlled | MET: NO\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No mention of conservative therapy | MET: NO\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No mal-union mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Active skin infection (exception recurrent cutaneous staph infections) or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Rapidly progressive neurological disease except in the clinical situation of a concomitant displaced femoral neck fracture | PATIENT: No neurological disease mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Absence or relative insufficiency of abductor musculature | PATIENT: No mention of abductor musculature insufficiency | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Any process that is rapidly destroying bone | PATIENT: No rapidly destroying bone process mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Neurotrophic arthritis | PATIENT: No neurotrophic arthritis mentioned | MET: YES (does not have the condition that would make it not met)\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to only having mild joint discomfort with no evidence of advanced joint disease, uncontrolled pain, or other qualifying conditions.",
+  "explanation": "We've reviewed your insurance claim for hip replacement surgery, and unfortunately, we've made the decision to deny it. According to our Total Hip Arthroplasty policy, we can only approve this type of surgery for patients with more severe joint problems. Since you only have mild joint discomfort, you don't meet the necessary criteria for eligibility. This decision was made based on the guidelines outlined in our Total Hip Arthroplasty policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:24:40.340615",
+      "input": "Hip replacement surgery coverage Mild joint discomfort patient age 19",
+      "output": "Total Hip Arthroplasty",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Mild joint discomfort patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:24:41.747593",
+      "input": "Policy: Total Hip Arthroplasty, Patient age: 19, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) supported evidence | PATIENT: Mild joint discomfort, no mention of radiographic evidence | MET: NO\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment or functional disability from injury due to trauma or arthritis of the joint | PATIENT: Mild joint discomfort, no mention of pain that cannot be controlled | MET: NO\n\nCRITERION: History of unsuccessful conservative therapy (non-surgical medical management) | PATIENT: No mention of conservative therapy | MET: NO\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No mal-union mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Active skin infection (exception recurrent cutaneous staph infections) or open wound within the planned surgical site of the hip | PATIENT: No infection mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Rapidly progressive neurological disease except in the clinical situation of a concomitant displaced femoral neck fracture | PATIENT: No neurological disease mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Absence or relative insufficiency of abductor musculature | PATIENT: No mention of abductor musculature insufficiency | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Any process that is rapidly destroying bone | PATIENT: No rapidly destroying bone process mentioned | MET: YES (does not have the condition that would make it not met)\n\nCRITERION: Neurotrophic arthritis | PATIENT: No neurotrophic arthritis mentioned | MET: YES (does not have the condition that would make it not met)\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:24:42.005875",
+      "input": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or when conventional radiography is not adequate, magnetic resonance imaging (MRI) and/or computed tomography (CT) sup",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to only having mild joint discomfort with no evidence of advanced joint disease, uncontrolled pain, or other qualifying conditions.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:24:42.335485",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to only having mild joint discomfort with no evidence of advanced joint disease, uncontrolled pain, or other qualifying conditions.",
+      "output": "We've reviewed your insurance claim for hip replacement surgery, and unfortunately, we've made the decision to deny it. According to our Total Hip Arthroplasty policy, we can only approve this type of surgery for patients with more severe joint problems. Since you only have mild joint discomfort, you don't meet the necessary criteria for eligibility. This decision was made based on the guidelines outlined in our Total Hip Arthroplasty policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

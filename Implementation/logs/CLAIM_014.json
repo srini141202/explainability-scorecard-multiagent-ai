@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_014",
+  "claim": {
+    "claim_id": "CLAIM_014",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must be a Medicare beneficiary with Type II DM | PATIENT: 50-year-old female with Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient's plan of care must be reasonable and necessary | PATIENT: Procedure requested is diabetes self-management training | MET: YES\n\nCRITERION: Skilled nurse visits are permitted for administration of daily insulin injections if patient is physically or mentally unable to self-inject insulin | PATIENT: No information provided about patient's ability to self-inject insulin | MET: NO (information not provided)\n\nCRITERION: Patient's plan of care must include monitoring of glucose and HbA1c levels | PATIENT: Procedure requested is diabetes self-management training, which may include monitoring | MET: YES\n\nCRITERION: HbA1c testing must be performed quarterly in patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided about patient's glycemic goals or therapy changes | MET: NO (information not provided)\n\nCRITERION: HbA1c testing must be performed at least 2 times a year for patients with stable glycemic control | PATIENT: No information provided about patient's glycemic control | MET: NO (information not provided)\n\nCRITERION: Patient's plan of care must be patient-centered and address prognosis | PATIENT: Procedure requested is diabetes self-management training, which may be patient-centered | MET: YES\n\nOVERALL: ELIGIBLE (Note: While some criteria are met, others lack sufficient information to determine eligibility. However, based on the provided information, the patient appears to be eligible for diabetes self-management training under the Medicare Home Health Plans of Care policy.)",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets key criteria, including being a Medicare beneficiary with Type 2 diabetes mellitus and having a reasonable and necessary plan of care that includes diabetes self-management training.",
+  "explanation": "We have reviewed your insurance claim for diabetes self-management training, and we are pleased to inform you that it has been approved. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, you meet the necessary criteria for this training. As a Medicare beneficiary with Type 2 diabetes, you have a plan of care that includes this training, which is considered reasonable and necessary for your care. This approval means that your insurance will cover the costs of this important training to help you manage your diabetes.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:16:41.445161",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 50",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 50"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:16:42.541961",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 50, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must be a Medicare beneficiary with Type II DM | PATIENT: 50-year-old female with Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient's plan of care must be reasonable and necessary | PATIENT: Procedure requested is diabetes self-management training | MET: YES\n\nCRITERION: Skilled nurse visits are permitted for administration of daily insulin injections if patient is physically or mentally unable to self-inject insulin | PATIENT: No information provided about patient's ability to self-inject insulin | MET: NO (information not provided)\n\nCRITERION: Patient's plan of care must include monitoring of glucose and HbA1c levels | PATIENT: Procedure requested is diabetes self-management training, which may include monitoring | MET: YES\n\nCRITERION: HbA1c testing must be performed quarterly in patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided about patient's glycemic goals or therapy changes | MET: NO (information not provided)\n\nCRITERION: HbA1c testing must be performed at least 2 times a year for patients with stable glycemic control | PATIENT: No information provided about patient's glycemic control | MET: NO (information not provided)\n\nCRITERION: Patient's plan of care must be patient-centered and address prognosis | PATIENT: Procedure requested is diabetes self-management training, which may be patient-centered | MET: YES\n\nOVERALL: ELIGIBLE (Note: While some criteria are met, others lack sufficient information to determine eligibility. However, based on the provided information, the patient appears to be eligible for diabetes self-management training under the Medicare Home Health Plans of Care policy.)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:16:42.778903",
+      "input": "CRITERION: Patient must be a Medicare beneficiary with Type II DM | PATIENT: 50-year-old female with Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient's plan of care must be reasonable and neces",
+      "output": "DECISION: APPROVE\nREASON: The patient meets key criteria, including being a Medicare beneficiary with Type 2 diabetes mellitus and having a reasonable and necessary plan of care that includes diabetes self-management training.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:16:43.192194",
+      "input": "DECISION: APPROVE\nREASON: The patient meets key criteria, including being a Medicare beneficiary with Type 2 diabetes mellitus and having a reasonable and necessary plan of care that includes diabetes self-management training.",
+      "output": "We have reviewed your insurance claim for diabetes self-management training, and we are pleased to inform you that it has been approved. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, you meet the necessary criteria for this training. As a Medicare beneficiary with Type 2 diabetes, you have a plan of care that includes this training, which is considered reasonable and necessary for your care. This approval means that your insurance will cover the costs of this important training to help you manage your diabetes.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

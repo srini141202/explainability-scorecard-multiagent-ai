@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_049",
+  "claim": {
+    "claim_id": "CLAIM_049",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: The patient must be under the care of an approved provider of service | PATIENT: The patient is 36 years old and has depression and anxiety disorder, but the provider is not specified | MET: NO\n\nCRITERION: The services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: The patient has depression and anxiety disorder and is requesting mental health counselling | MET: YES\n\nCRITERION: The services must meet the criteria of having an individualized treatment plan | PATIENT: There is no information about an individualized treatment plan | MET: NO\n\nCRITERION: The services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: The patient is requesting mental health counselling, which is expected to improve their condition | MET: YES\n\nCRITERION: The treatment must be designed to reduce or control the patient's psychiatric symptoms | PATIENT: The patient has depression and anxiety disorder, and mental health counselling is expected to reduce or control their symptoms | MET: YES\n\nCRITERION: The patient's condition must not be severe and profound mental retardation | PATIENT: The patient has depression and anxiety disorder, not severe and profound mental retardation | MET: YES\n\nCRITERION: The patient must retain the capacity to recall the therapeutic encounter from one session to another (for patients with dementia) | PATIENT: The patient does not have dementia | MET: YES\n\nCRITERION: The services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: The patient is requesting mental health counselling, which is not excluded | MET: YES\n\nCRITERION: The services must be provided in a distinct outpatient setting | PATIENT: There is no information about the setting | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient is not eligible because some criteria are not met, such as the provider not being specified, no individualized treatment plan, and no information about the setting. However, the patient's condition and the requested service (mental health counselling) are reasonable and necessary for the diagnosis or treatment of the patient's condition.",
+  "decision": "DECISION: DENY\nREASON: The patient's claim is denied due to unmet criteria, including the lack of a specified approved provider, no individualized treatment plan, and insufficient information about the setting in which the services will be provided.",
+  "explanation": "We have reviewed your insurance claim for mental health counselling for Depression and anxiety disorder under our Outpatient Psychiatry and Psychology Services policy. Unfortunately, we are unable to approve your claim at this time. The reason for this decision is that we didn't receive enough information about your treatment plan, the provider, and where you will receive the services. According to our Outpatient Psychiatry and Psychology Services policy, we need this information to ensure that you receive the right care.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:45:35.117157",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 36",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 36"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:45:40.384882",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 36, Procedure: Mental health counselling",
+      "output": "CRITERION: The patient must be under the care of an approved provider of service | PATIENT: The patient is 36 years old and has depression and anxiety disorder, but the provider is not specified | MET: NO\n\nCRITERION: The services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: The patient has depression and anxiety disorder and is requesting mental health counselling | MET: YES\n\nCRITERION: The services must meet the criteria of having an individualized treatment plan | PATIENT: There is no information about an individualized treatment plan | MET: NO\n\nCRITERION: The services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: The patient is requesting mental health counselling, which is expected to improve their condition | MET: YES\n\nCRITERION: The treatment must be designed to reduce or control the patient's psychiatric symptoms | PATIENT: The patient has depression and anxiety disorder, and mental health counselling is expected to reduce or control their symptoms | MET: YES\n\nCRITERION: The patient's condition must not be severe and profound mental retardation | PATIENT: The patient has depression and anxiety disorder, not severe and profound mental retardation | MET: YES\n\nCRITERION: The patient must retain the capacity to recall the therapeutic encounter from one session to another (for patients with dementia) | PATIENT: The patient does not have dementia | MET: YES\n\nCRITERION: The services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: The patient is requesting mental health counselling, which is not excluded | MET: YES\n\nCRITERION: The services must be provided in a distinct outpatient setting | PATIENT: There is no information about the setting | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient is not eligible because some criteria are not met, such as the provider not being specified, no individualized treatment plan, and no information about the setting. However, the patient's condition and the requested service (mental health counselling) are reasonable and necessary for the diagnosis or treatment of the patient's condition.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:45:40.997535",
+      "input": "CRITERION: The patient must be under the care of an approved provider of service | PATIENT: The patient is 36 years old and has depression and anxiety disorder, but the provider is not specified | MET",
+      "output": "DECISION: DENY\nREASON: The patient's claim is denied due to unmet criteria, including the lack of a specified approved provider, no individualized treatment plan, and insufficient information about the setting in which the services will be provided.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:45:41.511903",
+      "input": "DECISION: DENY\nREASON: The patient's claim is denied due to unmet criteria, including the lack of a specified approved provider, no individualized treatment plan, and insufficient information about the setting in which the services will be provided.",
+      "output": "We have reviewed your insurance claim for mental health counselling for Depression and anxiety disorder under our Outpatient Psychiatry and Psychology Services policy. Unfortunately, we are unable to approve your claim at this time. The reason for this decision is that we didn't receive enough information about your treatment plan, the provider, and where you will receive the services. According to our Outpatient Psychiatry and Psychology Services policy, we need this information to ensure that you receive the right care.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

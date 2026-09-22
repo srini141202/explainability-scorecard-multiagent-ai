@@ -1,0 +1,1082 @@
+[
+  {
+    "claim_id": "CLAIM_001",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_002",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_003",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_004",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_005",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_006",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_007",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_008",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_009",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_010",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_011",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_012",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_013",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_014",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_015",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_016",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_017",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_018",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_019",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_020",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_021",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_022",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_023",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_024",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_025",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_026",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_027",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_028",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_029",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_030",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_031",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_032",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_033",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_034",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_035",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_036",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_037",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_038",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_039",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_040",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_041",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_042",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_043",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_044",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_045",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_046",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_047",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_048",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_049",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_050",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_051",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_052",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_053",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_054",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_055",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_056",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_057",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_058",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_059",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_060",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_061",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_062",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_063",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_064",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_065",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_066",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_067",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_068",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_069",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_070",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_071",
+    "patient_id": "0350fdd6-a889-0075-ddf7-bdfdf9bb9397",
+    "age": 58,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_072",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_073",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_074",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_075",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_076",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_077",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_078",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_079",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_080",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_081",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_082",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_083",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_084",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_085",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_086",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_087",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_088",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_089",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_090",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_091",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Osteoporosis screening",
+    "procedure": "Bone density scan",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_092",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_093",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_094",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_095",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_096",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_097",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_098",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_099",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_100",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_101",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_102",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_103",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_104",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_105",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_106",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_107",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_108",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_109",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_110",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  {
+    "claim_id": "CLAIM_111",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_112",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_113",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_114",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_115",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_116",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  {
+    "claim_id": "CLAIM_117",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_118",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_119",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  {
+    "claim_id": "CLAIM_120",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Severe osteoarthritis",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "APPROVE"
+  }
+]

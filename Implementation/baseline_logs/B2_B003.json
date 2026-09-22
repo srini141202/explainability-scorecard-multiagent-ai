@@ -1,0 +1,25 @@
+{
+  "claim_id": "B003",
+  "claim": {
+    "claim_id": "B003",
+    "age": 55,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: The patient is a 55-year-old male, which falls within the recommended age range for colorectal cancer screening. The procedure requested is a colonoscopy screening, which is a standard diagnostic and therapeutic procedure for colorectal cancer screening. The patient's diagnosis is consistent with the indication for the procedure, and the procedure meets the definition of a colonoscopy as it will examine the colon proximal to the splenic flexure.\n\nAccording to the coverage rules, a colonoscopy is a covered procedure for diagnostic and therapeutic purposes, including colorectal cancer screening. Since the patient's age and diagnosis are consistent with the recommended guidelines for colorectal cancer screening, and the procedure meets the definition of a colonoscopy, the request for a colonoscopy screening is approved.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:41:44.149568",
+      "input": "Colonoscopy screening Colorectal cancer screening",
+      "output": "**APPROVE**\n\nExplanation: The patient is a 55-year-old male, which falls within the recommended age ",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Diagnostic and Therapeutic Colonoscopy",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: The patient is a 55-year-old male, which falls within the recommended age range for colorectal cancer screening. The procedure requested is a colonoscopy screening, which is a standard diagnostic and therapeutic procedure for colorectal cancer screening. The patient's diagnosis is consistent with the indication for the procedure, and the procedure meets the definition of a colonoscopy as it will examine the colon proximal to the splenic flexure.\n\nAccording to the coverage rules, a colonoscopy is a covered procedure for diagnostic and therapeutic purposes, including colorectal cancer screening. Since the patient's age and diagnosis are consistent with the recommended guidelines for colorectal cancer screening, and the procedure meets the definition of a colonoscopy, the request for a colonoscopy screening is approved."
+}

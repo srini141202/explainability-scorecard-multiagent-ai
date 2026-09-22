@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_003",
+  "claim": {
+    "claim_id": "CLAIM_003",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is being applied | MET: NO (information not provided)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Has Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Skilled nurse visits are permitted for administration of daily insulin injections for patients physically or mentally unable to self-inject insulin | PATIENT: No information provided regarding ability to self-inject insulin | MET: NO (information not provided)\n\nCRITERION: Evidence-based medicine supports ascertaining glucose control by monitoring glucose and HbA1c levels | PATIENT: No information provided regarding glucose or HbA1c levels | MET: NO (information not provided)\n\nCRITERION: Performing HbA1c test quarterly for patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided regarding therapy changes or glycemic goals | MET: NO (information not provided)\n\nCRITERION: For patients with stable glycemic control, performing HbA1c test at least 2 times a year may be considered | PATIENT: No information provided regarding glycemic control | MET: NO (information not provided)\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: Age 23, which is below the typical Medicare eligibility age of 65 | MET: NO\n\nCRITERION: Procedure requested is Diabetes self-management training | PATIENT: Requested procedure is Diabetes self-management training | MET: YES\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare benefit due to being below the typical Medicare eligibility age of 65 and lacking necessary information to support the requested procedure.",
+  "explanation": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, your claim has been denied because you are not yet 65 years old, which is the typical age for Medicare eligibility. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information to support your request, which was not provided. This decision was made based on the guidelines outlined in this policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:05:46.894614",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 23",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:05:48.023994",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 23, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is being applied | MET: NO (information not provided)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Has Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Skilled nurse visits are permitted for administration of daily insulin injections for patients physically or mentally unable to self-inject insulin | PATIENT: No information provided regarding ability to self-inject insulin | MET: NO (information not provided)\n\nCRITERION: Evidence-based medicine supports ascertaining glucose control by monitoring glucose and HbA1c levels | PATIENT: No information provided regarding glucose or HbA1c levels | MET: NO (information not provided)\n\nCRITERION: Performing HbA1c test quarterly for patients whose therapy has changed or who are not meeting glycemic goals | PATIENT: No information provided regarding therapy changes or glycemic goals | MET: NO (information not provided)\n\nCRITERION: For patients with stable glycemic control, performing HbA1c test at least 2 times a year may be considered | PATIENT: No information provided regarding glycemic control | MET: NO (information not provided)\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: Age 23, which is below the typical Medicare eligibility age of 65 | MET: NO\n\nCRITERION: Procedure requested is Diabetes self-management training | PATIENT: Requested procedure is Diabetes self-management training | MET: YES\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:05:48.277639",
+      "input": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is being applied | MET: NO (information not provided)\n\nCRITERION",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare benefit due to being below the typical Medicare eligibility age of 65 and lacking necessary information to support the requested procedure.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:05:48.801726",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare benefit due to being below the typical Medicare eligibility age of 65 and lacking necessary information to support the requested procedure.",
+      "output": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, your claim has been denied because you are not yet 65 years old, which is the typical age for Medicare eligibility. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information to support your request, which was not provided. This decision was made based on the guidelines outlined in this policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

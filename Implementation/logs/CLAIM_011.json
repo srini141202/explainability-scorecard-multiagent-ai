@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_011",
+  "claim": {
+    "claim_id": "CLAIM_011",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Age is not explicitly stated as a criterion, but it may be considered in the context of the patient's condition | PATIENT: 23 years old | MET: YES (age is not a limiting factor in this policy)\n\nCRITERION: Diagnosis of a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease (may be associated with these conditions, but not explicitly stated) | MET: NO (not explicitly stated, but possible)\n\nCRITERION: Fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Pregnancy | PATIENT: Female, 23 years old (but no information about pregnancy) | MET: NO (no information provided)\n\nCRITERION: Heart Failure | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Pericarditis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO (no information provided)\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Medical documentation supporting the need for additional sessions | PATIENT: No information provided | MET: NO (no information provided)\n\nOVERALL: NOT ELIGIBLE (due to lack of information about the patient's condition and treatment, and no explicit statement about the medical necessity of the treatment)",
+  "decision": "DECISION: DENY\nREASON: The claim is denied due to insufficient information provided about the patient's condition and treatment, which fails to establish the medical necessity of the treatment.",
+  "explanation": "We have made a decision about your insurance claim for kidney dialysis treatment. Unfortunately, we are unable to approve your claim at this time because we didn't receive enough information about your condition and treatment. According to our Frequency of Hemodialysis policy, we need more details to understand why this treatment is necessary for you. We will need additional information to review your claim again.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:07:43.332765",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 23",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:07:48.873354",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 23, Procedure: Kidney dialysis",
+      "output": "CRITERION: Age is not explicitly stated as a criterion, but it may be considered in the context of the patient's condition | PATIENT: 23 years old | MET: YES (age is not a limiting factor in this policy)\n\nCRITERION: Diagnosis of a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease (may be associated with these conditions, but not explicitly stated) | MET: NO (not explicitly stated, but possible)\n\nCRITERION: Fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Pregnancy | PATIENT: Female, 23 years old (but no information about pregnancy) | MET: NO (no information provided)\n\nCRITERION: Heart Failure | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Pericarditis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO (no information provided)\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO (no information provided)\n\nCRITERION: Medical documentation supporting the need for additional sessions | PATIENT: No information provided | MET: NO (no information provided)\n\nOVERALL: NOT ELIGIBLE (due to lack of information about the patient's condition and treatment, and no explicit statement about the medical necessity of the treatment)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:07:50.343013",
+      "input": "CRITERION: Age is not explicitly stated as a criterion, but it may be considered in the context of the patient's condition | PATIENT: 23 years old | MET: YES (age is not a limiting factor in this poli",
+      "output": "DECISION: DENY\nREASON: The claim is denied due to insufficient information provided about the patient's condition and treatment, which fails to establish the medical necessity of the treatment.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:07:52.794956",
+      "input": "DECISION: DENY\nREASON: The claim is denied due to insufficient information provided about the patient's condition and treatment, which fails to establish the medical necessity of the treatment.",
+      "output": "We have made a decision about your insurance claim for kidney dialysis treatment. Unfortunately, we are unable to approve your claim at this time because we didn't receive enough information about your condition and treatment. According to our Frequency of Hemodialysis policy, we need more details to understand why this treatment is necessary for you. We will need additional information to review your claim again.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

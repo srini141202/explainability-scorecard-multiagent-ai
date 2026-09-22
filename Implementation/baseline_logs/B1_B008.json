@@ -1,0 +1,17 @@
+{
+  "claim_id": "B008",
+  "claim": {
+    "claim_id": "B008",
+    "age": 40,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Physical therapy is a standard and conservative treatment for lower back pain, and it is a covered benefit under most health insurance plans for a 40-year-old male patient. No prior authorization is required for the initial evaluation and treatment sessions.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Physical therapy is a standard and conservative treatment for lower back pain, and it is a covered benefit under most health insurance plans for a 40-year-old male patient. No prior authorization is required for the initial evaluation and treatment sessions."
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_010",
+  "claim": {
+    "claim_id": "CLAIM_010",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, requesting mental health counselling | MET: YES\n\nCRITERION: Services must meet the criteria of having an individualized treatment plan, a reasonable expectation of improvement, and be for the purpose of diagnostic study or to improve the patient's condition | PATIENT: No information provided about an individualized treatment plan, but mental health counselling could be for diagnostic study or to improve condition | MET: NO\n\nCRITERION: Patient must have a mental illness or signs of mental illness for which psychological testing is indicated as an aid in diagnosis and therapeutic planning | PATIENT: Diagnosis of depression and anxiety disorder | MET: YES\n\nCRITERION: The service must be provided in a distinct outpatient setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: The patient's dementia must be mild and they must retain the capacity to recall the therapeutic encounter from one session to another | PATIENT: No information provided about dementia | MET: NO\n\nCRITERION: The patient must not have severe and profound mental retardation | PATIENT: No information provided about mental retardation | MET: NO\n\nCRITERION: The service must not be provided by a practitioner not practicing within the scope of their licensure or other State authorization | PATIENT: No information provided about the practitioner's licensure | MET: NO\n\nCRITERION: The service must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: Mental health counselling is not excluded | MET: YES\n\nCRITERION: The patient must be 23 years old or older to be eligible for Medicare | PATIENT: Patient is 23 years old | MET: YES\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient's claim is denied because multiple criteria, including the requirement for an approved provider, individualized treatment plan, and distinct outpatient setting, are not met due to lack of provided information.",
+  "explanation": "We have reviewed your claim for mental health counselling under our Outpatient Psychiatry and Psychology Services policy. Unfortunately, we are unable to approve your claim because we did not receive enough information to show that you met all the necessary requirements. According to our policy, we need to know that you saw an approved provider, had a personalized treatment plan, and received care in a distinct outpatient setting. We denied your claim due to this lack of information, and we encourage you to provide the needed details so we can re-evaluate your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:07:00.585321",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 23",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:07:34.843048",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 23, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, requesting mental health counselling | MET: YES\n\nCRITERION: Services must meet the criteria of having an individualized treatment plan, a reasonable expectation of improvement, and be for the purpose of diagnostic study or to improve the patient's condition | PATIENT: No information provided about an individualized treatment plan, but mental health counselling could be for diagnostic study or to improve condition | MET: NO\n\nCRITERION: Patient must have a mental illness or signs of mental illness for which psychological testing is indicated as an aid in diagnosis and therapeutic planning | PATIENT: Diagnosis of depression and anxiety disorder | MET: YES\n\nCRITERION: The service must be provided in a distinct outpatient setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: The patient's dementia must be mild and they must retain the capacity to recall the therapeutic encounter from one session to another | PATIENT: No information provided about dementia | MET: NO\n\nCRITERION: The patient must not have severe and profound mental retardation | PATIENT: No information provided about mental retardation | MET: NO\n\nCRITERION: The service must not be provided by a practitioner not practicing within the scope of their licensure or other State authorization | PATIENT: No information provided about the practitioner's licensure | MET: NO\n\nCRITERION: The service must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: Mental health counselling is not excluded | MET: YES\n\nCRITERION: The patient must be 23 years old or older to be eligible for Medicare | PATIENT: Patient is 23 years old | MET: YES\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:07:38.283547",
+      "input": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's serv",
+      "output": "DECISION: DENY\nREASON: The patient's claim is denied because multiple criteria, including the requirement for an approved provider, individualized treatment plan, and distinct outpatient setting, are not met due to lack of provided information.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:07:38.758436",
+      "input": "DECISION: DENY\nREASON: The patient's claim is denied because multiple criteria, including the requirement for an approved provider, individualized treatment plan, and distinct outpatient setting, are not met due to lack of provided information.",
+      "output": "We have reviewed your claim for mental health counselling under our Outpatient Psychiatry and Psychology Services policy. Unfortunately, we are unable to approve your claim because we did not receive enough information to show that you met all the necessary requirements. According to our policy, we need to know that you saw an approved provider, had a personalized treatment plan, and received care in a distinct outpatient setting. We denied your claim due to this lack of information, and we encourage you to provide the needed details so we can re-evaluate your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

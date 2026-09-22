@@ -1,0 +1,25 @@
+{
+  "claim_id": "B008",
+  "claim": {
+    "claim_id": "B008",
+    "age": 40,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "DECISION: DENY\n\nEXPLANATION: \nThe patient's diagnosis is lower back pain, and the procedure requested is physical therapy. However, according to the coverage rules for Intraosseous Basivertebral Nerve Ablation, the treatment is considered medically reasonable and necessary for Chronic Low Back Pain (CLBP) in patients who meet specific criteria, including having CLBP for at least 6 months and being skeletally mature. \n\nThe requested procedure, physical therapy, does not align with the specified treatment for CLBP under the policy for Intraosseous Basivertebral Nerve Ablation. Furthermore, the patient's specific details (age 40, male) and diagnosis (lower back pain) do not provide sufficient information to confirm that the patient meets all the criteria for coverage under this specific policy. \n\nTherefore, the request for physical therapy as a treatment for lower back pain does not meet the coverage indications for Intraosseous Basivertebral Nerve Ablation as outlined in the policy.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:42:40.884364",
+      "input": "Physical therapy Lower back pain",
+      "output": "DECISION: DENY\n\nEXPLANATION: \nThe patient's diagnosis is lower back pain, and the procedure requeste",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Intraosseous Basivertebral Nerve Ablation",
+  "criteria_check": "",
+  "explanation": "DECISION: DENY\n\nEXPLANATION: \nThe patient's diagnosis is lower back pain, and the procedure requested is physical therapy. However, according to the coverage rules for Intraosseous Basivertebral Nerve Ablation, the treatment is considered medically reasonable and necessary for Chronic Low Back Pain (CLBP) in patients who meet specific criteria, including having CLBP for at least 6 months and being skeletally mature. \n\nThe requested procedure, physical therapy, does not align with the specified treatment for CLBP under the policy for Intraosseous Basivertebral Nerve Ablation. Furthermore, the patient's specific details (age 40, male) and diagnosis (lower back pain) do not provide sufficient information to confirm that the patient meets all the criteria for coverage under this specific policy. \n\nTherefore, the request for physical therapy as a treatment for lower back pain does not meet the coverage indications for Intraosseous Basivertebral Nerve Ablation as outlined in the policy."
+}

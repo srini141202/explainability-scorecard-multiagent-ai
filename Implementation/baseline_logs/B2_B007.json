@@ -1,0 +1,25 @@
+{
+  "claim_id": "B007",
+  "claim": {
+    "claim_id": "B007",
+    "age": 65,
+    "gender": "Female",
+    "diagnosis": "Osteoporosis screening",
+    "procedure": "Bone density scan",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: \nThe patient is a 65-year-old female with a diagnosis of osteoporosis screening, and the procedure requested is a bone density scan. According to the policy, bone mass measurement (BMM) studies are covered if they quantify bone mineral density, detect bone loss, or determine bone quality, and are performed with an FDA-cleared device. \n\nSince the patient's age and gender put her at a higher risk for osteoporosis, and the procedure is a bone density scan, which is a standard method for assessing bone health and diagnosing osteoporosis, the request meets the coverage rules. \n\nTherefore, the bone density scan for this patient is approved for coverage under the Bone Mass Measurement policy.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:42:29.411238",
+      "input": "Bone density scan Osteoporosis screening",
+      "output": "**APPROVE**\n\nExplanation: \nThe patient is a 65-year-old female with a diagnosis of osteoporosis scre",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Bone Mass Measurement",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: \nThe patient is a 65-year-old female with a diagnosis of osteoporosis screening, and the procedure requested is a bone density scan. According to the policy, bone mass measurement (BMM) studies are covered if they quantify bone mineral density, detect bone loss, or determine bone quality, and are performed with an FDA-cleared device. \n\nSince the patient's age and gender put her at a higher risk for osteoporosis, and the procedure is a bone density scan, which is a standard method for assessing bone health and diagnosing osteoporosis, the request meets the coverage rules. \n\nTherefore, the bone density scan for this patient is approved for coverage under the Bone Mass Measurement policy."
+}

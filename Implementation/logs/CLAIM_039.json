@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_039",
+  "claim": {
+    "claim_id": "CLAIM_039",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be diagnosed with a mental disorder or disease | PATIENT: Depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be provided by an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided about the expected outcome | MET: NO\n\nCRITERION: Services must be incident to a physician's service (unless provided by a nurse practitioner, clinical nurse specialist, clinical psychologist, or clinical social worker) | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Patient must be under the care of a physician (if services are provided by a non-physician practitioner) | PATIENT: No information provided | MET: NO\n\nCRITERION: Services must be provided in a hospital outpatient facility or other approved setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: Patient must not have severe and profound mental retardation | PATIENT: 18-year-old male with depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must not have dementia that prevents them from benefiting from psychotherapy | PATIENT: 18-year-old male with depression and anxiety disorder | MET: YES\n\nCRITERION: Services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to lack of information about the provider, setting, and treatment plan)",
+  "decision": "DECISION: DENY\nREASON: The patient's claim is denied due to the lack of information provided about the provider, setting, and treatment plan, which are essential criteria for determining eligibility for Medicare coverage.",
+  "explanation": "We have reviewed your claim for mental health counselling, and unfortunately, we are unable to approve it at this time. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider, where you received treatment, and the details of your treatment plan. Without this information, we cannot determine if your treatment meets the requirements for coverage. We encourage you to provide the necessary details so we can re-evaluate your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:44:54.980265",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 18",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:44:57.278801",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 18, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be diagnosed with a mental disorder or disease | PATIENT: Depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be provided by an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided about the expected outcome | MET: NO\n\nCRITERION: Services must be incident to a physician's service (unless provided by a nurse practitioner, clinical nurse specialist, clinical psychologist, or clinical social worker) | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Patient must be under the care of a physician (if services are provided by a non-physician practitioner) | PATIENT: No information provided | MET: NO\n\nCRITERION: Services must be provided in a hospital outpatient facility or other approved setting | PATIENT: No information provided about the setting | MET: NO\n\nCRITERION: Patient must not have severe and profound mental retardation | PATIENT: 18-year-old male with depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must not have dementia that prevents them from benefiting from psychotherapy | PATIENT: 18-year-old male with depression and anxiety disorder | MET: YES\n\nCRITERION: Services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to lack of information about the provider, setting, and treatment plan)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:44:57.686859",
+      "input": "CRITERION: Patient must be diagnosed with a mental disorder or disease | PATIENT: Depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under a",
+      "output": "DECISION: DENY\nREASON: The patient's claim is denied due to the lack of information provided about the provider, setting, and treatment plan, which are essential criteria for determining eligibility for Medicare coverage.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:44:58.097638",
+      "input": "DECISION: DENY\nREASON: The patient's claim is denied due to the lack of information provided about the provider, setting, and treatment plan, which are essential criteria for determining eligibility for Medicare coverage.",
+      "output": "We have reviewed your claim for mental health counselling, and unfortunately, we are unable to approve it at this time. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider, where you received treatment, and the details of your treatment plan. Without this information, we cannot determine if your treatment meets the requirements for coverage. We encourage you to provide the necessary details so we can re-evaluate your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

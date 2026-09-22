@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_029",
+  "claim": {
+    "claim_id": "CLAIM_029",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, and the patient is requesting mental health counselling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided about a treatment plan | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Treatment must be designed to reduce or control the patient's psychiatric symptoms and improve or maintain the patient's level of functioning | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided about the patient's expectations | MET: NO\n\nCRITERION: Frequency and duration of services must be within accepted norms of medical practice | PATIENT: No information provided about the frequency and duration of services | MET: NO\n\nCRITERION: Services must meet the specific coverage requirements for psychiatric services | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must be 65 or older, or have a disability, or have End-Stage Renal Disease (ESRD) to be eligible for Medicare | PATIENT: 57 years old, no information about disability or ESRD | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for Medicare as they are 57 years old and no information is provided about a disability or End-Stage Renal Disease (ESRD).",
+  "explanation": "We have made a decision about your insurance claim for mental health counselling. Unfortunately, we are unable to approve your claim under our Outpatient Psychiatry and Psychology Services policy because you do not meet the eligibility criteria. This is because you are 57 years old and do not have a disability or certain medical conditions that would qualify you for coverage. We understand this may be disappointing, and we are here to help you explore other options.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:17:49.536313",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 57",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 57"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:18:21.733392",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 57, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Diagnosis of depression and anxiety disorder, and the patient is requesting mental health counselling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided about a treatment plan | MET: NO\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Treatment must be designed to reduce or control the patient's psychiatric symptoms and improve or maintain the patient's level of functioning | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided about the patient's expectations | MET: NO\n\nCRITERION: Frequency and duration of services must be within accepted norms of medical practice | PATIENT: No information provided about the frequency and duration of services | MET: NO\n\nCRITERION: Services must meet the specific coverage requirements for psychiatric services | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Patient must be 65 or older, or have a disability, or have End-Stage Renal Disease (ESRD) to be eligible for Medicare | PATIENT: 57 years old, no information about disability or ESRD | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:18:24.047738",
+      "input": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: No information provided about the provider | MET: NO\n\nCRITERION: Services must be incident to a physician's serv",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for Medicare as they are 57 years old and no information is provided about a disability or End-Stage Renal Disease (ESRD).",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:18:24.424266",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for Medicare as they are 57 years old and no information is provided about a disability or End-Stage Renal Disease (ESRD).",
+      "output": "We have made a decision about your insurance claim for mental health counselling. Unfortunately, we are unable to approve your claim under our Outpatient Psychiatry and Psychology Services policy because you do not meet the eligibility criteria. This is because you are 57 years old and do not have a disability or certain medical conditions that would qualify you for coverage. We understand this may be disappointing, and we are here to help you explore other options.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

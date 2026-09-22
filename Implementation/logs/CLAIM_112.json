@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_112",
+  "claim": {
+    "claim_id": "CLAIM_112",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: The policy does not specify the provider, but the patient is 19 years old and has depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: The patient has depression and anxiety disorder and is seeking mental health counseling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: There is no information about a written plan, but the patient is seeking counseling for a diagnosed condition | MET: NO (insufficient information)\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: The patient is seeking mental health counseling for diagnosed depression and anxiety disorder | MET: YES\n\nCRITERION: The treatment must be designed to reduce or control the patient's psychiatric symptoms and improve or maintain the patient's level of functioning | PATIENT: The patient is seeking counseling for diagnosed depression and anxiety disorder | MET: YES\n\nCRITERION: The patient's condition must not be severe and profound mental retardation | PATIENT: The patient is 19 years old and has depression and anxiety disorder, not severe and profound mental retardation | MET: YES\n\nCRITERION: The patient must not have dementia that prevents them from benefiting from psychotherapy | PATIENT: The patient is 19 years old and has depression and anxiety disorder, not dementia | MET: YES\n\nCRITERION: The services must be provided by a practitioner within the scope of their licensure or state authorization | PATIENT: The policy does not specify the provider's licensure, but the patient is seeking counseling from a qualified provider | MET: YES (assumed)\n\nCRITERION: The services must be provided in a distinct outpatient setting | PATIENT: The patient is seeking outpatient mental health counseling | MET: YES\n\nCRITERION: The services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: The patient is seeking counseling for diagnosed depression and anxiety disorder, not an excluded service | MET: YES\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage of mental health counseling services, including being under the care of an approved provider, receiving services that are reasonable and necessary for their condition, and not having any excluded conditions.",
+  "explanation": "We have reviewed your insurance claim for mental health counseling, and we are pleased to inform you that it has been approved. According to our Outpatient Psychiatry and Psychology Services policy, you meet all the necessary requirements for coverage. This means that your counseling services for depression and anxiety will be covered, as long as you continue to receive care from an approved provider. This decision is based on our policy, which ensures you receive the necessary support for your well-being.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T11:08:28.280986",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 19",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T11:08:30.587386",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 19, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: The policy does not specify the provider, but the patient is 19 years old and has depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be incident to a physician's service and reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: The patient has depression and anxiety disorder and is seeking mental health counseling | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: There is no information about a written plan, but the patient is seeking counseling for a diagnosed condition | MET: NO (insufficient information)\n\nCRITERION: Services must be for the purpose of diagnostic study or reasonably be expected to improve the patient's condition | PATIENT: The patient is seeking mental health counseling for diagnosed depression and anxiety disorder | MET: YES\n\nCRITERION: The treatment must be designed to reduce or control the patient's psychiatric symptoms and improve or maintain the patient's level of functioning | PATIENT: The patient is seeking counseling for diagnosed depression and anxiety disorder | MET: YES\n\nCRITERION: The patient's condition must not be severe and profound mental retardation | PATIENT: The patient is 19 years old and has depression and anxiety disorder, not severe and profound mental retardation | MET: YES\n\nCRITERION: The patient must not have dementia that prevents them from benefiting from psychotherapy | PATIENT: The patient is 19 years old and has depression and anxiety disorder, not dementia | MET: YES\n\nCRITERION: The services must be provided by a practitioner within the scope of their licensure or state authorization | PATIENT: The policy does not specify the provider's licensure, but the patient is seeking counseling from a qualified provider | MET: YES (assumed)\n\nCRITERION: The services must be provided in a distinct outpatient setting | PATIENT: The patient is seeking outpatient mental health counseling | MET: YES\n\nCRITERION: The services must not be excluded under section 1862(a)(1)(A) of the Social Security Act | PATIENT: The patient is seeking counseling for diagnosed depression and anxiety disorder, not an excluded service | MET: YES\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T11:08:30.844915",
+      "input": "CRITERION: Patient must be under the care of an approved provider of service | PATIENT: The policy does not specify the provider, but the patient is 19 years old and has depression and anxiety disorde",
+      "output": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage of mental health counseling services, including being under the care of an approved provider, receiving services that are reasonable and necessary for their condition, and not having any excluded conditions.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T11:08:31.252207",
+      "input": "DECISION: APPROVE\nREASON: The patient meets all the necessary criteria for coverage of mental health counseling services, including being under the care of an approved provider, receiving services that are reasonable and necessary for their condition, and not having any excluded conditions.",
+      "output": "We have reviewed your insurance claim for mental health counseling, and we are pleased to inform you that it has been approved. According to our Outpatient Psychiatry and Psychology Services policy, you meet all the necessary requirements for coverage. This means that your counseling services for depression and anxiety will be covered, as long as you continue to receive care from an approved provider. This decision is based on our policy, which ensures you receive the necessary support for your well-being.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

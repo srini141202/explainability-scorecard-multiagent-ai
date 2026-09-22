@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_101",
+  "claim": {
+    "claim_id": "CLAIM_101",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Immunizations",
+  "criteria_check": "Let's evaluate the patient's claim against each criterion in the policy:\n\n1. CRITERION: Patient must be receiving a vaccination or inoculation directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention, Influenza vaccination | MET: NO\n2. CRITERION: Preventive immunizations are not covered except for pneumococcal, hepatitis B, and influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n3. CRITERION: Specific coverage criteria for each immunization | PATIENT: Influenza vaccination | MET: YES (since influenza vaccination is one of the exceptions for preventive immunizations)\n4. CRITERION: Post-exposure immunizations for tetanus, diphtheria, hepatitis A, and rabies | PATIENT: Not applicable (seasonal flu prevention) | MET: NO\n5. CRITERION: Coverage for drug wastage | PATIENT: Not applicable (no information about drug wastage) | MET: N/A\n6. CRITERION: Coverage information for vaccinations for Influenza, pneumococcal pneumonia, and hepatitis B | PATIENT: Influenza vaccination | MET: YES\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient's claim for an influenza vaccination meets the policy's criteria for preventive immunizations, specifically as an exception for influenza virus vaccines.",
+  "explanation": "We have reviewed your insurance claim for a seasonal flu vaccination. According to our Immunizations policy, we are pleased to inform you that your claim has been approved. This decision was made because the flu vaccine is considered a preventive measure, which is covered under our policy. As stated in the Immunizations policy, you are eligible for this vaccination as a way to help prevent the flu.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T23:20:53.806755",
+      "input": "Influenza vaccination coverage Seasonal flu prevention patient age 67",
+      "output": "Immunizations",
+      "reasoning": "Searched vector store for: Influenza vaccination coverage Seasonal flu prevention patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T23:20:54.662351",
+      "input": "Policy: Immunizations, Patient age: 67, Procedure: Influenza vaccination",
+      "output": "Let's evaluate the patient's claim against each criterion in the policy:\n\n1. CRITERION: Patient must be receiving a vaccination or inoculation directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention, Influenza vaccination | MET: NO\n2. CRITERION: Preventive immunizations are not covered except for pneumococcal, hepatitis B, and influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n3. CRITERION: Specific coverage criteria for each immunization | PATIENT: Influenza vaccination | MET: YES (since influenza vaccination is one of the exceptions for preventive immunizations)\n4. CRITERION: Post-exposure immunizations for tetanus, diphtheria, hepatitis A, and rabies | PATIENT: Not applicable (seasonal flu prevention) | MET: NO\n5. CRITERION: Coverage for drug wastage | PATIENT: Not applicable (no information about drug wastage) | MET: N/A\n6. CRITERION: Coverage information for vaccinations for Influenza, pneumococcal pneumonia, and hepatitis B | PATIENT: Influenza vaccination | MET: YES\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T23:20:54.893116",
+      "input": "Let's evaluate the patient's claim against each criterion in the policy:\n\n1. CRITERION: Patient must be receiving a vaccination or inoculation directly related to the treatment of an injury or direct ",
+      "output": "DECISION: APPROVE\nREASON: The patient's claim for an influenza vaccination meets the policy's criteria for preventive immunizations, specifically as an exception for influenza virus vaccines.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T23:20:55.280749",
+      "input": "DECISION: APPROVE\nREASON: The patient's claim for an influenza vaccination meets the policy's criteria for preventive immunizations, specifically as an exception for influenza virus vaccines.",
+      "output": "We have reviewed your insurance claim for a seasonal flu vaccination. According to our Immunizations policy, we are pleased to inform you that your claim has been approved. This decision was made because the flu vaccine is considered a preventive measure, which is covered under our policy. As stated in the Immunizations policy, you are eligible for this vaccination as a way to help prevent the flu.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "DV004",
+  "claim": {
+    "claim_id": "DV004",
+    "age": 25,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  "system": "Autonomous",
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum requirements for a screening mammogram | PATIENT: Routine breast cancer screening | MET: NO (patient does not meet age requirement)\nCRITERION: FDA-certified mammography center | PATIENT: Not specified | MET: NO (information not provided)\nCRITERION: Physician's referral for screening mammography | PATIENT: Not specified | MET: NO (information not provided, but not required for screening)\nCRITERION: Diagnostic mammography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have signs or symptoms of breast disease)\nCRITERION: Breast sonography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have conditions that require breast sonography)\nCRITERION: Breast MRI requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have conditions that require breast MRI)\nCRITERION: Ductography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have abnormal nipple discharge)\nCRITERION: Limitations on screening mammography | PATIENT: 25 | MET: NO (patient is under 35 and does not meet the age requirement)\nCRITERION: Limitations on diagnostic mammography | PATIENT: Routine breast cancer screening | MET: NO (patient does not have signs or symptoms of breast disease)\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient is 25 years old and does not meet the age requirement for screening mammography, which is a necessary criterion for eligibility.",
+  "explanation": "We have reviewed your insurance claim for a mammography screening, and unfortunately, it has been denied. According to our Breast Imaging policy, routine breast cancer screenings are only covered for patients who meet certain age requirements. Since you are 25 years old, you do not meet this requirement, which is why your claim was denied. We understand this may be disappointing, and we're here to answer any questions you may have about our Breast Imaging policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-08-10T02:35:46.285776",
+      "input": "Mammography screening coverage Routine breast cancer screening patient age 25",
+      "output": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+      "reasoning": "Searched vector store for: Mammography screening coverage Routine breast cancer screening patient age 25"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-08-10T02:35:47.471284",
+      "input": "Policy: Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography, Patient age: 25, Procedure: Mammography screening",
+      "output": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum requirements for a screening mammogram | PATIENT: Routine breast cancer screening | MET: NO (patient does not meet age requirement)\nCRITERION: FDA-certified mammography center | PATIENT: Not specified | MET: NO (information not provided)\nCRITERION: Physician's referral for screening mammography | PATIENT: Not specified | MET: NO (information not provided, but not required for screening)\nCRITERION: Diagnostic mammography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have signs or symptoms of breast disease)\nCRITERION: Breast sonography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have conditions that require breast sonography)\nCRITERION: Breast MRI requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have conditions that require breast MRI)\nCRITERION: Ductography requirements | PATIENT: Routine breast cancer screening | MET: NO (patient does not have abnormal nipple discharge)\nCRITERION: Limitations on screening mammography | PATIENT: 25 | MET: NO (patient is under 35 and does not meet the age requirement)\nCRITERION: Limitations on diagnostic mammography | PATIENT: Routine breast cancer screening | MET: NO (patient does not have signs or symptoms of breast disease)\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-08-10T02:35:47.673255",
+      "input": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum requirements for a screeni",
+      "output": "DECISION: DENY\nREASON: The patient is 25 years old and does not meet the age requirement for screening mammography, which is a necessary criterion for eligibility.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-08-10T02:35:48.184328",
+      "input": "DECISION: DENY\nREASON: The patient is 25 years old and does not meet the age requirement for screening mammography, which is a necessary criterion for eligibility.",
+      "output": "We have reviewed your insurance claim for a mammography screening, and unfortunately, it has been denied. According to our Breast Imaging policy, routine breast cancer screenings are only covered for patients who meet certain age requirements. Since you are 25 years old, you do not meet this requirement, which is why your claim was denied. We understand this may be disappointing, and we're here to answer any questions you may have about our Breast Imaging policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

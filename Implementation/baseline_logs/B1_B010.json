@@ -1,0 +1,17 @@
+{
+  "claim_id": "B010",
+  "claim": {
+    "claim_id": "B010",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE\nReason: Mental health counselling is a covered benefit for the diagnosis of depression and anxiety disorder, and the patient's age and gender do not affect the coverage of this procedure.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE\nReason: Mental health counselling is a covered benefit for the diagnosis of depression and anxiety disorder, and the patient's age and gender do not affect the coverage of this procedure."
+}

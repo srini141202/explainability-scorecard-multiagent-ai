@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_043",
+  "claim": {
+    "claim_id": "CLAIM_043",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, and disability | PATIENT: No information provided on impairments, activity limitations, and disability | MET: NO\n\nCRITERION: The patient's health status, including functioning, physical illness, and mental well-being, must be considered | PATIENT: No information provided on health status | MET: NO\n\nCRITERION: The patient must have a prognosis of 6 months or less if the illness runs its normal course | PATIENT: No information provided on prognosis | MET: NO\n\nCRITERION: The patient must have documentation of sufficient clinical information to support the certification of a terminal illness | PATIENT: No information provided on clinical documentation | MET: NO\n\nCRITERION: The patient's care plan may be impacted by relevant secondary and/or comorbid conditions | PATIENT: No information provided on secondary or comorbid conditions | MET: NO\n\nCRITERION: The combined effects of the primary cardiopulmonary condition and any identified secondary or comorbid conditions must be such that most beneficiaries with the identified impairments would have a prognosis of 6 months or less | PATIENT: No information provided on secondary or comorbid conditions or prognosis | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient's application lacks necessary information on impairments, activity limitations, health status, prognosis, and clinical documentation to support eligibility for Medicare claims.",
+  "explanation": "We've reviewed your insurance claim for cardiac rehabilitation for your chronic heart condition. Unfortunately, we are unable to approve your claim at this time due to a lack of necessary information. According to our Hospice Cardiopulmonary Conditions policy, we need more details about your condition and how it affects your daily life to support your claim. We will need you to provide additional documentation to help us make a more informed decision.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:36:52.832626",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 36",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 36"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:36:53.883693",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 36, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, and disability | PATIENT: No information provided on impairments, activity limitations, and disability | MET: NO\n\nCRITERION: The patient's health status, including functioning, physical illness, and mental well-being, must be considered | PATIENT: No information provided on health status | MET: NO\n\nCRITERION: The patient must have a prognosis of 6 months or less if the illness runs its normal course | PATIENT: No information provided on prognosis | MET: NO\n\nCRITERION: The patient must have documentation of sufficient clinical information to support the certification of a terminal illness | PATIENT: No information provided on clinical documentation | MET: NO\n\nCRITERION: The patient's care plan may be impacted by relevant secondary and/or comorbid conditions | PATIENT: No information provided on secondary or comorbid conditions | MET: NO\n\nCRITERION: The combined effects of the primary cardiopulmonary condition and any identified secondary or comorbid conditions must be such that most beneficiaries with the identified impairments would have a prognosis of 6 months or less | PATIENT: No information provided on secondary or comorbid conditions or prognosis | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:36:54.161425",
+      "input": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, ",
+      "output": "DECISION: DENY\nREASON: The patient's application lacks necessary information on impairments, activity limitations, health status, prognosis, and clinical documentation to support eligibility for Medicare claims.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:36:54.599217",
+      "input": "DECISION: DENY\nREASON: The patient's application lacks necessary information on impairments, activity limitations, health status, prognosis, and clinical documentation to support eligibility for Medicare claims.",
+      "output": "We've reviewed your insurance claim for cardiac rehabilitation for your chronic heart condition. Unfortunately, we are unable to approve your claim at this time due to a lack of necessary information. According to our Hospice Cardiopulmonary Conditions policy, we need more details about your condition and how it affects your daily life to support your claim. We will need you to provide additional documentation to help us make a more informed decision.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

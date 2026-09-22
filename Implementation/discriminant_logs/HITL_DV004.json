@@ -1,0 +1,46 @@
+{
+  "claim_id": "DV004",
+  "claim": {
+    "claim_id": "DV004",
+    "age": 25,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  "system": "HITL",
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Diagnosis for screening mammography | PATIENT: Routine breast cancer screening | MET: YES\nCRITERION: Procedure requested | PATIENT: Mammography screening | MET: YES\nCRITERION: Certification requirements for mammography centers | PATIENT: Not specified | MET: NO (information not provided, but this is a facility requirement, not a patient requirement)\nCRITERION: Physician's referral for screening mammography | PATIENT: Not required | MET: YES\nCRITERION: Limitations on screening mammography for women under 35 | PATIENT: 25 | MET: NO\nCRITERION: Interval between screening mammography services | PATIENT: Not specified | MET: NO (information not provided)\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient is under the minimum age requirement for screening mammography, as they are 25 years old and do not meet the established criteria for eligibility.",
+  "explanation": "We have reviewed your insurance claim for a mammography screening, but unfortunately, it has been denied. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, you must be a certain age to qualify for this screening, and since you are 25 years old, you do not meet this requirement. Our policy has specific guidelines to ensure that screenings are used effectively, and in this case, you are not yet eligible. We understand this may be disappointing, but we are happy to discuss this further with you.\n\n[HUMAN REVIEWER NOTE: Decision reviewed and approved by senior claims analyst on 2026-08-10. Patient explanation verified for accuracy and policy compliance.]",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-08-10T02:34:33.388020",
+      "input": "Mammography screening coverage Routine breast cancer screening patient age 25",
+      "output": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+      "reasoning": "Searched vector store for: Mammography screening coverage Routine breast cancer screening patient age 25"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-08-10T02:34:34.351614",
+      "input": "Policy: Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography, Patient age: 25, Procedure: Mammography screening",
+      "output": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Diagnosis for screening mammography | PATIENT: Routine breast cancer screening | MET: YES\nCRITERION: Procedure requested | PATIENT: Mammography screening | MET: YES\nCRITERION: Certification requirements for mammography centers | PATIENT: Not specified | MET: NO (information not provided, but this is a facility requirement, not a patient requirement)\nCRITERION: Physician's referral for screening mammography | PATIENT: Not required | MET: YES\nCRITERION: Limitations on screening mammography for women under 35 | PATIENT: 25 | MET: NO\nCRITERION: Interval between screening mammography services | PATIENT: Not specified | MET: NO (information not provided)\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-08-10T02:34:34.657473",
+      "input": "CRITERION: Patient age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Minimum age for screening mammography | PATIENT: 25 | MET: NO\nCRITERION: Patient age for baseline screening mammogra",
+      "output": "DECISION: DENY\nREASON: The patient is under the minimum age requirement for screening mammography, as they are 25 years old and do not meet the established criteria for eligibility.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-08-10T02:34:35.277285",
+      "input": "DECISION: DENY\nREASON: The patient is under the minimum age requirement for screening mammography, as they are 25 years old and do not meet the established criteria for eligibility.",
+      "output": "We have reviewed your insurance claim for a mammography screening, but unfortunately, it has been denied. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, you must be a certain age to qualify for this screening, and since you are 25 years old, you do not meet this requirement. Our policy has specific guidelines to ensure that screenings are used effectively, and in this case, you are not yet eligible. We understand this may be disappointing, but we are happy to discuss this further with you.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

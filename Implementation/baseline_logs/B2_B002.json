@@ -1,0 +1,25 @@
+{
+  "claim_id": "B002",
+  "claim": {
+    "claim_id": "B002",
+    "age": 25,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**DECISION: DENY**\n\n**EXPLANATION:** The patient is 25 years old, and according to the standard guidelines for breast cancer screening, mammography screening is typically recommended for women starting at age 40. Since the patient is under the recommended age for routine breast cancer screening, the mammography screening procedure is not covered under this policy.\n\n**REASON FOR DENIAL:** Patient age is below the recommended age for routine breast cancer screening.\n\n**NEXT STEPS:** If the patient has a family history of breast cancer, genetic predisposition, or other high-risk factors, a prior authorization may be considered. Otherwise, the patient should wait until she reaches the recommended age for routine breast cancer screening to undergo mammography screening.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:41:32.660723",
+      "input": "Mammography screening Routine breast cancer screening",
+      "output": "**DECISION: DENY**\n\n**EXPLANATION:** The patient is 25 years old, and according to the standard guid",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "",
+  "explanation": "**DECISION: DENY**\n\n**EXPLANATION:** The patient is 25 years old, and according to the standard guidelines for breast cancer screening, mammography screening is typically recommended for women starting at age 40. Since the patient is under the recommended age for routine breast cancer screening, the mammography screening procedure is not covered under this policy.\n\n**REASON FOR DENIAL:** Patient age is below the recommended age for routine breast cancer screening.\n\n**NEXT STEPS:** If the patient has a family history of breast cancer, genetic predisposition, or other high-risk factors, a prior authorization may be considered. Otherwise, the patient should wait until she reaches the recommended age for routine breast cancer screening to undergo mammography screening."
+}

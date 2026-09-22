@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_025",
+  "claim": {
+    "claim_id": "CLAIM_025",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Epidural Steroid Injections for Pain Management",
+  "criteria_check": "CRITERION: Patient must have a history, physical examination, and concordant radiological image-based diagnostic testing | PATIENT: Lower back pain, no radiological image-based diagnostic testing results provided | MET: NO\n\nCRITERION: Patient must have one of the following: Lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis; Post-laminectomy syndrome; Acute herpes zoster associated pain | PATIENT: Lower back pain, no specific diagnosis provided | MET: NO\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication must be severe enough to greatly impact quality of life or function | PATIENT: No information provided about the severity of the pain or its impact on quality of life | MET: NO\n\nCRITERION: Pain duration of at least 4 weeks, and the inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: No information provided about the duration of the pain or response to noninvasive conservative care | MET: NO\n\nCRITERION: The procedure must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast, unless the patient has a documented contrast allergy or pregnancy | PATIENT: Procedure requested is physical therapy, not an epidural steroid injection | MET: NO\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which may be part of a rehabilitation program, but no information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The policy provided is for epidural steroid injections, but the patient is requesting physical therapy. The criteria in the policy do not apply to physical therapy, so the patient is not eligible according to this policy. However, Medicare may have a separate policy for physical therapy, which would need to be consulted to determine eligibility.",
+  "decision": "DECISION: DENY\nREASON: The patient is requesting physical therapy, which does not align with the policy criteria for epidural steroid injections, and no information is provided to determine eligibility under a separate physical therapy policy.",
+  "explanation": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve your claim because it does not meet the requirements of our Epidural Steroid Injections for Pain Management policy. This policy is specifically for a different type of treatment, and we don't have enough information to consider your claim under a separate policy for physical therapy. We will need more information to review your claim again.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:16:57.763875",
+      "input": "Physical therapy coverage Lower back pain patient age 57",
+      "output": "Epidural Steroid Injections for Pain Management",
+      "reasoning": "Searched vector store for: Physical therapy coverage Lower back pain patient age 57"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:17:00.143590",
+      "input": "Policy: Epidural Steroid Injections for Pain Management, Patient age: 57, Procedure: Physical therapy",
+      "output": "CRITERION: Patient must have a history, physical examination, and concordant radiological image-based diagnostic testing | PATIENT: Lower back pain, no radiological image-based diagnostic testing results provided | MET: NO\n\nCRITERION: Patient must have one of the following: Lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis; Post-laminectomy syndrome; Acute herpes zoster associated pain | PATIENT: Lower back pain, no specific diagnosis provided | MET: NO\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication must be severe enough to greatly impact quality of life or function | PATIENT: No information provided about the severity of the pain or its impact on quality of life | MET: NO\n\nCRITERION: Pain duration of at least 4 weeks, and the inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: No information provided about the duration of the pain or response to noninvasive conservative care | MET: NO\n\nCRITERION: The procedure must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast, unless the patient has a documented contrast allergy or pregnancy | PATIENT: Procedure requested is physical therapy, not an epidural steroid injection | MET: NO\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which may be part of a rehabilitation program, but no information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The policy provided is for epidural steroid injections, but the patient is requesting physical therapy. The criteria in the policy do not apply to physical therapy, so the patient is not eligible according to this policy. However, Medicare may have a separate policy for physical therapy, which would need to be consulted to determine eligibility.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:17:01.472840",
+      "input": "CRITERION: Patient must have a history, physical examination, and concordant radiological image-based diagnostic testing | PATIENT: Lower back pain, no radiological image-based diagnostic testing resu",
+      "output": "DECISION: DENY\nREASON: The patient is requesting physical therapy, which does not align with the policy criteria for epidural steroid injections, and no information is provided to determine eligibility under a separate physical therapy policy.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:17:01.957780",
+      "input": "DECISION: DENY\nREASON: The patient is requesting physical therapy, which does not align with the policy criteria for epidural steroid injections, and no information is provided to determine eligibility under a separate physical therapy policy.",
+      "output": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve your claim because it does not meet the requirements of our Epidural Steroid Injections for Pain Management policy. This policy is specifically for a different type of treatment, and we don't have enough information to consider your claim under a separate policy for physical therapy. We will need more information to review your claim again.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

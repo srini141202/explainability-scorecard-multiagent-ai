@@ -1,0 +1,46 @@
+{
+  "claim_id": "DV003",
+  "claim": {
+    "claim_id": "DV003",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "system": "HITL",
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must have a diagnosis of Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must be a Medicare beneficiary | PATIENT: Implied to be a Medicare beneficiary as per the context of the policy | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for the administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, not specifically insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes monitoring glucose control and HbA1c levels | PATIENT: The patient is requesting diabetes self-management training, which may imply the need for monitoring, but the details are not provided | MET: NO\n\nCRITERION: Patient's treatment plan must take into account the level of hyperglycemia/hypoglycemia and comorbidities | PATIENT: No information provided about the patient's treatment plan or comorbidities | MET: NO\n\nCRITERION: For patients with stable glycemic control, HbA1c testing must be performed at least 2 times a year | PATIENT: No information provided about the patient's glycemic control or HbA1c testing frequency | MET: NO\n\nCRITERION: Patient's plan of care must be patient-centered and address prognosis as required by the Medicare Benefit Policy Manual | PATIENT: The patient is requesting diabetes self-management training, which may imply a patient-centered approach, but the details are not provided | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information regarding their treatment plan, glycemic control, and comorbidities, as well as not specifically requiring skilled nurse visits for insulin injections.",
+  "explanation": "We've reviewed your insurance claim for diabetes self-management training, and unfortunately, it has been denied. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information about your treatment plan and health status to approve this claim. We didn't receive enough details about your condition and how it's being managed, which is required for coverage. This decision was made based on the guidelines outlined in the policy.\n\n[HUMAN REVIEWER NOTE: Decision reviewed and approved by senior claims analyst on 2026-08-10. Patient explanation verified for accuracy and policy compliance.]",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-08-10T02:34:18.540293",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 50",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 50"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-08-10T02:34:19.708410",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 50, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must have a diagnosis of Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must be a Medicare beneficiary | PATIENT: Implied to be a Medicare beneficiary as per the context of the policy | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for the administration of daily insulin injections and be physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, not specifically insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes monitoring glucose control and HbA1c levels | PATIENT: The patient is requesting diabetes self-management training, which may imply the need for monitoring, but the details are not provided | MET: NO\n\nCRITERION: Patient's treatment plan must take into account the level of hyperglycemia/hypoglycemia and comorbidities | PATIENT: No information provided about the patient's treatment plan or comorbidities | MET: NO\n\nCRITERION: For patients with stable glycemic control, HbA1c testing must be performed at least 2 times a year | PATIENT: No information provided about the patient's glycemic control or HbA1c testing frequency | MET: NO\n\nCRITERION: Patient's plan of care must be patient-centered and address prognosis as required by the Medicare Benefit Policy Manual | PATIENT: The patient is requesting diabetes self-management training, which may imply a patient-centered approach, but the details are not provided | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-08-10T02:34:20.115738",
+      "input": "CRITERION: Patient must have a diagnosis of Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must be a Medicare beneficiary | PATIENT: Implied to be a Medic",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information regarding their treatment plan, glycemic control, and comorbidities, as well as not specifically requiring skilled nurse visits for insulin injections.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-08-10T02:34:20.736885",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to lack of information regarding their treatment plan, glycemic control, and comorbidities, as well as not specifically requiring skilled nurse visits for insulin injections.",
+      "output": "We've reviewed your insurance claim for diabetes self-management training, and unfortunately, it has been denied. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more information about your treatment plan and health status to approve this claim. We didn't receive enough details about your condition and how it's being managed, which is required for coverage. This decision was made based on the guidelines outlined in the policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

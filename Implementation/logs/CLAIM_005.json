@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_005",
+  "claim": {
+    "claim_id": "CLAIM_005",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Epidural Steroid Injections for Pain Management",
+  "criteria_check": "CRITERION: Age is not explicitly mentioned as a criterion in the policy, but it may be relevant for certain conditions or procedures | PATIENT: 23 years old | MET: YES (since age is not a direct criterion for ESI, but the patient's age may influence other factors such as the presence of certain conditions)\n\nCRITERION: Diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO (the patient's diagnosis is not explicitly mentioned as meeting this criterion)\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication is severe enough to greatly impact quality of life or function | PATIENT: No information provided about the severity of the pain or its impact on quality of life | MET: NO (insufficient information)\n\nCRITERION: Pain duration of at least 4 weeks | PATIENT: No information provided about the duration of the pain | MET: NO (insufficient information)\n\nCRITERION: Inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a form of noninvasive conservative care | MET: NO (the patient is requesting physical therapy, which is a conservative treatment)\n\nCRITERION: ESI must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not ESI | MET: N/A (not applicable, as the patient is not requesting ESI)\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which may be part of a rehabilitation program | MET: YES (physical therapy can be part of a rehabilitation program)\n\nCRITERION: Provider qualifications and training | PATIENT: No information provided about the provider | MET: NO (insufficient information)\n\nSince the patient is requesting physical therapy and not ESI, many of the criteria do not apply. However, based on the information provided, the patient does not meet the criteria for ESI.\n\nOVERALL: NOT ELIGIBLE (for ESI, but may be eligible for physical therapy or other conservative treatments)",
+  "decision": "DECISION: DENY\nREASON: The patient is requesting physical therapy and does not meet the criteria for epidural steroid injections (ESI), as the diagnosis and other requirements specific to ESI are not met.",
+  "explanation": "We've made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve your claim because it doesn't meet the requirements outlined in our Epidural Steroid Injections for Pain Management policy. This policy is specifically for a different type of treatment, and your current request for physical therapy doesn't fit the criteria. We understand this may be disappointing, and we're happy to help you explore other options for managing your back pain.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:06:00.327801",
+      "input": "Physical therapy coverage Lower back pain patient age 23",
+      "output": "Epidural Steroid Injections for Pain Management",
+      "reasoning": "Searched vector store for: Physical therapy coverage Lower back pain patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:06:02.923037",
+      "input": "Policy: Epidural Steroid Injections for Pain Management, Patient age: 23, Procedure: Physical therapy",
+      "output": "CRITERION: Age is not explicitly mentioned as a criterion in the policy, but it may be relevant for certain conditions or procedures | PATIENT: 23 years old | MET: YES (since age is not a direct criterion for ESI, but the patient's age may influence other factors such as the presence of certain conditions)\n\nCRITERION: Diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO (the patient's diagnosis is not explicitly mentioned as meeting this criterion)\n\nCRITERION: Radiculopathy, radicular pain and/or neurogenic claudication is severe enough to greatly impact quality of life or function | PATIENT: No information provided about the severity of the pain or its impact on quality of life | MET: NO (insufficient information)\n\nCRITERION: Pain duration of at least 4 weeks | PATIENT: No information provided about the duration of the pain | MET: NO (insufficient information)\n\nCRITERION: Inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a form of noninvasive conservative care | MET: NO (the patient is requesting physical therapy, which is a conservative treatment)\n\nCRITERION: ESI must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not ESI | MET: N/A (not applicable, as the patient is not requesting ESI)\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which may be part of a rehabilitation program | MET: YES (physical therapy can be part of a rehabilitation program)\n\nCRITERION: Provider qualifications and training | PATIENT: No information provided about the provider | MET: NO (insufficient information)\n\nSince the patient is requesting physical therapy and not ESI, many of the criteria do not apply. However, based on the information provided, the patient does not meet the criteria for ESI.\n\nOVERALL: NOT ELIGIBLE (for ESI, but may be eligible for physical therapy or other conservative treatments)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:06:03.330599",
+      "input": "CRITERION: Age is not explicitly mentioned as a criterion in the policy, but it may be relevant for certain conditions or procedures | PATIENT: 23 years old | MET: YES (since age is not a direct crite",
+      "output": "DECISION: DENY\nREASON: The patient is requesting physical therapy and does not meet the criteria for epidural steroid injections (ESI), as the diagnosis and other requirements specific to ESI are not met.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:06:03.842655",
+      "input": "DECISION: DENY\nREASON: The patient is requesting physical therapy and does not meet the criteria for epidural steroid injections (ESI), as the diagnosis and other requirements specific to ESI are not met.",
+      "output": "We've made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve your claim because it doesn't meet the requirements outlined in our Epidural Steroid Injections for Pain Management policy. This policy is specifically for a different type of treatment, and your current request for physical therapy doesn't fit the criteria. We understand this may be disappointing, and we're happy to help you explore other options for managing your back pain.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

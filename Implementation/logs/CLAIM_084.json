@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_084",
+  "claim": {
+    "claim_id": "CLAIM_084",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient is a Medicare beneficiary | PATIENT: Implied, as the patient is being evaluated under a Medicare policy | MET: YES\n\nCRITERION: Patient requires skilled nurse visits for administration of daily insulin injections due to being physically or mentally unable to self-inject insulin | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has a plan of care that includes monitoring glucose control and HbA1c levels | PATIENT: Procedure requested is diabetes self-management training, which implies monitoring | MET: YES\n\nCRITERION: Patient has stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient is eligible for the Medicare Home Health benefit | PATIENT: Implied, as the patient is being evaluated under a Medicare Home Health policy | MET: YES\n\nCRITERION: Patient's treatment plan takes into account factors such as level of hyperglycemia/hypoglycemia and comorbidities | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient's plan of care includes evidence-based medicine to reduce risks of acute and chronic complications of diabetes | PATIENT: Procedure requested is diabetes self-management training, which is evidence-based | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to insufficient information regarding skilled nurse visits, stable glycemic control, and treatment plan)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and treatment plan, which are crucial criteria for approval.",
+  "explanation": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim at this time because we don't have enough information about your care plan. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more details about your nurse visits and treatment plan to determine if you are eligible. We will need to receive more information before we can reconsider your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:49:15.338871",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 100",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:49:16.767055",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 100, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient is a Medicare beneficiary | PATIENT: Implied, as the patient is being evaluated under a Medicare policy | MET: YES\n\nCRITERION: Patient requires skilled nurse visits for administration of daily insulin injections due to being physically or mentally unable to self-inject insulin | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient has a plan of care that includes monitoring glucose control and HbA1c levels | PATIENT: Procedure requested is diabetes self-management training, which implies monitoring | MET: YES\n\nCRITERION: Patient has stable glycemic control (defined as 2 consecutive HbA1c results meeting treatment goals) | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient is eligible for the Medicare Home Health benefit | PATIENT: Implied, as the patient is being evaluated under a Medicare Home Health policy | MET: YES\n\nCRITERION: Patient's treatment plan takes into account factors such as level of hyperglycemia/hypoglycemia and comorbidities | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Patient's plan of care includes evidence-based medicine to reduce risks of acute and chronic complications of diabetes | PATIENT: Procedure requested is diabetes self-management training, which is evidence-based | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to insufficient information regarding skilled nurse visits, stable glycemic control, and treatment plan)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:49:17.111180",
+      "input": "CRITERION: Patient has Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient is a Medicare beneficiary | PATIENT: Implied, as the patient is being evaluated unde",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and treatment plan, which are crucial criteria for approval.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:49:17.529754",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding skilled nurse visits, stable glycemic control, and treatment plan, which are crucial criteria for approval.",
+      "output": "We have made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim at this time because we don't have enough information about your care plan. According to our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy, we need more details about your nurse visits and treatment plan to determine if you are eligible. We will need to receive more information before we can reconsider your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

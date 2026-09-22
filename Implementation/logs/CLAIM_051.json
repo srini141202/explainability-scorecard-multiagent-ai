@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_051",
+  "claim": {
+    "claim_id": "CLAIM_051",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "CRITERION: Patient age must be 40 or over for annual screening mammography, or between 35-39 for a baseline screening mammography | PATIENT: 30 | MET: NO\n\nCRITERION: Screening mammography must be provided by a hospital, physician (in office or clinic), or independent diagnostic testing facility (IDTF) | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Screening mammography must include a minimum of two-view exposure (cranio-caudal and medio-lateral oblique view) of each breast | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Payment may not be made for screening mammography performed on a woman under age 35, except for a baseline screening | PATIENT: 30 | MET: NO\n\nCRITERION: A physician's referral is not required for a screening mammography | PATIENT: Not specified | MET: NO (information not provided, but this is not a requirement)\n\nCRITERION: The service must be furnished by a supplier that meets the certification requirements in 21 CFR Section 900.11 | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Medicare covers annual screening mammography for all women age 40 and over, and one baseline screening mammography for women between the ages of 35-39 | PATIENT: 30 | MET: NO\n\nCRITERION: A screening mammography is not subject to the Part B deductible and coinsurance does not apply | PATIENT: Not specified | MET: NO (information not provided, but this is a payment rule)\n\nCRITERION: Diagnostic mammography is indicated when there are signs or symptoms suggestive of malignancy, radiographic abnormalities, or other specific conditions | PATIENT: Routine breast cancer screening | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient is 30 years old, which is below the eligible age range for Medicare coverage of screening mammography, either as an annual screening for women 40 and over or as a baseline screening for women between 35-39.",
+  "explanation": "We've received a decision about your insurance claim for a mammography screening. Unfortunately, the claim was denied because you are 30 years old, which is below the age range covered by your insurance. According to the Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, routine breast cancer screenings are typically covered for women 40 and over. This means you don't meet the age requirement for this screening to be covered by your insurance.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:45:54.295889",
+      "input": "Mammography screening coverage Routine breast cancer screening patient age 30",
+      "output": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+      "reasoning": "Searched vector store for: Mammography screening coverage Routine breast cancer screening patient age 30"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:45:57.251107",
+      "input": "Policy: Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography, Patient age: 30, Procedure: Mammography screening",
+      "output": "CRITERION: Patient age must be 40 or over for annual screening mammography, or between 35-39 for a baseline screening mammography | PATIENT: 30 | MET: NO\n\nCRITERION: Screening mammography must be provided by a hospital, physician (in office or clinic), or independent diagnostic testing facility (IDTF) | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Screening mammography must include a minimum of two-view exposure (cranio-caudal and medio-lateral oblique view) of each breast | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Payment may not be made for screening mammography performed on a woman under age 35, except for a baseline screening | PATIENT: 30 | MET: NO\n\nCRITERION: A physician's referral is not required for a screening mammography | PATIENT: Not specified | MET: NO (information not provided, but this is not a requirement)\n\nCRITERION: The service must be furnished by a supplier that meets the certification requirements in 21 CFR Section 900.11 | PATIENT: Not specified | MET: NO (information not provided)\n\nCRITERION: Medicare covers annual screening mammography for all women age 40 and over, and one baseline screening mammography for women between the ages of 35-39 | PATIENT: 30 | MET: NO\n\nCRITERION: A screening mammography is not subject to the Part B deductible and coinsurance does not apply | PATIENT: Not specified | MET: NO (information not provided, but this is a payment rule)\n\nCRITERION: Diagnostic mammography is indicated when there are signs or symptoms suggestive of malignancy, radiographic abnormalities, or other specific conditions | PATIENT: Routine breast cancer screening | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:45:59.739099",
+      "input": "CRITERION: Patient age must be 40 or over for annual screening mammography, or between 35-39 for a baseline screening mammography | PATIENT: 30 | MET: NO\n\nCRITERION: Screening mammography must be prov",
+      "output": "DECISION: DENY\nREASON: The patient is 30 years old, which is below the eligible age range for Medicare coverage of screening mammography, either as an annual screening for women 40 and over or as a baseline screening for women between 35-39.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:46:01.428222",
+      "input": "DECISION: DENY\nREASON: The patient is 30 years old, which is below the eligible age range for Medicare coverage of screening mammography, either as an annual screening for women 40 and over or as a baseline screening for women between 35-39.",
+      "output": "We've received a decision about your insurance claim for a mammography screening. Unfortunately, the claim was denied because you are 30 years old, which is below the age range covered by your insurance. According to the Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, routine breast cancer screenings are typically covered for women 40 and over. This means you don't meet the age requirement for this screening to be covered by your insurance.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

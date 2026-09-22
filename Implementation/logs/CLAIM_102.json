@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_102",
+  "claim": {
+    "claim_id": "CLAIM_102",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Depression and anxiety disorder",
+    "procedure": "Mental health counselling",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Outpatient Psychiatry and Psychology Services",
+  "criteria_check": "CRITERION: Patient must be 65 or older or have a disability | PATIENT: 67 years old | MET: YES\n\nCRITERION: Patient must have a diagnosis of a mental disorder or disease | PATIENT: Depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Services must be reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be provided by an approved provider of service (e.g. physician, clinical psychologist, clinical social worker) | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Services must not be excluded from coverage (e.g. day care programs, vocational training, biofeedback training) | PATIENT: Mental health counselling | MET: YES\n\nCRITERION: Services must meet the frequency and duration requirements | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must not have severe or profound mental retardation | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must have the capacity to recall the therapeutic encounter from one session to another (for patients with dementia) | PATIENT: No dementia mentioned | MET: YES\n\nOVERALL: ELIGIBLE (based on available information, but additional information is needed to fully determine eligibility)",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for Medicare coverage of mental health counselling services cannot be fully determined due to lack of information regarding the provider, treatment plan, and other necessary criteria.",
+  "explanation": "We've reviewed your insurance claim for mental health counselling for Depression and anxiety disorder. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider and treatment plan to make a decision. This is why we're requiring prior authorization to ensure you're eligible for coverage. We'll work with you to gather the necessary details so we can move forward with your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:22:36.818557",
+      "input": "Mental health counselling coverage Depression and anxiety disorder patient age 67",
+      "output": "Outpatient Psychiatry and Psychology Services",
+      "reasoning": "Searched vector store for: Mental health counselling coverage Depression and anxiety disorder patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:22:38.609648",
+      "input": "Policy: Outpatient Psychiatry and Psychology Services, Patient age: 67, Procedure: Mental health counselling",
+      "output": "CRITERION: Patient must be 65 or older or have a disability | PATIENT: 67 years old | MET: YES\n\nCRITERION: Patient must have a diagnosis of a mental disorder or disease | PATIENT: Depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be prescribed by a physician and provided under an individualized written plan of treatment | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Services must be reasonable and necessary for the diagnosis or treatment of the patient's condition | PATIENT: Mental health counselling for depression and anxiety disorder | MET: YES\n\nCRITERION: Services must be provided by an approved provider of service (e.g. physician, clinical psychologist, clinical social worker) | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must have a reasonable expectation of improvement | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Services must not be excluded from coverage (e.g. day care programs, vocational training, biofeedback training) | PATIENT: Mental health counselling | MET: YES\n\nCRITERION: Services must meet the frequency and duration requirements | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must not have severe or profound mental retardation | PATIENT: No information provided | MET: NO (information not available)\n\nCRITERION: Patient must have the capacity to recall the therapeutic encounter from one session to another (for patients with dementia) | PATIENT: No dementia mentioned | MET: YES\n\nOVERALL: ELIGIBLE (based on available information, but additional information is needed to fully determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:22:38.907453",
+      "input": "CRITERION: Patient must be 65 or older or have a disability | PATIENT: 67 years old | MET: YES\n\nCRITERION: Patient must have a diagnosis of a mental disorder or disease | PATIENT: Depression and anxie",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for Medicare coverage of mental health counselling services cannot be fully determined due to lack of information regarding the provider, treatment plan, and other necessary criteria.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:22:39.243958",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for Medicare coverage of mental health counselling services cannot be fully determined due to lack of information regarding the provider, treatment plan, and other necessary criteria.",
+      "output": "We've reviewed your insurance claim for mental health counselling for Depression and anxiety disorder. According to our Outpatient Psychiatry and Psychology Services policy, we need more information about your provider and treatment plan to make a decision. This is why we're requiring prior authorization to ensure you're eligible for coverage. We'll work with you to gather the necessary details so we can move forward with your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

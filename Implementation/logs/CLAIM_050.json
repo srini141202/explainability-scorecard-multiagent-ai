@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_050",
+  "claim": {
+    "claim_id": "CLAIM_050",
+    "patient_id": "5c9e07c7-1634-5702-a514-8ee8e12323ce",
+    "age": 36,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Age is not explicitly stated as a criterion, but the policy applies to patients with end-stage renal disease | PATIENT: 36 years old | MET: YES (since age is not a limiting factor)\n\nCRITERION: Diagnosis of a condition that may require hemodialysis | PATIENT: End-stage renal disease | MET: YES\n\nCRITERION: Hemodialysis sessions are limited to 3 sessions per week unless medically justified | PATIENT: No information provided on the number of sessions requested, assuming it's more than 3 | MET: NO (without additional medical justification)\n\nCRITERION: Covered indications for additional sessions include metabolic conditions, fluid positive status, pregnancy, heart failure, pericarditis, or incomplete dialysis | PATIENT: End-stage renal disease (no specific indication listed) | MET: NO (no specific indication listed, but end-stage renal disease may require additional sessions)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week must be fully supported in the medical documentation | PATIENT: No information provided on medical documentation | MET: NO (without medical documentation)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on planned dialysis | MET: YES (assuming planned dialysis is adequate)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on reason for sessions | MET: YES (assuming sessions are not performed for convenience)\n\nCRITERION: Medical documentation requirements must be met | PATIENT: No information provided on medical documentation | MET: NO (without medical documentation)\n\nOVERALL: NOT ELIGIBLE (due to lack of information on medical justification, number of sessions, and medical documentation)",
+  "decision": "DECISION: DENY\nREASON: The patient's request for hemodialysis sessions is denied due to lack of information on medical justification, number of sessions, and medical documentation.",
+  "explanation": "We have made a decision about your insurance claim for kidney dialysis treatment. Unfortunately, we are unable to approve your claim at this time due to missing information. According to our \"Frequency of Hemodialysis\" policy, we need more details about your treatment plan and medical records to support your request. We will be happy to reconsider your claim once we receive the necessary information.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:38:03.800645",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 36",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 36"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:38:05.584620",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 36, Procedure: Kidney dialysis",
+      "output": "CRITERION: Age is not explicitly stated as a criterion, but the policy applies to patients with end-stage renal disease | PATIENT: 36 years old | MET: YES (since age is not a limiting factor)\n\nCRITERION: Diagnosis of a condition that may require hemodialysis | PATIENT: End-stage renal disease | MET: YES\n\nCRITERION: Hemodialysis sessions are limited to 3 sessions per week unless medically justified | PATIENT: No information provided on the number of sessions requested, assuming it's more than 3 | MET: NO (without additional medical justification)\n\nCRITERION: Covered indications for additional sessions include metabolic conditions, fluid positive status, pregnancy, heart failure, pericarditis, or incomplete dialysis | PATIENT: End-stage renal disease (no specific indication listed) | MET: NO (no specific indication listed, but end-stage renal disease may require additional sessions)\n\nCRITERION: Sessions furnished in excess of 3 sessions per week must be fully supported in the medical documentation | PATIENT: No information provided on medical documentation | MET: NO (without medical documentation)\n\nCRITERION: Planned inadequate or short dialysis is not considered reasonable and necessary | PATIENT: No information provided on planned dialysis | MET: YES (assuming planned dialysis is adequate)\n\nCRITERION: Sessions performed for convenience of patient or staff are not considered reasonable and necessary | PATIENT: No information provided on reason for sessions | MET: YES (assuming sessions are not performed for convenience)\n\nCRITERION: Medical documentation requirements must be met | PATIENT: No information provided on medical documentation | MET: NO (without medical documentation)\n\nOVERALL: NOT ELIGIBLE (due to lack of information on medical justification, number of sessions, and medical documentation)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:38:06.903714",
+      "input": "CRITERION: Age is not explicitly stated as a criterion, but the policy applies to patients with end-stage renal disease | PATIENT: 36 years old | MET: YES (since age is not a limiting factor)\n\nCRITERI",
+      "output": "DECISION: DENY\nREASON: The patient's request for hemodialysis sessions is denied due to lack of information on medical justification, number of sessions, and medical documentation.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:38:08.374600",
+      "input": "DECISION: DENY\nREASON: The patient's request for hemodialysis sessions is denied due to lack of information on medical justification, number of sessions, and medical documentation.",
+      "output": "We have made a decision about your insurance claim for kidney dialysis treatment. Unfortunately, we are unable to approve your claim at this time due to missing information. According to our \"Frequency of Hemodialysis\" policy, we need more details about your treatment plan and medical records to support your request. We will be happy to reconsider your claim once we receive the necessary information.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

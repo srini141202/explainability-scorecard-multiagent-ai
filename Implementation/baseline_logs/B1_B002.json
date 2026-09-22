@@ -1,0 +1,17 @@
+{
+  "claim_id": "B002",
+  "claim": {
+    "claim_id": "B002",
+    "age": 25,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "DENY"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Routine breast cancer screening is a preventive service recommended for women starting at age 40, but some guidelines suggest starting at age 25 for high-risk individuals or as part of a routine checkup for those with a family history. However, since this is a screening and not a diagnostic test, and given the patient's age, it is likely considered a preventive measure, which is often covered under many health insurance plans without requiring prior authorization for this age group in certain cases or as per specific policy terms.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Routine breast cancer screening is a preventive service recommended for women starting at age 40, but some guidelines suggest starting at age 25 for high-risk individuals or as part of a routine checkup for those with a family history. However, since this is a screening and not a diagnostic test, and given the patient's age, it is likely considered a preventive measure, which is often covered under many health insurance plans without requiring prior authorization for this age group in certain cases or as per specific policy terms."
+}

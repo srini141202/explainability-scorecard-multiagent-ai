@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_004",
+  "claim": {
+    "claim_id": "CLAIM_004",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Pulmonary Stress Testing",
+  "criteria_check": "CRITERION: Evaluation of exercise tolerance | PATIENT: Chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Determination of functional impairment or capacity | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Determination of exercise-limiting factors and pathophysiologic mechanisms | PATIENT: Chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Evaluation of undiagnosed exercise intolerance | PATIENT: Already diagnosed with chronic heart failure | MET: NO\n\nCRITERION: Assessing contribution of cardiac and pulmonary etiology in coexisting disease | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Symptoms disproportionate to resting pulmonary and cardiac tests | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Unexplained dyspnea when initial cardiopulmonary testing is nondiagnostic | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Evaluation of patients with cardiovascular disease | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Functional evaluation and prognosis in patients with heart failure | PATIENT: Diagnosed with chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Selection for cardiac transplantation | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Exercise prescription and monitoring response to exercise training for cardiac rehabilitation | PATIENT: Requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Evaluation of patients with respiratory disease | PATIENT: No respiratory disease mentioned | MET: NO\n\nCRITERION: Absolute contraindications (list of conditions) | PATIENT: No information provided for most conditions, but patient is not mentioned to have any | MET: NO (insufficient information, but no obvious contraindication mentioned)\n\nCRITERION: Relative contraindications (list of conditions) | PATIENT: No information provided for most conditions, but patient is not mentioned to have any | MET: NO (insufficient information, but no obvious contraindication mentioned)\n\nCRITERION: Age | PATIENT: 23 years old | MET: YES (no age restriction mentioned)\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets the majority of the criteria, including evaluation of exercise tolerance, determination of functional impairment, and evaluation of patients with cardiovascular disease, making them eligible for cardiac rehabilitation.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation, and we are pleased to inform you that it has been approved. According to our Pulmonary Stress Testing policy, you meet the necessary criteria to participate in this program. This decision was made because you would benefit from a program that helps you improve your heart health and overall well-being. We are happy to support your care and look forward to helping you get started with cardiac rehabilitation.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:05:52.768159",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 23",
+      "output": "Pulmonary Stress Testing",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:05:53.944019",
+      "input": "Policy: Pulmonary Stress Testing, Patient age: 23, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Evaluation of exercise tolerance | PATIENT: Chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Determination of functional impairment or capacity | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Determination of exercise-limiting factors and pathophysiologic mechanisms | PATIENT: Chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Evaluation of undiagnosed exercise intolerance | PATIENT: Already diagnosed with chronic heart failure | MET: NO\n\nCRITERION: Assessing contribution of cardiac and pulmonary etiology in coexisting disease | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Symptoms disproportionate to resting pulmonary and cardiac tests | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Unexplained dyspnea when initial cardiopulmonary testing is nondiagnostic | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Evaluation of patients with cardiovascular disease | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Functional evaluation and prognosis in patients with heart failure | PATIENT: Diagnosed with chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Selection for cardiac transplantation | PATIENT: No information provided | MET: NO (insufficient information)\n\nCRITERION: Exercise prescription and monitoring response to exercise training for cardiac rehabilitation | PATIENT: Requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Evaluation of patients with respiratory disease | PATIENT: No respiratory disease mentioned | MET: NO\n\nCRITERION: Absolute contraindications (list of conditions) | PATIENT: No information provided for most conditions, but patient is not mentioned to have any | MET: NO (insufficient information, but no obvious contraindication mentioned)\n\nCRITERION: Relative contraindications (list of conditions) | PATIENT: No information provided for most conditions, but patient is not mentioned to have any | MET: NO (insufficient information, but no obvious contraindication mentioned)\n\nCRITERION: Age | PATIENT: 23 years old | MET: YES (no age restriction mentioned)\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:05:54.284463",
+      "input": "CRITERION: Evaluation of exercise tolerance | PATIENT: Chronic heart failure, requesting cardiac rehabilitation | MET: YES\n\nCRITERION: Determination of functional impairment or capacity | PATIENT: Chr",
+      "output": "DECISION: APPROVE\nREASON: The patient meets the majority of the criteria, including evaluation of exercise tolerance, determination of functional impairment, and evaluation of patients with cardiovascular disease, making them eligible for cardiac rehabilitation.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:05:54.732433",
+      "input": "DECISION: APPROVE\nREASON: The patient meets the majority of the criteria, including evaluation of exercise tolerance, determination of functional impairment, and evaluation of patients with cardiovascular disease, making them eligible for cardiac rehabilitation.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation, and we are pleased to inform you that it has been approved. According to our Pulmonary Stress Testing policy, you meet the necessary criteria to participate in this program. This decision was made because you would benefit from a program that helps you improve your heart health and overall well-being. We are happy to support your care and look forward to helping you get started with cardiac rehabilitation.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_103",
+  "claim": {
+    "claim_id": "CLAIM_103",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Male | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on number of sessions per week | MET: NO\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO\n\nCRITERION: Medical documentation supports the need for additional sessions | PATIENT: No information provided | MET: NO\n\nCRITERION: Use of KX modifier is appropriate | PATIENT: No information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's end-stage renal disease may be a valid reason for dialysis, but the policy requires more specific information about the patient's condition and the medical necessity of the treatment. Without additional information, the patient does not meet the criteria for eligibility.",
+  "decision": "DECISION: DENY\nREASON: The patient's end-stage renal disease alone is not sufficient to establish medical necessity for the treatment, as additional specific information about the patient's condition and the treatment is required to meet the eligibility criteria.",
+  "explanation": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we need more specific information about your condition and treatment to decide if it's necessary. Unfortunately, we are denying your claim because we don't have enough details to meet the required criteria. We understand this may be disappointing, and we are happy to discuss what additional information is needed to reconsider your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:22:52.123936",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 67",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:22:53.185030",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 67, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Male | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on number of sessions per week | MET: NO\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided | MET: NO\n\nCRITERION: Medical documentation supports the need for additional sessions | PATIENT: No information provided | MET: NO\n\nCRITERION: Use of KX modifier is appropriate | PATIENT: No information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's end-stage renal disease may be a valid reason for dialysis, but the policy requires more specific information about the patient's condition and the medical necessity of the treatment. Without additional information, the patient does not meet the criteria for eligibility.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:22:53.463154",
+      "input": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease | MET: YES\n\nCRITERION: Patient has fluid positive status not controlled with",
+      "output": "DECISION: DENY\nREASON: The patient's end-stage renal disease alone is not sufficient to establish medical necessity for the treatment, as additional specific information about the patient's condition and the treatment is required to meet the eligibility criteria.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:22:53.893005",
+      "input": "DECISION: DENY\nREASON: The patient's end-stage renal disease alone is not sufficient to establish medical necessity for the treatment, as additional specific information about the patient's condition and the treatment is required to meet the eligibility criteria.",
+      "output": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we need more specific information about your condition and treatment to decide if it's necessary. Unfortunately, we are denying your claim because we don't have enough details to meet the required criteria. We understand this may be disappointing, and we are happy to discuss what additional information is needed to reconsider your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

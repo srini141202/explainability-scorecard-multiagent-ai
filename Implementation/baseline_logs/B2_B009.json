@@ -1,0 +1,25 @@
+{
+  "claim_id": "B009",
+  "claim": {
+    "claim_id": "B009",
+    "age": 70,
+    "gender": "Female",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nThe patient is a 70-year-old female who has undergone an influenza vaccination procedure for seasonal flu prevention. According to the coverage rules, the influenza virus vaccine is one of the exceptions to the general exclusion of preventive immunizations. Since the procedure is directly related to the administration of the influenza vaccine, which is a covered preventive immunization, the claim is approved for coverage. The patient's age and the specific vaccine administered align with the policy's criteria for covered immunizations. Therefore, the charges related to the influenza vaccination are covered under this policy.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:42:52.248743",
+      "input": "Influenza vaccination Seasonal flu prevention",
+      "output": "**APPROVE**\n\nThe patient is a 70-year-old female who has undergone an influenza vaccination procedur",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Immunizations",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nThe patient is a 70-year-old female who has undergone an influenza vaccination procedure for seasonal flu prevention. According to the coverage rules, the influenza virus vaccine is one of the exceptions to the general exclusion of preventive immunizations. Since the procedure is directly related to the administration of the influenza vaccine, which is a covered preventive immunization, the claim is approved for coverage. The patient's age and the specific vaccine administered align with the policy's criteria for covered immunizations. Therefore, the charges related to the influenza vaccination are covered under this policy."
+}

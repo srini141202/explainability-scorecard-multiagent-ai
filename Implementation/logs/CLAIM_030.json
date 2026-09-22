@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_030",
+  "claim": {
+    "claim_id": "CLAIM_030",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Age | PATIENT: 57 | MET: YES (no specific age restrictions mentioned in the policy)\n\nCRITERION: Diagnosis | PATIENT: End stage renal disease | MET: YES (the policy specifically mentions end stage renal disease as a condition that may require hemodialysis)\n\nCRITERION: Procedure Requested | PATIENT: Kidney dialysis | MET: YES (the policy covers hemodialysis for patients with end stage renal disease)\n\nCRITERION: Covered Indications | PATIENT: Not specified | MET: NO (the policy lists specific covered indications, but none are mentioned in the patient's claim)\n\nCRITERION: Limitations | PATIENT: Not specified | MET: NO (the policy lists specific limitations, but none are mentioned in the patient's claim)\n\nCRITERION: Frequency of Hemodialysis | PATIENT: Not specified | MET: NO (the policy states that sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation)\n\nCRITERION: Medical Necessity | PATIENT: Not specified | MET: NO (the policy requires that services performed must meet all of the indications and limitations stated in the policy and associated articles)\n\nCRITERION: Documentation Requirements | PATIENT: Not specified | MET: NO (the policy requires specific documentation requirements, but none are mentioned in the patient's claim)\n\nOVERALL: NOT ELIGIBLE (the patient's claim does not provide enough information to determine medical necessity and compliance with the policy's requirements)",
+  "decision": "DECISION: DENY\nREASON: The patient's claim lacks sufficient information to determine medical necessity and compliance with the policy's requirements, including covered indications, limitations, frequency of hemodialysis, and documentation requirements.",
+  "explanation": "We've reviewed your insurance claim for kidney dialysis, and unfortunately, we're unable to approve it at this time. According to our Frequency of Hemodialysis policy, we need more information to ensure that the treatment is necessary and meets our requirements. We're missing some important details, so we're denying the claim for now. We'll be happy to reconsider if you can provide the additional information we need, as outlined in the Frequency of Hemodialysis policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:18:28.541719",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 57",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 57"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:18:34.744860",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 57, Procedure: Kidney dialysis",
+      "output": "CRITERION: Age | PATIENT: 57 | MET: YES (no specific age restrictions mentioned in the policy)\n\nCRITERION: Diagnosis | PATIENT: End stage renal disease | MET: YES (the policy specifically mentions end stage renal disease as a condition that may require hemodialysis)\n\nCRITERION: Procedure Requested | PATIENT: Kidney dialysis | MET: YES (the policy covers hemodialysis for patients with end stage renal disease)\n\nCRITERION: Covered Indications | PATIENT: Not specified | MET: NO (the policy lists specific covered indications, but none are mentioned in the patient's claim)\n\nCRITERION: Limitations | PATIENT: Not specified | MET: NO (the policy lists specific limitations, but none are mentioned in the patient's claim)\n\nCRITERION: Frequency of Hemodialysis | PATIENT: Not specified | MET: NO (the policy states that sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation)\n\nCRITERION: Medical Necessity | PATIENT: Not specified | MET: NO (the policy requires that services performed must meet all of the indications and limitations stated in the policy and associated articles)\n\nCRITERION: Documentation Requirements | PATIENT: Not specified | MET: NO (the policy requires specific documentation requirements, but none are mentioned in the patient's claim)\n\nOVERALL: NOT ELIGIBLE (the patient's claim does not provide enough information to determine medical necessity and compliance with the policy's requirements)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:18:37.037817",
+      "input": "CRITERION: Age | PATIENT: 57 | MET: YES (no specific age restrictions mentioned in the policy)\n\nCRITERION: Diagnosis | PATIENT: End stage renal disease | MET: YES (the policy specifically mentions end",
+      "output": "DECISION: DENY\nREASON: The patient's claim lacks sufficient information to determine medical necessity and compliance with the policy's requirements, including covered indications, limitations, frequency of hemodialysis, and documentation requirements.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:18:37.467852",
+      "input": "DECISION: DENY\nREASON: The patient's claim lacks sufficient information to determine medical necessity and compliance with the policy's requirements, including covered indications, limitations, frequency of hemodialysis, and documentation requirements.",
+      "output": "We've reviewed your insurance claim for kidney dialysis, and unfortunately, we're unable to approve it at this time. According to our Frequency of Hemodialysis policy, we need more information to ensure that the treatment is necessary and meets our requirements. We're missing some important details, so we're denying the claim for now. We'll be happy to reconsider if you can provide the additional information we need, as outlined in the Frequency of Hemodialysis policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

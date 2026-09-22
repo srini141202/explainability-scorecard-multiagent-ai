@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_035",
+  "claim": {
+    "claim_id": "CLAIM_035",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Magnetic Resonance Angiography (MRA)",
+  "criteria_check": "CRITERION: MRA is used to evaluate the carotid arteries, the circle of Willis, the anterior, middle or posterior cerebral arteries, the vertebral or basilar arteries or the venous sinuses | PATIENT: Severe headache investigation, no specific arteries mentioned | MET: NO\n\nCRITERION: MRA is performed on patients with conditions of the head and neck for which surgery is anticipated and may be found to be appropriate based on the MRA | PATIENT: No mention of anticipated surgery or specific conditions | MET: NO\n\nCRITERION: MRA and CA are not expected to be performed on the same patient for diagnostic purposes prior to the application of anticipated therapy | PATIENT: No information about other tests being performed | MET: NO (cannot be determined, but this is not the primary reason for the decision)\n\nCRITERION: MRA is appropriately used to verify the presence of a condition, suspected because of findings from another test | PATIENT: Severe headache, but no other test results mentioned | MET: NO\n\nCRITERION: Patient presents with signs and symptoms strongly suggesting an unruptured intracranial aneurysm | PATIENT: Severe headache, but no other symptoms mentioned | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient's severe headache investigation does not meet the specific criteria for an MRA, as there is no mention of specific arteries, anticipated surgery, or prior test results that would warrant the use of MRA.",
+  "explanation": "We have reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, our decision is to deny the claim, as it does not meet the requirements outlined in our Magnetic Resonance Angiography (MRA) policy. This policy requires specific conditions, such as concerns about certain arteries or planned surgery, which are not mentioned in your case. We made this decision based on the guidelines set by the MRA policy, and we are happy to discuss this further with you.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:19:56.258141",
+      "input": "MRI brain scan coverage Severe headache investigation patient age 18",
+      "output": "Magnetic Resonance Angiography (MRA)",
+      "reasoning": "Searched vector store for: MRI brain scan coverage Severe headache investigation patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:19:57.091887",
+      "input": "Policy: Magnetic Resonance Angiography (MRA), Patient age: 18, Procedure: MRI brain scan",
+      "output": "CRITERION: MRA is used to evaluate the carotid arteries, the circle of Willis, the anterior, middle or posterior cerebral arteries, the vertebral or basilar arteries or the venous sinuses | PATIENT: Severe headache investigation, no specific arteries mentioned | MET: NO\n\nCRITERION: MRA is performed on patients with conditions of the head and neck for which surgery is anticipated and may be found to be appropriate based on the MRA | PATIENT: No mention of anticipated surgery or specific conditions | MET: NO\n\nCRITERION: MRA and CA are not expected to be performed on the same patient for diagnostic purposes prior to the application of anticipated therapy | PATIENT: No information about other tests being performed | MET: NO (cannot be determined, but this is not the primary reason for the decision)\n\nCRITERION: MRA is appropriately used to verify the presence of a condition, suspected because of findings from another test | PATIENT: Severe headache, but no other test results mentioned | MET: NO\n\nCRITERION: Patient presents with signs and symptoms strongly suggesting an unruptured intracranial aneurysm | PATIENT: Severe headache, but no other symptoms mentioned | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:20:01.695070",
+      "input": "CRITERION: MRA is used to evaluate the carotid arteries, the circle of Willis, the anterior, middle or posterior cerebral arteries, the vertebral or basilar arteries or the venous sinuses | PATIENT: S",
+      "output": "DECISION: DENY\nREASON: The patient's severe headache investigation does not meet the specific criteria for an MRA, as there is no mention of specific arteries, anticipated surgery, or prior test results that would warrant the use of MRA.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:20:02.420062",
+      "input": "DECISION: DENY\nREASON: The patient's severe headache investigation does not meet the specific criteria for an MRA, as there is no mention of specific arteries, anticipated surgery, or prior test results that would warrant the use of MRA.",
+      "output": "We have reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, our decision is to deny the claim, as it does not meet the requirements outlined in our Magnetic Resonance Angiography (MRA) policy. This policy requires specific conditions, such as concerns about certain arteries or planned surgery, which are not mentioned in your case. We made this decision based on the guidelines set by the MRA policy, and we are happy to discuss this further with you.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

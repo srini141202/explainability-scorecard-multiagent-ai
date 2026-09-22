@@ -1,0 +1,25 @@
+{
+  "claim_id": "B004",
+  "claim": {
+    "claim_id": "B004",
+    "age": 35,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation:\nThe patient is a 35-year-old male undergoing a colonoscopy for colorectal cancer screening. According to the coverage rules, a colonoscopy is a covered procedure that includes inspection of the entire colon, from the rectum to the cecum, and may include the examination of the terminal ileum. The procedure meets the definition of a colonoscopy, as it will examine the colon proximal to the splenic flexure.\n\nAlthough the patient is relatively young for routine colorectal cancer screening (typically recommended starting at age 45 for average-risk individuals), the procedure is still within the scope of the coverage rules. Additionally, there may be specific circumstances, such as a family history of colorectal cancer or other risk factors, that justify screening at a younger age.\n\nAs the procedure meets the coverage rules and there is no indication that prior authorization is required, the decision is to **APPROVE** the colonoscopy screening for this patient.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:41:55.418513",
+      "input": "Colonoscopy screening Colorectal cancer screening",
+      "output": "**APPROVE**\n\nExplanation:\nThe patient is a 35-year-old male undergoing a colonoscopy for colorectal ",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Diagnostic and Therapeutic Colonoscopy",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation:\nThe patient is a 35-year-old male undergoing a colonoscopy for colorectal cancer screening. According to the coverage rules, a colonoscopy is a covered procedure that includes inspection of the entire colon, from the rectum to the cecum, and may include the examination of the terminal ileum. The procedure meets the definition of a colonoscopy, as it will examine the colon proximal to the splenic flexure.\n\nAlthough the patient is relatively young for routine colorectal cancer screening (typically recommended starting at age 45 for average-risk individuals), the procedure is still within the scope of the coverage rules. Additionally, there may be specific circumstances, such as a family history of colorectal cancer or other risk factors, that justify screening at a younger age.\n\nAs the procedure meets the coverage rules and there is no indication that prior authorization is required, the decision is to **APPROVE** the colonoscopy screening for this patient."
+}

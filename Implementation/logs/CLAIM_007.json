@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_007",
+  "claim": {
+    "claim_id": "CLAIM_007",
+    "patient_id": "9c7a2245-91ca-9100-fcb8-ce6dc963e920",
+    "age": 23,
+    "gender": "Female",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Total Hip Arthroplasty",
+  "criteria_check": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence | PATIENT: Mild joint discomfort, no radiographic evidence provided | MET: NO\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment | PATIENT: No information on previous conservative treatment or its outcomes | MET: NO\n\nCRITERION: History of unsuccessful conservative therapy | PATIENT: No information on previous conservative therapy | MET: NO\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Indications for replacement or revision of total hip arthroplasty (e.g., loosening of components, infection, etc.) | PATIENT: No previous total hip arthroplasty mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (in the sense that there's no active infection)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (in the sense that there's no active infection)\n\nCRITERION: Active skin infection or open wound within the planned surgical site | PATIENT: No skin infection or open wound mentioned | MET: YES (in the sense that there's no active skin infection)\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: YES (in the sense that there's no rapidly progressive neurological disease)\n\nCRITERION: Absence or relative insufficiency of abductor musculature | PATIENT: No information on abductor musculature | MET: NO (due to lack of information)\n\nCRITERION: Any process that is rapidly destroying bone | PATIENT: No such process mentioned | MET: YES (in the sense that there's no process rapidly destroying bone)\n\nCRITERION: Neurotrophic arthritis | PATIENT: No neurotrophic arthritis mentioned | MET: YES (in the sense that there's no neurotrophic arthritis)\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to a lack of radiographic evidence, insufficient information on previous conservative treatment, and no mention of specific conditions that would necessitate the procedure.",
+  "explanation": "We've reviewed your insurance claim for hip replacement surgery under our Total Hip Arthroplasty policy. Unfortunately, we are unable to approve your claim because we didn't receive enough information about your previous treatments or see clear evidence of a condition that would require surgery. Our policy requires certain conditions to be met before we can cover this type of procedure. We denied your claim because we didn't have enough information to show that the surgery is necessary.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:06:14.638864",
+      "input": "Hip replacement surgery coverage Mild joint discomfort patient age 23",
+      "output": "Total Hip Arthroplasty",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Mild joint discomfort patient age 23"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:06:16.233984",
+      "input": "Policy: Total Hip Arthroplasty, Patient age: 23, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence | PATIENT: Mild joint discomfort, no radiographic evidence provided | MET: NO\n\nCRITERION: Pain that cannot be adequately controlled despite optimal conservative treatment | PATIENT: No information on previous conservative treatment or its outcomes | MET: NO\n\nCRITERION: History of unsuccessful conservative therapy | PATIENT: No information on previous conservative therapy | MET: NO\n\nCRITERION: Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur | PATIENT: No malignancy mentioned | MET: NO\n\nCRITERION: Avascular necrosis (osteonecrosis of femoral head) | PATIENT: No avascular necrosis mentioned | MET: NO\n\nCRITERION: Fracture of the femoral neck | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Acetabular fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Non-union or failure of previous hip fracture surgery | PATIENT: No previous hip fracture surgery mentioned | MET: NO\n\nCRITERION: Mal-union of acetabular or proximal femur fracture | PATIENT: No fracture mentioned | MET: NO\n\nCRITERION: Indications for replacement or revision of total hip arthroplasty (e.g., loosening of components, infection, etc.) | PATIENT: No previous total hip arthroplasty mentioned | MET: NO\n\nCRITERION: Active infection of the hip joint or active systemic bacteremia | PATIENT: No infection mentioned | MET: YES (in the sense that there's no active infection)\n\nCRITERION: Active urinary tract or dental infection | PATIENT: No infection mentioned | MET: YES (in the sense that there's no active infection)\n\nCRITERION: Active skin infection or open wound within the planned surgical site | PATIENT: No skin infection or open wound mentioned | MET: YES (in the sense that there's no active skin infection)\n\nCRITERION: Rapidly progressive neurological disease | PATIENT: No neurological disease mentioned | MET: YES (in the sense that there's no rapidly progressive neurological disease)\n\nCRITERION: Absence or relative insufficiency of abductor musculature | PATIENT: No information on abductor musculature | MET: NO (due to lack of information)\n\nCRITERION: Any process that is rapidly destroying bone | PATIENT: No such process mentioned | MET: YES (in the sense that there's no process rapidly destroying bone)\n\nCRITERION: Neurotrophic arthritis | PATIENT: No neurotrophic arthritis mentioned | MET: YES (in the sense that there's no neurotrophic arthritis)\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:06:19.973875",
+      "input": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence | PATIENT: Mild joint discomfort, no radiographic evidence provided | MET: NO\n\nCRITERION: Pain that cannot be adequate",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to a lack of radiographic evidence, insufficient information on previous conservative treatment, and no mention of specific conditions that would necessitate the procedure.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:06:20.434795",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for coverage due to a lack of radiographic evidence, insufficient information on previous conservative treatment, and no mention of specific conditions that would necessitate the procedure.",
+      "output": "We've reviewed your insurance claim for hip replacement surgery under our Total Hip Arthroplasty policy. Unfortunately, we are unable to approve your claim because we didn't receive enough information about your previous treatments or see clear evidence of a condition that would require surgery. Our policy requires certain conditions to be met before we can cover this type of procedure. We denied your claim because we didn't have enough information to show that the surgery is necessary.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

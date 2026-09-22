@@ -1,0 +1,25 @@
+{
+  "claim_id": "B005",
+  "claim": {
+    "claim_id": "B005",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: The patient, a 50-year-old female, has been diagnosed with Type 2 diabetes mellitus. According to the policy, the goal of the Local Coverage Determination (LCD) is to ensure that evidence-based medicine addressing the risks of acute and chronic complications of diabetes mellitus are integrated into the delivery of home health services for Medicare beneficiaries with Type II DM. \n\nDiabetes self-management training is a crucial aspect of managing Type 2 diabetes, as it educates the patient on how to monitor and control their glucose levels, manage their diet, and engage in physical activity to prevent complications. This training is considered an evidence-based practice and is in line with the policy's goal of integrating evidence-based medicine into home health services for Medicare beneficiaries with Type II DM.\n\nTherefore, based on the patient's diagnosis and the procedure of diabetes self-management training, the decision is to **APPROVE** the coverage of this service, as it is a necessary and evidence-based component of the patient's care plan for managing Type 2 diabetes mellitus.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:42:06.818175",
+      "input": "Diabetes self-management training Type 2 diabetes mellitus",
+      "output": "**APPROVE**\n\nExplanation: The patient, a 50-year-old female, has been diagnosed with Type 2 diabetes",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: The patient, a 50-year-old female, has been diagnosed with Type 2 diabetes mellitus. According to the policy, the goal of the Local Coverage Determination (LCD) is to ensure that evidence-based medicine addressing the risks of acute and chronic complications of diabetes mellitus are integrated into the delivery of home health services for Medicare beneficiaries with Type II DM. \n\nDiabetes self-management training is a crucial aspect of managing Type 2 diabetes, as it educates the patient on how to monitor and control their glucose levels, manage their diet, and engage in physical activity to prevent complications. This training is considered an evidence-based practice and is in line with the policy's goal of integrating evidence-based medicine into home health services for Medicare beneficiaries with Type II DM.\n\nTherefore, based on the patient's diagnosis and the procedure of diabetes self-management training, the decision is to **APPROVE** the coverage of this service, as it is a necessary and evidence-based component of the patient's care plan for managing Type 2 diabetes mellitus."
+}

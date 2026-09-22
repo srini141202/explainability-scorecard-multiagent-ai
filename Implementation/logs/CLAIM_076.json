@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_076",
+  "claim": {
+    "claim_id": "CLAIM_076",
+    "patient_id": "9a3db830-3fde-14fa-032b-6004d95322c5",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Peripheral Nerve Blocks and Procedures for Chronic Pain",
+  "criteria_check": "CRITERION: Patient has trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provided | MET: NO\n\nCRITERION: Non-responsive to medical therapy | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is not a good surgical candidate or declines surgical intervention | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has had \u2265 75% improvement after diagnostic trigeminal nerve block | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of median neuropathy at the wrist (carpal tunnel syndrome) | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Diagnosis of Morton\u2019s Neuroma | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Use of Peripheral Nerve Blocks (PNB) for chronic pain | PATIENT: Request for MRI brain scan | MET: NO\n\nCRITERION: Limitations on procedures (e.g. no biologics, no sedation) | PATIENT: Request for MRI brain scan | MET: NO\n\nCRITERION: Exceptions (regional anesthetic block, acute surgical pain, pain related to malignancy) | PATIENT: Severe headache investigation | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's request for an MRI brain scan does not match any of the criteria for peripheral nerve blocks or procedures for chronic pain as outlined in the policy. The policy primarily covers specific procedures for conditions like trigeminal neuralgia, carpal tunnel syndrome, and Morton's neuroma, which do not apply to this patient's situation.",
+  "decision": "DECISION: DENY\nREASON: The patient's request for an MRI brain scan does not meet any of the specified criteria for peripheral nerve blocks or procedures for chronic pain as outlined in the policy.",
+  "explanation": "We've reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, your claim has been denied because it doesn't fit the criteria outlined in our \"Peripheral Nerve Blocks and Procedures for Chronic Pain\" policy. This policy only covers specific treatments for chronic pain, and your MRI brain scan doesn't meet those requirements. We understand this may be disappointing, and we're here to help you explore other options for getting the care you need.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:55:12.939293",
+      "input": "MRI brain scan coverage Severe headache investigation patient age 67",
+      "output": "Peripheral Nerve Blocks and Procedures for Chronic Pain",
+      "reasoning": "Searched vector store for: MRI brain scan coverage Severe headache investigation patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:55:14.086846",
+      "input": "Policy: Peripheral Nerve Blocks and Procedures for Chronic Pain, Patient age: 67, Procedure: MRI brain scan",
+      "output": "CRITERION: Patient has trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provided | MET: NO\n\nCRITERION: Non-responsive to medical therapy | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is not a good surgical candidate or declines surgical intervention | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has had \u2265 75% improvement after diagnostic trigeminal nerve block | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of median neuropathy at the wrist (carpal tunnel syndrome) | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Diagnosis of Morton\u2019s Neuroma | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Use of Peripheral Nerve Blocks (PNB) for chronic pain | PATIENT: Request for MRI brain scan | MET: NO\n\nCRITERION: Limitations on procedures (e.g. no biologics, no sedation) | PATIENT: Request for MRI brain scan | MET: NO\n\nCRITERION: Exceptions (regional anesthetic block, acute surgical pain, pain related to malignancy) | PATIENT: Severe headache investigation | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's request for an MRI brain scan does not match any of the criteria for peripheral nerve blocks or procedures for chronic pain as outlined in the policy. The policy primarily covers specific procedures for conditions like trigeminal neuralgia, carpal tunnel syndrome, and Morton's neuroma, which do not apply to this patient's situation.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:55:14.285885",
+      "input": "CRITERION: Patient has trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provided | MET: NO\n\nCR",
+      "output": "DECISION: DENY\nREASON: The patient's request for an MRI brain scan does not meet any of the specified criteria for peripheral nerve blocks or procedures for chronic pain as outlined in the policy.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:55:14.687956",
+      "input": "DECISION: DENY\nREASON: The patient's request for an MRI brain scan does not meet any of the specified criteria for peripheral nerve blocks or procedures for chronic pain as outlined in the policy.",
+      "output": "We've reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, your claim has been denied because it doesn't fit the criteria outlined in our \"Peripheral Nerve Blocks and Procedures for Chronic Pain\" policy. This policy only covers specific treatments for chronic pain, and your MRI brain scan doesn't meet those requirements. We understand this may be disappointing, and we're here to help you explore other options for getting the care you need.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

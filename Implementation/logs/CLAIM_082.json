@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_082",
+  "claim": {
+    "claim_id": "CLAIM_082",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "CRITERION: Patient age for screening mammography | PATIENT: 100 years old | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over, and the patient is over 40.)\n\nCRITERION: Minimum requirements for a screening mammogram | PATIENT: Not specified, but assuming cranio-caudal (CC) and medio-lateral oblique (MLO) views are included | MET: YES \n(The policy requires cranio-caudal (CC) and medio-lateral oblique (MLO) views for a screening mammogram.)\n\nCRITERION: Physician's referral for screening mammography | PATIENT: Not required | MET: YES \n(The policy does not require a physician's referral for a screening mammography.)\n\nCRITERION: Time since last screening mammography | PATIENT: Not specified | MET: NO \n(The policy requires that at least 11 months have passed since the last screening mammography, but this information is not provided for the patient.)\n\nCRITERION: Type of mammography facility | PATIENT: Not specified | MET: NO \n(The policy requires that the mammography facility meet the certification requirements of 21 CFR Section 900.11, but this information is not provided for the patient.)\n\nCRITERION: Screening mammography for male beneficiaries | PATIENT: Female | MET: YES \n(The policy does not cover screening mammography for male beneficiaries, but the patient is female.)\n\nCRITERION: Payment for screening mammography | PATIENT: Not specified | MET: NO \n(The policy requires that payment may not be made for screening mammography performed on a woman under age 35, but the patient is over 35 and the information about payment is not provided.)\n\nOVERALL: NOT ELIGIBLE \n\nHowever, considering the age and other factors, the main issue seems to be the time since the last screening mammography and the type of facility, which are not specified. If these conditions are met, the patient would be eligible for a screening mammography. \n\nAdditionally, it's worth noting that the policy does cover screening mammography for women over 40, and the patient is 100 years old, which meets this criterion. But without more information about the time since the last screening and the type of facility, we cannot definitively say the patient is eligible. \n\nIt would be best to confirm the time since the last screening mammography and the type of facility to determine the patient's eligibility.",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for a screening mammography cannot be determined without additional information regarding the time since the last screening and the type of facility, requiring prior authorization to confirm these details.",
+  "explanation": "We have reviewed your insurance claim for a routine breast cancer screening. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, we need more information about when you had your last screening and where you plan to have it done. This means we need prior authorization to confirm these details before we can make a decision about covering the cost. We will work with you to gather the necessary information so we can move forward with your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:58:29.353304",
+      "input": "Mammography screening coverage Routine breast cancer screening patient age 100",
+      "output": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+      "reasoning": "Searched vector store for: Mammography screening coverage Routine breast cancer screening patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:58:31.085093",
+      "input": "Policy: Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography, Patient age: 100, Procedure: Mammography screening",
+      "output": "CRITERION: Patient age for screening mammography | PATIENT: 100 years old | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over, and the patient is over 40.)\n\nCRITERION: Minimum requirements for a screening mammogram | PATIENT: Not specified, but assuming cranio-caudal (CC) and medio-lateral oblique (MLO) views are included | MET: YES \n(The policy requires cranio-caudal (CC) and medio-lateral oblique (MLO) views for a screening mammogram.)\n\nCRITERION: Physician's referral for screening mammography | PATIENT: Not required | MET: YES \n(The policy does not require a physician's referral for a screening mammography.)\n\nCRITERION: Time since last screening mammography | PATIENT: Not specified | MET: NO \n(The policy requires that at least 11 months have passed since the last screening mammography, but this information is not provided for the patient.)\n\nCRITERION: Type of mammography facility | PATIENT: Not specified | MET: NO \n(The policy requires that the mammography facility meet the certification requirements of 21 CFR Section 900.11, but this information is not provided for the patient.)\n\nCRITERION: Screening mammography for male beneficiaries | PATIENT: Female | MET: YES \n(The policy does not cover screening mammography for male beneficiaries, but the patient is female.)\n\nCRITERION: Payment for screening mammography | PATIENT: Not specified | MET: NO \n(The policy requires that payment may not be made for screening mammography performed on a woman under age 35, but the patient is over 35 and the information about payment is not provided.)\n\nOVERALL: NOT ELIGIBLE \n\nHowever, considering the age and other factors, the main issue seems to be the time since the last screening mammography and the type of facility, which are not specified. If these conditions are met, the patient would be eligible for a screening mammography. \n\nAdditionally, it's worth noting that the policy does cover screening mammography for women over 40, and the patient is 100 years old, which meets this criterion. But without more information about the time since the last screening and the type of facility, we cannot definitively say the patient is eligible. \n\nIt would be best to confirm the time since the last screening mammography and the type of facility to determine the patient's eligibility.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:58:31.348941",
+      "input": "CRITERION: Patient age for screening mammography | PATIENT: 100 years old | MET: YES \n(The policy covers annual screening mammography for all women age 40 and over, and the patient is over 40.)\n\nCRITE",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for a screening mammography cannot be determined without additional information regarding the time since the last screening and the type of facility, requiring prior authorization to confirm these details.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:58:31.840769",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for a screening mammography cannot be determined without additional information regarding the time since the last screening and the type of facility, requiring prior authorization to confirm these details.",
+      "output": "We have reviewed your insurance claim for a routine breast cancer screening. According to our Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography policy, we need more information about when you had your last screening and where you plan to have it done. This means we need prior authorization to confirm these details before we can make a decision about covering the cost. We will work with you to gather the necessary information so we can move forward with your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

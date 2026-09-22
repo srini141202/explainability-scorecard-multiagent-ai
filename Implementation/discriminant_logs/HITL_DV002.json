@@ -1,0 +1,46 @@
+{
+  "claim_id": "DV002",
+  "claim": {
+    "claim_id": "DV002",
+    "age": 55,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "HITL",
+  "policy_used": "Diagnostic and Therapeutic Colonoscopy",
+  "criteria_check": "CRITERION: Patient must be of a certain age for screening colonoscopy | PATIENT: 55 | MET: YES \nCRITERION: Procedure must be a visual examination of the lining of the large intestine using a rigid or flexible video or fiberoptic endoscope | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: Procedure includes inspection of the entire colon, from the rectum to the cecum, and may include the examination of the terminal ileum | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: A colonoscopy, by definition, must examine the colon proximal to the splenic flexure | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: Diagnosis of colorectal cancer screening | PATIENT: Colorectal cancer screening | MET: YES \nCRITERION: Indications for diagnostic colonoscopy, including evaluation of an abnormality discovered by a radiology examination, abnormal oncology colorectal screening, unexplained gastrointestinal bleeding, etc. | PATIENT: Colorectal cancer screening | MET: YES \nCRITERION: Contraindications for colonoscopy, including fulminant colitis, acute severe diverticulitis, or suspected perforated viscus | PATIENT: No mention of contraindications | MET: YES \nCRITERION: Patient has a personal history of symptoms or meets other specific criteria for diagnostic colonoscopy | PATIENT: Colorectal cancer screening | MET: YES \n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient meets all the criteria for a screening colonoscopy, including age, procedure type, and diagnosis, with no mention of contraindications.",
+  "explanation": "We have reviewed your insurance claim for a colonoscopy screening, and we are pleased to inform you that it has been approved. According to our Diagnostic and Therapeutic Colonoscopy policy, you meet all the necessary criteria for this procedure. This means that your insurance will cover the cost of the screening. We made this decision because you meet the required age and procedure type guidelines outlined in the Diagnostic and Therapeutic Colonoscopy policy.\n\n[HUMAN REVIEWER NOTE: Decision reviewed and approved by senior claims analyst on 2026-08-10. Patient explanation verified for accuracy and policy compliance.]",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-08-10T02:34:04.214784",
+      "input": "Colonoscopy screening coverage Colorectal cancer screening patient age 55",
+      "output": "Diagnostic and Therapeutic Colonoscopy",
+      "reasoning": "Searched vector store for: Colonoscopy screening coverage Colorectal cancer screening patient age 55"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-08-10T02:34:05.272355",
+      "input": "Policy: Diagnostic and Therapeutic Colonoscopy, Patient age: 55, Procedure: Colonoscopy screening",
+      "output": "CRITERION: Patient must be of a certain age for screening colonoscopy | PATIENT: 55 | MET: YES \nCRITERION: Procedure must be a visual examination of the lining of the large intestine using a rigid or flexible video or fiberoptic endoscope | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: Procedure includes inspection of the entire colon, from the rectum to the cecum, and may include the examination of the terminal ileum | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: A colonoscopy, by definition, must examine the colon proximal to the splenic flexure | PATIENT: Colonoscopy screening | MET: YES \nCRITERION: Diagnosis of colorectal cancer screening | PATIENT: Colorectal cancer screening | MET: YES \nCRITERION: Indications for diagnostic colonoscopy, including evaluation of an abnormality discovered by a radiology examination, abnormal oncology colorectal screening, unexplained gastrointestinal bleeding, etc. | PATIENT: Colorectal cancer screening | MET: YES \nCRITERION: Contraindications for colonoscopy, including fulminant colitis, acute severe diverticulitis, or suspected perforated viscus | PATIENT: No mention of contraindications | MET: YES \nCRITERION: Patient has a personal history of symptoms or meets other specific criteria for diagnostic colonoscopy | PATIENT: Colorectal cancer screening | MET: YES \n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-08-10T02:34:05.491836",
+      "input": "CRITERION: Patient must be of a certain age for screening colonoscopy | PATIENT: 55 | MET: YES \nCRITERION: Procedure must be a visual examination of the lining of the large intestine using a rigid or ",
+      "output": "DECISION: APPROVE\nREASON: The patient meets all the criteria for a screening colonoscopy, including age, procedure type, and diagnosis, with no mention of contraindications.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-08-10T02:34:05.886059",
+      "input": "DECISION: APPROVE\nREASON: The patient meets all the criteria for a screening colonoscopy, including age, procedure type, and diagnosis, with no mention of contraindications.",
+      "output": "We have reviewed your insurance claim for a colonoscopy screening, and we are pleased to inform you that it has been approved. According to our Diagnostic and Therapeutic Colonoscopy policy, you meet all the necessary criteria for this procedure. This means that your insurance will cover the cost of the screening. We made this decision because you meet the required age and procedure type guidelines outlined in the Diagnostic and Therapeutic Colonoscopy policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

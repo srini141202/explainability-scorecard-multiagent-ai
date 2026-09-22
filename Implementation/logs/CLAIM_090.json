@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_090",
+  "claim": {
+    "claim_id": "CLAIM_090",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Immunizations",
+  "criteria_check": "Let's break down the policy criteria and check each one against the patient:\n\n1. CRITERION: Vaccinations or inoculations are excluded as immunizations unless directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention, Influenza vaccination | MET: NO\n2. CRITERION: Preventive immunizations are not covered except for the following: pneumococcal, hepatitis B, and influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n3. CRITERION: Each specific immunization has specific coverage criteria | PATIENT: Influenza vaccination | MET: YES (since it's one of the exceptions)\n4. CRITERION: Tetanus, Diphtheria and Pertussis (Tdap) Vaccines and Tetanus Diphtheria (Td) Vaccines are covered when given for an acute injury to a person who is incompletely immunized for tetanus | PATIENT: No acute injury mentioned | MET: NO\n5. CRITERION: Diphtheria antitoxin will be covered for the treatment of diphtheria | PATIENT: No diphtheria mentioned | MET: NO\n6. CRITERION: Hepatitis A vaccine will be covered for those patients who have been exposed either by close personal contact with an infected person or after ingestion of contaminated food or water | PATIENT: No exposure to hepatitis A mentioned | MET: NO\n7. CRITERION: Rabies Prophylaxis will be covered for post-exposure treatment | PATIENT: No rabies exposure mentioned | MET: NO\n8. CRITERION: Influenza vaccination is covered as a preventive immunization | PATIENT: Influenza vaccination for seasonal flu prevention | MET: YES\n\nSince the patient is receiving an Influenza vaccination, which is one of the exceptions for preventive immunizations, the criteria are met.\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: APPROVE\nREASON: The patient's Influenza vaccination is covered as a preventive immunization, meeting the criteria for exceptions to preventive immunizations.",
+  "explanation": "We have reviewed your insurance claim for the Influenza vaccination, and we are pleased to inform you that it has been approved. According to our Immunizations policy, this vaccination is covered as a preventive measure to help keep you healthy during flu season. This decision is based on the fact that your vaccination meets the criteria outlined in our policy, which allows for exceptions to preventive immunizations. You can now receive the vaccination with no out-of-pocket costs to you.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:50:47.573257",
+      "input": "Influenza vaccination coverage Seasonal flu prevention patient age 100",
+      "output": "Immunizations",
+      "reasoning": "Searched vector store for: Influenza vaccination coverage Seasonal flu prevention patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:50:48.992893",
+      "input": "Policy: Immunizations, Patient age: 100, Procedure: Influenza vaccination",
+      "output": "Let's break down the policy criteria and check each one against the patient:\n\n1. CRITERION: Vaccinations or inoculations are excluded as immunizations unless directly related to the treatment of an injury or direct exposure to a disease or condition | PATIENT: Seasonal flu prevention, Influenza vaccination | MET: NO\n2. CRITERION: Preventive immunizations are not covered except for the following: pneumococcal, hepatitis B, and influenza virus vaccines | PATIENT: Influenza vaccination | MET: YES\n3. CRITERION: Each specific immunization has specific coverage criteria | PATIENT: Influenza vaccination | MET: YES (since it's one of the exceptions)\n4. CRITERION: Tetanus, Diphtheria and Pertussis (Tdap) Vaccines and Tetanus Diphtheria (Td) Vaccines are covered when given for an acute injury to a person who is incompletely immunized for tetanus | PATIENT: No acute injury mentioned | MET: NO\n5. CRITERION: Diphtheria antitoxin will be covered for the treatment of diphtheria | PATIENT: No diphtheria mentioned | MET: NO\n6. CRITERION: Hepatitis A vaccine will be covered for those patients who have been exposed either by close personal contact with an infected person or after ingestion of contaminated food or water | PATIENT: No exposure to hepatitis A mentioned | MET: NO\n7. CRITERION: Rabies Prophylaxis will be covered for post-exposure treatment | PATIENT: No rabies exposure mentioned | MET: NO\n8. CRITERION: Influenza vaccination is covered as a preventive immunization | PATIENT: Influenza vaccination for seasonal flu prevention | MET: YES\n\nSince the patient is receiving an Influenza vaccination, which is one of the exceptions for preventive immunizations, the criteria are met.\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:50:49.279558",
+      "input": "Let's break down the policy criteria and check each one against the patient:\n\n1. CRITERION: Vaccinations or inoculations are excluded as immunizations unless directly related to the treatment of an in",
+      "output": "DECISION: APPROVE\nREASON: The patient's Influenza vaccination is covered as a preventive immunization, meeting the criteria for exceptions to preventive immunizations.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:50:49.758964",
+      "input": "DECISION: APPROVE\nREASON: The patient's Influenza vaccination is covered as a preventive immunization, meeting the criteria for exceptions to preventive immunizations.",
+      "output": "We have reviewed your insurance claim for the Influenza vaccination, and we are pleased to inform you that it has been approved. According to our Immunizations policy, this vaccination is covered as a preventive measure to help keep you healthy during flu season. This decision is based on the fact that your vaccination meets the criteria outlined in our policy, which allows for exceptions to preventive immunizations. You can now receive the vaccination with no out-of-pocket costs to you.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

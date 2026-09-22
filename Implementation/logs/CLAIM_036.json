@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_036",
+  "claim": {
+    "claim_id": "CLAIM_036",
+    "patient_id": "5bf2d300-4dea-c43a-3e8b-5411ad3434fe",
+    "age": 18,
+    "gender": "Male",
+    "diagnosis": "Mild joint discomfort",
+    "procedure": "Hip replacement surgery",
+    "expected_decision": "DENY"
+  },
+  "policy_used": "Lower Extremity Major Joint Replacement (Hip and Knee)",
+  "criteria_check": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or magnetic resonance imaging (MRI) | PATIENT: Mild joint discomfort, no radiographic or MRI evidence provided | MET: NO\n\nCRITERION: History of unsuccessful appropriate conservative therapy | PATIENT: No information provided about conservative therapy | MET: NO\n\nCRITERION: Pain with functional disability due to arthritis or trauma to the joint | PATIENT: Mild joint discomfort, no information about functional disability | MET: NO\n\nCRITERION: Distinct structural abnormalities | PATIENT: No information about structural abnormalities | MET: NO\n\nCRITERION: Failed previous joint replacement/arthroplasty necessitating revision | PATIENT: No previous joint replacement/arthroplasty | MET: NO\n\nCRITERION: Advanced joint disease demonstrated by radiographic supported evidence or magnetic resonance imaging (MRI) for hip | PATIENT: Mild joint discomfort, no radiographic or MRI evidence provided | MET: NO\n\nCRITERION: Pain and functional disability from injury due to trauma or arthritis of the joint for hip | PATIENT: Mild joint discomfort, no information about functional disability | MET: NO\n\nCRITERION: History of unsuccessful conservative treatment or non-surgical medical management for hip | PATIENT: No information provided about conservative therapy | MET: NO\n\nCRITERION: Distinct structural abnormalities for hip | PATIENT: No information about structural abnormalities | MET: NO\n\nCRITERION: Failed previous Hip Arthroplasty necessitating revision | PATIENT: No previous hip arthroplasty | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to lack of radiographic or MRI evidence, unsuccessful conservative therapy, and insufficient information about functional disability and structural abnormalities.",
+  "explanation": "We have reviewed your claim for hip replacement surgery under our Lower Extremity Major Joint Replacement (Hip and Knee) policy. Unfortunately, we are unable to approve your claim at this time because we need more information to show that this surgery is necessary for your condition. Our policy requires certain criteria to be met, such as trying other treatments first and having imaging tests that show the need for surgery. We cannot move forward with your claim without this additional information.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:20:06.382017",
+      "input": "Hip replacement surgery coverage Mild joint discomfort patient age 18",
+      "output": "Lower Extremity Major Joint Replacement (Hip and Knee)",
+      "reasoning": "Searched vector store for: Hip replacement surgery coverage Mild joint discomfort patient age 18"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:20:15.439648",
+      "input": "Policy: Lower Extremity Major Joint Replacement (Hip and Knee), Patient age: 18, Procedure: Hip replacement surgery",
+      "output": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or magnetic resonance imaging (MRI) | PATIENT: Mild joint discomfort, no radiographic or MRI evidence provided | MET: NO\n\nCRITERION: History of unsuccessful appropriate conservative therapy | PATIENT: No information provided about conservative therapy | MET: NO\n\nCRITERION: Pain with functional disability due to arthritis or trauma to the joint | PATIENT: Mild joint discomfort, no information about functional disability | MET: NO\n\nCRITERION: Distinct structural abnormalities | PATIENT: No information about structural abnormalities | MET: NO\n\nCRITERION: Failed previous joint replacement/arthroplasty necessitating revision | PATIENT: No previous joint replacement/arthroplasty | MET: NO\n\nCRITERION: Advanced joint disease demonstrated by radiographic supported evidence or magnetic resonance imaging (MRI) for hip | PATIENT: Mild joint discomfort, no radiographic or MRI evidence provided | MET: NO\n\nCRITERION: Pain and functional disability from injury due to trauma or arthritis of the joint for hip | PATIENT: Mild joint discomfort, no information about functional disability | MET: NO\n\nCRITERION: History of unsuccessful conservative treatment or non-surgical medical management for hip | PATIENT: No information provided about conservative therapy | MET: NO\n\nCRITERION: Distinct structural abnormalities for hip | PATIENT: No information about structural abnormalities | MET: NO\n\nCRITERION: Failed previous Hip Arthroplasty necessitating revision | PATIENT: No previous hip arthroplasty | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:20:18.804207",
+      "input": "CRITERION: Advanced joint disease demonstrated by radiographic supported evidence or magnetic resonance imaging (MRI) | PATIENT: Mild joint discomfort, no radiographic or MRI evidence provided | MET: ",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to lack of radiographic or MRI evidence, unsuccessful conservative therapy, and insufficient information about functional disability and structural abnormalities.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:20:21.288558",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the necessary criteria for eligibility due to lack of radiographic or MRI evidence, unsuccessful conservative therapy, and insufficient information about functional disability and structural abnormalities.",
+      "output": "We have reviewed your claim for hip replacement surgery under our Lower Extremity Major Joint Replacement (Hip and Knee) policy. Unfortunately, we are unable to approve your claim at this time because we need more information to show that this surgery is necessary for your condition. Our policy requires certain criteria to be met, such as trying other treatments first and having imaging tests that show the need for surgery. We cannot move forward with your claim without this additional information.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

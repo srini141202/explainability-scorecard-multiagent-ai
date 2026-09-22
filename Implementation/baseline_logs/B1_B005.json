@@ -1,0 +1,17 @@
+{
+  "claim_id": "B005",
+  "claim": {
+    "claim_id": "B005",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Diabetes self-management training is a standard and medically necessary treatment for Type 2 diabetes mellitus, and it is typically covered under most health insurance plans to help patients manage their condition effectively.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Diabetes self-management training is a standard and medically necessary treatment for Type 2 diabetes mellitus, and it is typically covered under most health insurance plans to help patients manage their condition effectively."
+}

@@ -1,0 +1,17 @@
+{
+  "claim_id": "B001",
+  "claim": {
+    "claim_id": "B001",
+    "age": 45,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Routine breast cancer screening is a recommended preventive service for women aged 40-74, and mammography screening is a covered benefit for this patient's age group.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Routine breast cancer screening is a recommended preventive service for women aged 40-74, and mammography screening is a covered benefit for this patient's age group."
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_061",
+  "claim": {
+    "claim_id": "CLAIM_061",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, no specific metabolic condition mentioned | MET: NO\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Female, 30 years old, no pregnancy mentioned | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No heart failure mentioned | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No pericarditis mentioned | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO\n\nCRITERION: Patient's diagnosis and treatment plan meet the general requirements for medical necessity as stated in CMS payment policy manuals | PATIENT: End stage renal disease, requiring kidney dialysis | MET: YES\n\nCRITERION: Patient's treatment plan is supported by medical documentation | PATIENT: No information provided about medical documentation | MET: NO\n\nCRITERION: Patient's diagnosis is consistent with clinical conditions that could establish reasonable and necessary requirements for payment | PATIENT: End stage renal disease | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to lack of specific information about the patient's condition and treatment plan, and no clear indication that the patient meets the covered indications)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to a lack of specific information about their condition and treatment plan, resulting in insufficient evidence to support a claim for medical necessity.",
+  "explanation": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we need more information about your condition and treatment plan to determine if this treatment is necessary for you. Unfortunately, we don't have enough details to support your claim, so we are unable to approve it at this time. We will need more information from your doctor to make a decision.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T13:48:15.077567",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 30",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 30"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T13:48:16.331976",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 30, Procedure: Kidney dialysis",
+      "output": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, no specific metabolic condition mentioned | MET: NO\n\nCRITERION: Patient has fluid positive status not controlled with routine dialysis | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is pregnant | PATIENT: Female, 30 years old, no pregnancy mentioned | MET: NO\n\nCRITERION: Patient has heart failure | PATIENT: No heart failure mentioned | MET: NO\n\nCRITERION: Patient has pericarditis | PATIENT: No pericarditis mentioned | MET: NO\n\nCRITERION: Patient has incomplete dialysis secondary to hypotension or access issues | PATIENT: No information provided | MET: NO\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided about the number of sessions per week | MET: NO\n\nCRITERION: Patient's diagnosis and treatment plan meet the general requirements for medical necessity as stated in CMS payment policy manuals | PATIENT: End stage renal disease, requiring kidney dialysis | MET: YES\n\nCRITERION: Patient's treatment plan is supported by medical documentation | PATIENT: No information provided about medical documentation | MET: NO\n\nCRITERION: Patient's diagnosis is consistent with clinical conditions that could establish reasonable and necessary requirements for payment | PATIENT: End stage renal disease | MET: YES\n\nOVERALL: NOT ELIGIBLE (due to lack of specific information about the patient's condition and treatment plan, and no clear indication that the patient meets the covered indications)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T13:48:16.741753",
+      "input": "CRITERION: Patient has a metabolic condition (acidosis, hyperkalemia, hyperphosphatemia) | PATIENT: End stage renal disease, no specific metabolic condition mentioned | MET: NO\n\nCRITERION: Patient has",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to a lack of specific information about their condition and treatment plan, resulting in insufficient evidence to support a claim for medical necessity.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T13:48:17.151458",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility for coverage cannot be determined due to a lack of specific information about their condition and treatment plan, resulting in insufficient evidence to support a claim for medical necessity.",
+      "output": "We have reviewed your insurance claim for kidney dialysis treatment. According to our \"Frequency of Hemodialysis\" policy, we need more information about your condition and treatment plan to determine if this treatment is necessary for you. Unfortunately, we don't have enough details to support your claim, so we are unable to approve it at this time. We will need more information from your doctor to make a decision.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

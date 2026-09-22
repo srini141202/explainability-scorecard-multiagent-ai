@@ -1,0 +1,17 @@
+{
+  "claim_id": "B009",
+  "claim": {
+    "claim_id": "B009",
+    "age": 70,
+    "gender": "Female",
+    "diagnosis": "Seasonal flu prevention",
+    "procedure": "Influenza vaccination",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE. The influenza vaccination is a recommended preventive service for adults 65 and older, and it is typically covered under most healthcare insurance plans without requiring prior authorization.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE. The influenza vaccination is a recommended preventive service for adults 65 and older, and it is typically covered under most healthcare insurance plans without requiring prior authorization."
+}

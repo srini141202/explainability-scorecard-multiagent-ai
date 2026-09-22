@@ -1,0 +1,17 @@
+{
+  "claim_id": "B003",
+  "claim": {
+    "claim_id": "B003",
+    "age": 55,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Routine screening colonoscopy is a recommended preventive service for individuals 50-75 years old, and this patient is within the recommended age range. According to guidelines, average-risk adults should undergo screening for colorectal cancer, and this claim meets the criteria for coverage.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Routine screening colonoscopy is a recommended preventive service for individuals 50-75 years old, and this patient is within the recommended age range. According to guidelines, average-risk adults should undergo screening for colorectal cancer, and this claim meets the criteria for coverage."
+}

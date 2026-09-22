@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_117",
+  "claim": {
+    "claim_id": "CLAIM_117",
+    "patient_id": "e873253b-530b-34f6-13b5-3c3703510848",
+    "age": 80,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less under many clinical scenarios | PATIENT: No explicit prognosis provided, but patient is 80 years old with chronic heart failure | MET: NO (insufficient information)\n\nCRITERION: Documentation of sufficient clinical information to support certification of terminal illness | PATIENT: No explicit documentation provided | MET: NO (insufficient information)\n\nCRITERION: Identification of specific structural/functional impairments and activity limitations | PATIENT: Chronic heart failure (impairment), but no specific activity limitations mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of secondary and comorbid conditions | PATIENT: No secondary or comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No secondary or comorbid conditions mentioned, and no explicit prognosis provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of structural/functional impairments and activity limitations to facilitate intervention strategies | PATIENT: No explicit documentation provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the necessary criteria for certification of terminal illness or disability.",
+  "explanation": "We have made a decision about your insurance claim for cardiac rehabilitation. Unfortunately, we are unable to approve your claim at this time because we did not receive enough information to determine if you meet the requirements under our Hospice Cardiopulmonary Conditions policy. This policy requires certain information to show that you have a terminal illness or disability, and we didn't get enough details to make that decision. We need more information to review your claim again.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-29T00:11:17.077639",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 80",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 80"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-29T00:11:18.169066",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 80, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less under many clinical scenarios | PATIENT: No explicit prognosis provided, but patient is 80 years old with chronic heart failure | MET: NO (insufficient information)\n\nCRITERION: Documentation of sufficient clinical information to support certification of terminal illness | PATIENT: No explicit documentation provided | MET: NO (insufficient information)\n\nCRITERION: Identification of specific structural/functional impairments and activity limitations | PATIENT: Chronic heart failure (impairment), but no specific activity limitations mentioned | MET: NO (insufficient information)\n\nCRITERION: Consideration of secondary and comorbid conditions | PATIENT: No secondary or comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No secondary or comorbid conditions mentioned, and no explicit prognosis provided | MET: NO (insufficient information)\n\nCRITERION: Documentation of structural/functional impairments and activity limitations to facilitate intervention strategies | PATIENT: No explicit documentation provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-29T00:11:18.472603",
+      "input": "CRITERION: Cardiopulmonary conditions are associated with impairments, activity limitations, and disability | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less under ",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the necessary criteria for certification of terminal illness or disability.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-29T00:11:18.988477",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information provided to meet the necessary criteria for certification of terminal illness or disability.",
+      "output": "We have made a decision about your insurance claim for cardiac rehabilitation. Unfortunately, we are unable to approve your claim at this time because we did not receive enough information to determine if you meet the requirements under our Hospice Cardiopulmonary Conditions policy. This policy requires certain information to show that you have a terminal illness or disability, and we didn't get enough details to make that decision. We need more information to review your claim again.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

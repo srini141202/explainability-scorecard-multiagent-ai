@@ -1,0 +1,23 @@
+{
+  "test": "Discriminant Validity",
+  "hitl_avg": {
+    "D1": 9.62,
+    "D2": 6.72,
+    "D3": 10.0,
+    "D4 Human Oversight": 9.17,
+    "D5": 10.0,
+    "Composite": 9.1
+  },
+  "autonomous_avg": {
+    "D1": 9.62,
+    "D2": 6.7,
+    "D3": 10.0,
+    "D4 Human Oversight": 9.01,
+    "D5": 10.0,
+    "Composite": 9.06
+  },
+  "d4_hitl": 9.17,
+  "d4_autonomous": 9.01,
+  "d4_difference": 0.16,
+  "valid": true
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_113",
+  "claim": {
+    "claim_id": "CLAIM_113",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "End stage renal disease",
+    "procedure": "Kidney dialysis",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Frequency of Hemodialysis",
+  "criteria_check": "CRITERION: Age not specified as a limitation | PATIENT: 19 years old | MET: YES\n\nCRITERION: Diagnosis of a metabolic condition, fluid positive status, pregnancy, heart failure, pericarditis, or incomplete dialysis | PATIENT: End stage renal disease | MET: YES, as end stage renal disease may require dialysis for metabolic conditions\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on the number of sessions per week | MET: NO, due to lack of information\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided on the planned duration of dialysis | MET: NO, due to lack of information\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided on the reason for the sessions | MET: NO, due to lack of information\n\nCRITERION: Medical documentation supporting the need for dialysis | PATIENT: No information provided on medical documentation | MET: NO, due to lack of information\n\nCRITERION: Patient Plan of Care (POC) establishing parameters for treatment | PATIENT: No information provided on the POC | MET: NO, due to lack of information\n\nOVERALL: NOT ELIGIBLE, due to lack of information provided on the number of sessions per week, planned duration of dialysis, reason for the sessions, medical documentation, and Patient Plan of Care. However, the patient's diagnosis of end stage renal disease suggests that they may be eligible for dialysis under the policy. Additional information is needed to determine eligibility.",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for dialysis cannot be determined due to lack of information, and additional documentation is needed to assess the medical necessity of the treatment.",
+  "explanation": "We have reviewed your insurance claim for kidney dialysis treatment. According to our Frequency of Hemodialysis policy, we need more information to determine if this treatment is necessary for you. We are requiring prior authorization, which means we need additional documentation from your doctor to make a decision. This will help us understand your needs and make a fair decision about covering your treatment.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-29T00:10:14.761504",
+      "input": "Kidney dialysis coverage End stage renal disease patient age 19",
+      "output": "Frequency of Hemodialysis",
+      "reasoning": "Searched vector store for: Kidney dialysis coverage End stage renal disease patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-29T00:10:16.404986",
+      "input": "Policy: Frequency of Hemodialysis, Patient age: 19, Procedure: Kidney dialysis",
+      "output": "CRITERION: Age not specified as a limitation | PATIENT: 19 years old | MET: YES\n\nCRITERION: Diagnosis of a metabolic condition, fluid positive status, pregnancy, heart failure, pericarditis, or incomplete dialysis | PATIENT: End stage renal disease | MET: YES, as end stage renal disease may require dialysis for metabolic conditions\n\nCRITERION: Sessions furnished in excess of 3 sessions per week are not considered reasonable and necessary unless fully supported in the medical documentation | PATIENT: No information provided on the number of sessions per week | MET: NO, due to lack of information\n\nCRITERION: Planned inadequate or short dialysis | PATIENT: No information provided on the planned duration of dialysis | MET: NO, due to lack of information\n\nCRITERION: Sessions performed for convenience of patient or staff | PATIENT: No information provided on the reason for the sessions | MET: NO, due to lack of information\n\nCRITERION: Medical documentation supporting the need for dialysis | PATIENT: No information provided on medical documentation | MET: NO, due to lack of information\n\nCRITERION: Patient Plan of Care (POC) establishing parameters for treatment | PATIENT: No information provided on the POC | MET: NO, due to lack of information\n\nOVERALL: NOT ELIGIBLE, due to lack of information provided on the number of sessions per week, planned duration of dialysis, reason for the sessions, medical documentation, and Patient Plan of Care. However, the patient's diagnosis of end stage renal disease suggests that they may be eligible for dialysis under the policy. Additional information is needed to determine eligibility.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-29T00:10:16.726589",
+      "input": "CRITERION: Age not specified as a limitation | PATIENT: 19 years old | MET: YES\n\nCRITERION: Diagnosis of a metabolic condition, fluid positive status, pregnancy, heart failure, pericarditis, or incomp",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for dialysis cannot be determined due to lack of information, and additional documentation is needed to assess the medical necessity of the treatment.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-29T00:10:17.244847",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for dialysis cannot be determined due to lack of information, and additional documentation is needed to assess the medical necessity of the treatment.",
+      "output": "We have reviewed your insurance claim for kidney dialysis treatment. According to our Frequency of Hemodialysis policy, we need more information to determine if this treatment is necessary for you. We are requiring prior authorization, which means we need additional documentation from your doctor to make a decision. This will help us understand your needs and make a fair decision about covering your treatment.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

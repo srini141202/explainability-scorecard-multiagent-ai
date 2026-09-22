@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_024",
+  "claim": {
+    "claim_id": "CLAIM_024",
+    "patient_id": "adcf84c4-2011-8c74-5190-101d2bffec10",
+    "age": 57,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: Age not specified as a criterion in the policy | PATIENT: 57 | MET: YES (age is not a factor in this policy)\n\nCRITERION: Cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided | MET: NO\n\nCRITERION: Documentation of structural/functional impairments and activity limitations | PATIENT: No information provided | MET: NO\n\nCRITERION: Presence of secondary conditions (e.g. delirium, pneumonia, stasis ulcers, pressure ulcers) | PATIENT: No information provided | MET: NO\n\nCRITERION: Presence of comorbid conditions (e.g. end stage renal disease) | PATIENT: No information provided | MET: NO\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE (due to lack of information regarding prognosis, structural/functional impairments, activity limitations, and presence of secondary or comorbid conditions)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to a lack of information regarding prognosis, structural/functional impairments, activity limitations, and presence of secondary or comorbid conditions.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation for your heart condition. According to our Hospice Cardiopulmonary Conditions policy, we were unable to approve your claim because we didn't receive enough information about your overall health and how your condition is affecting you. We need more details to understand your needs and make a decision. Unfortunately, this means we are denying your claim at this time.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T09:16:52.365195",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 57",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 57"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T09:16:53.650166",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 57, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Age not specified as a criterion in the policy | PATIENT: 57 | MET: YES (age is not a factor in this policy)\n\nCRITERION: Cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided | MET: NO\n\nCRITERION: Documentation of structural/functional impairments and activity limitations | PATIENT: No information provided | MET: NO\n\nCRITERION: Presence of secondary conditions (e.g. delirium, pneumonia, stasis ulcers, pressure ulcers) | PATIENT: No information provided | MET: NO\n\nCRITERION: Presence of comorbid conditions (e.g. end stage renal disease) | PATIENT: No information provided | MET: NO\n\nCRITERION: Combined effects of primary and secondary/comorbid conditions resulting in a prognosis of 6 months or less | PATIENT: No information provided | MET: NO\n\nOVERALL: NOT ELIGIBLE (due to lack of information regarding prognosis, structural/functional impairments, activity limitations, and presence of secondary or comorbid conditions)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T09:16:53.934356",
+      "input": "CRITERION: Age not specified as a criterion in the policy | PATIENT: 57 | MET: YES (age is not a factor in this policy)\n\nCRITERION: Cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YE",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to a lack of information regarding prognosis, structural/functional impairments, activity limitations, and presence of secondary or comorbid conditions.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T09:16:54.412303",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to a lack of information regarding prognosis, structural/functional impairments, activity limitations, and presence of secondary or comorbid conditions.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation for your heart condition. According to our Hospice Cardiopulmonary Conditions policy, we were unable to approve your claim because we didn't receive enough information about your overall health and how your condition is affecting you. We need more details to understand your needs and make a decision. Unfortunately, this means we are denying your claim at this time.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

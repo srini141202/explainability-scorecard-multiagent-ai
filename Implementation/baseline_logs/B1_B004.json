@@ -1,0 +1,17 @@
+{
+  "claim_id": "B004",
+  "claim": {
+    "claim_id": "B004",
+    "age": 35,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "DENY"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: Routine colorectal cancer screening is recommended for average-risk adults starting at age 45, but some guidelines suggest starting at age 35 for those with higher risk factors or family history. Since the patient is 35, this claim is approved for preventive care, assuming the patient has a higher risk factor or family history as per the latest screening guidelines.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: Routine colorectal cancer screening is recommended for average-risk adults starting at age 45, but some guidelines suggest starting at age 35 for those with higher risk factors or family history. Since the patient is 35, this claim is approved for preventive care, assuming the patient has a higher risk factor or family history as per the latest screening guidelines."
+}

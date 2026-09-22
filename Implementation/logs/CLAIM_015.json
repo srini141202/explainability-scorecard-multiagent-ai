@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_015",
+  "claim": {
+    "claim_id": "CLAIM_015",
+    "patient_id": "a739fac8-6bad-6f6b-9856-59ff0b6bc412",
+    "age": 50,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, and disability | PATIENT: Chronic heart failure, which is associated with such impairments | MET: YES\n\nCRITERION: The patient's health status, including functioning, physical illness, and mental well-being, must be considered | PATIENT: No information provided on overall health status, but chronic heart failure is a significant physical illness | MET: NO (insufficient information)\n\nCRITERION: The patient must have a prognosis of 6 months or less if the illness runs its normal course | PATIENT: No information provided on prognosis | MET: NO (insufficient information)\n\nCRITERION: The patient's care plan may be impacted by relevant secondary and/or comorbid conditions | PATIENT: No secondary or comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Secondary conditions must be directly related to the primary condition and contribute to the patient's prognosis | PATIENT: No secondary conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Comorbid conditions must be distinct from the primary condition and contribute to the patient's prognosis | PATIENT: No comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: The combined effects of the primary condition and any secondary or comorbid conditions must result in a prognosis of 6 months or less | PATIENT: No information provided on combined effects or prognosis | MET: NO (insufficient information)\n\nCRITERION: The documentation of structural/functional impairments and activity limitations must facilitate the selection of intervention strategies | PATIENT: No documentation provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+  "decision": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding their health status, prognosis, and the impact of potential secondary or comorbid conditions.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation for your heart condition. Unfortunately, we are unable to approve your claim at this time due to a lack of information about your current health status. According to our Hospice Cardiopulmonary Conditions policy, we need more details to make a decision. We will need to gather more information to determine if you are eligible for coverage under this policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-24T17:11:59.310537",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 50",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 50"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-24T17:12:00.719761",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 50, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, and disability | PATIENT: Chronic heart failure, which is associated with such impairments | MET: YES\n\nCRITERION: The patient's health status, including functioning, physical illness, and mental well-being, must be considered | PATIENT: No information provided on overall health status, but chronic heart failure is a significant physical illness | MET: NO (insufficient information)\n\nCRITERION: The patient must have a prognosis of 6 months or less if the illness runs its normal course | PATIENT: No information provided on prognosis | MET: NO (insufficient information)\n\nCRITERION: The patient's care plan may be impacted by relevant secondary and/or comorbid conditions | PATIENT: No secondary or comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Secondary conditions must be directly related to the primary condition and contribute to the patient's prognosis | PATIENT: No secondary conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: Comorbid conditions must be distinct from the primary condition and contribute to the patient's prognosis | PATIENT: No comorbid conditions mentioned | MET: NO (insufficient information)\n\nCRITERION: The combined effects of the primary condition and any secondary or comorbid conditions must result in a prognosis of 6 months or less | PATIENT: No information provided on combined effects or prognosis | MET: NO (insufficient information)\n\nCRITERION: The documentation of structural/functional impairments and activity limitations must facilitate the selection of intervention strategies | PATIENT: No documentation provided | MET: NO (insufficient information)\n\nOVERALL: NOT ELIGIBLE (due to insufficient information to determine eligibility)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-24T17:12:01.156659",
+      "input": "CRITERION: The patient must have a cardiopulmonary condition | PATIENT: Chronic heart failure | MET: YES\n\nCRITERION: The patient's condition must be associated with impairments, activity limitations, ",
+      "output": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding their health status, prognosis, and the impact of potential secondary or comorbid conditions.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-24T17:12:01.631488",
+      "input": "DECISION: DENY\nREASON: The patient's eligibility cannot be determined due to insufficient information regarding their health status, prognosis, and the impact of potential secondary or comorbid conditions.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation for your heart condition. Unfortunately, we are unable to approve your claim at this time due to a lack of information about your current health status. According to our Hospice Cardiopulmonary Conditions policy, we need more details to make a decision. We will need to gather more information to determine if you are eligible for coverage under this policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

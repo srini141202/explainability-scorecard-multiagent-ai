@@ -1,0 +1,46 @@
+{
+  "claim_id": "DV002",
+  "claim": {
+    "claim_id": "DV002",
+    "age": 55,
+    "gender": "Male",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Autonomous",
+  "policy_used": "Diagnostic and Therapeutic Colonoscopy",
+  "criteria_check": "CRITERION: Patient must be of an age that is eligible for Medicare | PATIENT: 55 | MET: NO\n\nCRITERION: Diagnosis must be one of the following for a diagnostic colonoscopy: Evaluation of an abnormality discovered by a radiology examination, abnormal oncology colorectal screening or stool based DNA test, unexplained gastrointestinal bleeding, clinically significant diarrhea, evaluation of acute colonic ischemia, streptococcus bovis endocarditis, clinical suspicion of inflammatory bowel disease, known chronic inflammatory bowel disease, surveillance of selected patients with Crohns colitis or chronic ulcerative colitis | PATIENT: Colorectal cancer screening | MET: YES\n\nCRITERION: Procedure requested must be a colonoscopy | PATIENT: Colonoscopy screening | MET: YES\n\nCRITERION: Colonoscopy must be contraindicated if the patient has fulminant colitis, acute severe diverticulitis, or suspected perforated viscus | PATIENT: No indication of these conditions | MET: YES\n\nCRITERION: Patient must meet the requirements for colorectal cancer screening as described in the CMS Colorectal Cancer screening Preventive Services requirements | PATIENT: 55-year-old male with diagnosis of colorectal cancer screening | MET: YES\n\nOVERALL: ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient is 55 years old, which does not meet the Medicare eligibility age criterion, typically 65 or older, unless the patient has a disability or end-stage renal disease.",
+  "explanation": "We've reviewed your insurance claim for a colonoscopy screening, and unfortunately, it has been denied. According to our Diagnostic and Therapeutic Colonoscopy policy, Medicare typically covers this service for people 65 or older, unless they have a disability or certain health conditions. Since you are 55 years old and don't meet these exceptions, your claim doesn't qualify for coverage under this policy. This decision is based on the eligibility criteria outlined in our Diagnostic and Therapeutic Colonoscopy policy.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-08-10T02:35:17.524181",
+      "input": "Colonoscopy screening coverage Colorectal cancer screening patient age 55",
+      "output": "Diagnostic and Therapeutic Colonoscopy",
+      "reasoning": "Searched vector store for: Colonoscopy screening coverage Colorectal cancer screening patient age 55"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-08-10T02:35:18.485995",
+      "input": "Policy: Diagnostic and Therapeutic Colonoscopy, Patient age: 55, Procedure: Colonoscopy screening",
+      "output": "CRITERION: Patient must be of an age that is eligible for Medicare | PATIENT: 55 | MET: NO\n\nCRITERION: Diagnosis must be one of the following for a diagnostic colonoscopy: Evaluation of an abnormality discovered by a radiology examination, abnormal oncology colorectal screening or stool based DNA test, unexplained gastrointestinal bleeding, clinically significant diarrhea, evaluation of acute colonic ischemia, streptococcus bovis endocarditis, clinical suspicion of inflammatory bowel disease, known chronic inflammatory bowel disease, surveillance of selected patients with Crohns colitis or chronic ulcerative colitis | PATIENT: Colorectal cancer screening | MET: YES\n\nCRITERION: Procedure requested must be a colonoscopy | PATIENT: Colonoscopy screening | MET: YES\n\nCRITERION: Colonoscopy must be contraindicated if the patient has fulminant colitis, acute severe diverticulitis, or suspected perforated viscus | PATIENT: No indication of these conditions | MET: YES\n\nCRITERION: Patient must meet the requirements for colorectal cancer screening as described in the CMS Colorectal Cancer screening Preventive Services requirements | PATIENT: 55-year-old male with diagnosis of colorectal cancer screening | MET: YES\n\nOVERALL: ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-08-10T02:35:18.795195",
+      "input": "CRITERION: Patient must be of an age that is eligible for Medicare | PATIENT: 55 | MET: NO\n\nCRITERION: Diagnosis must be one of the following for a diagnostic colonoscopy: Evaluation of an abnormality",
+      "output": "DECISION: DENY\nREASON: The patient is 55 years old, which does not meet the Medicare eligibility age criterion, typically 65 or older, unless the patient has a disability or end-stage renal disease.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-08-10T02:35:19.317245",
+      "input": "DECISION: DENY\nREASON: The patient is 55 years old, which does not meet the Medicare eligibility age criterion, typically 65 or older, unless the patient has a disability or end-stage renal disease.",
+      "output": "We've reviewed your insurance claim for a colonoscopy screening, and unfortunately, it has been denied. According to our Diagnostic and Therapeutic Colonoscopy policy, Medicare typically covers this service for people 65 or older, unless they have a disability or certain health conditions. Since you are 55 years old and don't meet these exceptions, your claim doesn't qualify for coverage under this policy. This decision is based on the eligibility criteria outlined in our Diagnostic and Therapeutic Colonoscopy policy.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

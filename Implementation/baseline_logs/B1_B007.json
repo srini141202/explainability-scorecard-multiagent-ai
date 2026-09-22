@@ -1,0 +1,17 @@
+{
+  "claim_id": "B007",
+  "claim": {
+    "claim_id": "B007",
+    "age": 65,
+    "gender": "Female",
+    "diagnosis": "Osteoporosis screening",
+    "procedure": "Bone density scan",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE \nReason: The patient is a 65-year-old female, and osteoporosis screening is a recommended preventive service for women over 65. Bone density scans are a standard diagnostic procedure for osteoporosis, and this claim meets the criteria for coverage under standard preventive care guidelines.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE \nReason: The patient is a 65-year-old female, and osteoporosis screening is a recommended preventive service for women over 65. Bone density scans are a standard diagnostic procedure for osteoporosis, and this claim meets the criteria for coverage under standard preventive care guidelines."
+}

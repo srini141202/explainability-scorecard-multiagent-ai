@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_098",
+  "claim": {
+    "claim_id": "CLAIM_098",
+    "patient_id": "3425cf29-b3c7-7652-839e-0c410b7d2a34",
+    "age": 67,
+    "gender": "Male",
+    "diagnosis": "Severe headache investigation",
+    "procedure": "MRI brain scan",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Peripheral Nerve Blocks and Procedures for Chronic Pain",
+  "criteria_check": "CRITERION: Patient has a diagnosis of Trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provided | MET: NO\n\nCRITERION: Non-responsive to medical therapy or intolerance of medical therapy | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is not a good surgical candidate or declines surgical intervention | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has had \u2265 75% improvement after diagnostic trigeminal nerve block | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of Median neuropathy at the wrist (carpal tunnel syndrome) | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Diagnosis of Morton\u2019s Neuroma | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Use of Moderate or Deep Sedation, General Anesthesia, and Monitored Anesthesia Care (MAC) | PATIENT: No information provided | MET: NO\n\nCRITERION: Treatment for complex regional pain syndrome, widespread diffuse pain, or systemic polyneuropathies | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: \"Dry needling\" of neuromas, peripheral nerves | PATIENT: No information provided | MET: NO\n\nCRITERION: Multiple injections or denervation on the same day | PATIENT: Requested MRI brain scan | MET: NO\n\nCRITERION: Therapeutic PNBs, peripheral nerve denervation from ablation (RFA) or cryoneurolysis for listed conditions | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Exceptions (regional anesthetic block, acute surgical pain, pain related to malignancy) | PATIENT: Severe headache investigation | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's requested procedure is an MRI brain scan, which is not mentioned in the provided policy rules. The policy rules seem to focus on peripheral nerve blocks and procedures for chronic pain, which does not align with the patient's diagnosis or requested procedure.",
+  "decision": "DECISION: DENY\nREASON: The patient's requested procedure, an MRI brain scan, does not align with the policy rules which focus on peripheral nerve blocks and procedures for chronic pain, and the patient's diagnosis of severe headache investigation does not meet the criteria for coverage.",
+  "explanation": "We have reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, your claim has been denied because the procedure does not fit with the rules of our \"Peripheral Nerve Blocks and Procedures for Chronic Pain\" policy. This policy is meant for treatments that help with long-term pain, and your situation doesn't meet the requirements for coverage. We understand this may be disappointing, and we're happy to help you explore other options.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-27T21:58:59.292508",
+      "input": "MRI brain scan coverage Severe headache investigation patient age 67",
+      "output": "Peripheral Nerve Blocks and Procedures for Chronic Pain",
+      "reasoning": "Searched vector store for: MRI brain scan coverage Severe headache investigation patient age 67"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-27T21:59:00.532305",
+      "input": "Policy: Peripheral Nerve Blocks and Procedures for Chronic Pain, Patient age: 67, Procedure: MRI brain scan",
+      "output": "CRITERION: Patient has a diagnosis of Trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provided | MET: NO\n\nCRITERION: Non-responsive to medical therapy or intolerance of medical therapy | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient is not a good surgical candidate or declines surgical intervention | PATIENT: No information provided | MET: NO\n\nCRITERION: Patient has had \u2265 75% improvement after diagnostic trigeminal nerve block | PATIENT: No information provided | MET: NO\n\nCRITERION: Diagnosis of Median neuropathy at the wrist (carpal tunnel syndrome) | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Diagnosis of Morton\u2019s Neuroma | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Use of Moderate or Deep Sedation, General Anesthesia, and Monitored Anesthesia Care (MAC) | PATIENT: No information provided | MET: NO\n\nCRITERION: Treatment for complex regional pain syndrome, widespread diffuse pain, or systemic polyneuropathies | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: \"Dry needling\" of neuromas, peripheral nerves | PATIENT: No information provided | MET: NO\n\nCRITERION: Multiple injections or denervation on the same day | PATIENT: Requested MRI brain scan | MET: NO\n\nCRITERION: Therapeutic PNBs, peripheral nerve denervation from ablation (RFA) or cryoneurolysis for listed conditions | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Exceptions (regional anesthetic block, acute surgical pain, pain related to malignancy) | PATIENT: Severe headache investigation | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's requested procedure is an MRI brain scan, which is not mentioned in the provided policy rules. The policy rules seem to focus on peripheral nerve blocks and procedures for chronic pain, which does not align with the patient's diagnosis or requested procedure.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-27T21:59:00.788145",
+      "input": "CRITERION: Patient has a diagnosis of Trigeminal neuralgia | PATIENT: Severe headache investigation | MET: NO\n\nCRITERION: Condition has been present at least 6 months | PATIENT: No information provide",
+      "output": "DECISION: DENY\nREASON: The patient's requested procedure, an MRI brain scan, does not align with the policy rules which focus on peripheral nerve blocks and procedures for chronic pain, and the patient's diagnosis of severe headache investigation does not meet the criteria for coverage.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-27T21:59:01.240029",
+      "input": "DECISION: DENY\nREASON: The patient's requested procedure, an MRI brain scan, does not align with the policy rules which focus on peripheral nerve blocks and procedures for chronic pain, and the patient's diagnosis of severe headache investigation does not meet the criteria for coverage.",
+      "output": "We have reviewed your insurance claim for an MRI brain scan to investigate your severe headaches. Unfortunately, your claim has been denied because the procedure does not fit with the rules of our \"Peripheral Nerve Blocks and Procedures for Chronic Pain\" policy. This policy is meant for treatments that help with long-term pain, and your situation doesn't meet the requirements for coverage. We understand this may be disappointing, and we're happy to help you explore other options.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

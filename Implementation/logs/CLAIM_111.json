@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_111",
+  "claim": {
+    "claim_id": "CLAIM_111",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Type 2 diabetes mellitus with eye complications",
+    "procedure": "Diabetic retinopathy eye examination",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+  "criteria_check": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy for medical decision making | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: Fundus photography must be used to document abnormalities of disease processes affecting the eye, or to follow the progress of such disease | PATIENT: Diabetic retinopathy eye examination requested | MET: YES\n\nCRITERION: Extended ophthalmoscopy must be indicated when the level of examination requires a complete view of the posterior segment of the eye and documentation is greater than that required for general ophthalmoscopy | PATIENT: Diabetic retinopathy, which may require detailed examination | MET: YES\n\nCRITERION: The patient must have a condition that is listed as an indication for extended ophthalmoscopy, such as diabetic retinopathy | PATIENT: Diabetic retinopathy | MET: YES\n\nCRITERION: The study must not be performed as a screening service | PATIENT: The patient has a diagnosed medical condition (diabetic retinopathy) | MET: YES\n\nCRITERION: Fundus photography must include a written interpretation | PATIENT: No information provided about the interpretation | MET: NO (assuming no interpretation is provided)\n\nCRITERION: Extended ophthalmoscopy must include a drawing of the retina, with interpretation and report | PATIENT: No information provided about the drawing, interpretation, and report | MET: NO (assuming no drawing, interpretation, and report are provided)\n\nCRITERION: The patient's age must be considered (Medicare eligibility typically starts at 65) | PATIENT: 19 years old | MET: NO (Medicare eligibility is not typically applicable)\n\nHowever, considering the context of the policy and the information provided, it appears that the patient's condition (diabetic retinopathy) may be eligible for coverage under specific circumstances.\n\nOVERALL: NOT ELIGIBLE (due to the patient's age, 19, which is below the typical Medicare eligibility age, and potential lack of interpretation and drawing for extended ophthalmoscopy)",
+  "decision": "DECISION: DENY\nREASON: The patient's age of 19 is below the typical Medicare eligibility age, and there is also a lack of information regarding the required written interpretation for fundus photography and the drawing, interpretation, and report for extended ophthalmoscopy.",
+  "explanation": "We have reviewed your insurance claim for a diabetic eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we are unable to approve your claim because you are under the typical age for Medicare eligibility. Additionally, we need more information about the test results to make a decision. We will need more details to reconsider your claim.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:24:54.899366",
+      "input": "Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 19",
+      "output": "Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography)",
+      "reasoning": "Searched vector store for: Diabetic retinopathy eye examination coverage Type 2 diabetes mellitus with eye complications patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:24:56.344314",
+      "input": "Policy: Ophthalmology: Posterior Segment Imaging (Extended Ophthalmoscopy and Fundus Photography), Patient age: 19, Procedure: Diabetic retinopathy eye examination",
+      "output": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy for medical decision making | PATIENT: Type 2 diabetes mellitus with eye complications | MET: YES\n\nCRITERION: Fundus photography must be used to document abnormalities of disease processes affecting the eye, or to follow the progress of such disease | PATIENT: Diabetic retinopathy eye examination requested | MET: YES\n\nCRITERION: Extended ophthalmoscopy must be indicated when the level of examination requires a complete view of the posterior segment of the eye and documentation is greater than that required for general ophthalmoscopy | PATIENT: Diabetic retinopathy, which may require detailed examination | MET: YES\n\nCRITERION: The patient must have a condition that is listed as an indication for extended ophthalmoscopy, such as diabetic retinopathy | PATIENT: Diabetic retinopathy | MET: YES\n\nCRITERION: The study must not be performed as a screening service | PATIENT: The patient has a diagnosed medical condition (diabetic retinopathy) | MET: YES\n\nCRITERION: Fundus photography must include a written interpretation | PATIENT: No information provided about the interpretation | MET: NO (assuming no interpretation is provided)\n\nCRITERION: Extended ophthalmoscopy must include a drawing of the retina, with interpretation and report | PATIENT: No information provided about the drawing, interpretation, and report | MET: NO (assuming no drawing, interpretation, and report are provided)\n\nCRITERION: The patient's age must be considered (Medicare eligibility typically starts at 65) | PATIENT: 19 years old | MET: NO (Medicare eligibility is not typically applicable)\n\nHowever, considering the context of the policy and the information provided, it appears that the patient's condition (diabetic retinopathy) may be eligible for coverage under specific circumstances.\n\nOVERALL: NOT ELIGIBLE (due to the patient's age, 19, which is below the typical Medicare eligibility age, and potential lack of interpretation and drawing for extended ophthalmoscopy)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:24:56.631217",
+      "input": "CRITERION: Patient must have a medical condition that requires the use of fundus photography or extended ophthalmoscopy for medical decision making | PATIENT: Type 2 diabetes mellitus with eye complic",
+      "output": "DECISION: DENY\nREASON: The patient's age of 19 is below the typical Medicare eligibility age, and there is also a lack of information regarding the required written interpretation for fundus photography and the drawing, interpretation, and report for extended ophthalmoscopy.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:24:56.992752",
+      "input": "DECISION: DENY\nREASON: The patient's age of 19 is below the typical Medicare eligibility age, and there is also a lack of information regarding the required written interpretation for fundus photography and the drawing, interpretation, and report for extended ophthalmoscopy.",
+      "output": "We have reviewed your insurance claim for a diabetic eye examination. According to our Ophthalmology: Posterior Segment Imaging policy, we are unable to approve your claim because you are under the typical age for Medicare eligibility. Additionally, we need more information about the test results to make a decision. We will need more details to reconsider your claim.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_083",
+  "claim": {
+    "claim_id": "CLAIM_083",
+    "patient_id": "fff228b5-a185-d09b-e3b6-be336d0f3f7e",
+    "age": 100,
+    "gender": "Female",
+    "diagnosis": "Colorectal cancer screening",
+    "procedure": "Colonoscopy screening",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy",
+  "criteria_check": "CRITERION: Patient has an abnormality discovered on barium enema and/or other imaging technique that is likely to be clinically significant | PATIENT: Colorectal cancer screening | MET: NO\n\nCRITERION: Patient has unexplained gastrointestinal (GI) bleeding | PATIENT: No indication of GI bleeding | MET: NO\n\nCRITERION: Patient has unexplained iron deficiency anemia | PATIENT: No indication of iron deficiency anemia | MET: NO\n\nCRITERION: Patient requires surveillance of colonic neoplasia | PATIENT: Colorectal cancer screening | MET: NO (this is a screening, not surveillance)\n\nCRITERION: Patient has chronic inflammatory bowel disease (IBD) of the colon | PATIENT: No indication of IBD | MET: NO\n\nCRITERION: Patient has clinically significant diarrhea of unexplained origin | PATIENT: No indication of diarrhea | MET: NO\n\nCRITERION: Patient requires intraoperative identification of the site of a lesion | PATIENT: Not applicable | MET: NO\n\nCRITERION: Patient has acute colonic ischemia/ischemic bowel disease | PATIENT: No indication of ischemia | MET: NO\n\nCRITERION: Patient has Streptococcus bovis (S. bovis) endocarditis or bacteremia | PATIENT: No indication of S. bovis | MET: NO\n\nCRITERION: Patient requires treatment of bleeding from lesions | PATIENT: No indication of bleeding | MET: NO\n\nCRITERION: Patient requires removal of a foreign body | PATIENT: No indication of foreign body | MET: NO\n\nCRITERION: Patient requires excision of colonic polyps | PATIENT: No indication of polyps | MET: NO\n\nCRITERION: Patient has pseudo-obstruction of the colon (Ogilvie\u2019s Syndrome) | PATIENT: No indication of pseudo-obstruction | MET: NO\n\nCRITERION: Patient requires evaluation of an unexplained, new-onset constipation | PATIENT: No indication of constipation | MET: NO\n\nCRITERION: Patient has an anorectal polyp (adenomatous polyp only) | PATIENT: No indication of anorectal polyp | MET: NO\n\nCRITERION: Patient requires palliative treatment of stenosing, bleeding neoplasms | PATIENT: No indication of neoplasms | MET: NO\n\nCRITERION: Patient is undergoing screening for colorectal cancer | PATIENT: Undergoing colorectal cancer screening | MET: YES\n\nHowever, according to the policy, this LCD addresses colonoscopies that are NOT performed for colorectal cancer screening. Colorectal cancer screening is a separate benefit with specific guidelines.\n\nOVERALL: NOT ELIGIBLE (under this specific LCD, but may be eligible under separate guidelines for colorectal cancer screening)",
+  "decision": "DECISION: DENY\nREASON: The patient is undergoing colorectal cancer screening, which is a separate benefit with specific guidelines and not covered under this Local Coverage Determination (LCD).",
+  "explanation": "We've received a decision about your insurance claim for a colonoscopy screening. Unfortunately, the claim was denied because this type of screening has its own set of rules and isn't covered under the Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy policy. This policy has specific guidelines that don't include routine colorectal cancer screenings like the one you had. We'll help you understand your options and find out if there's another way to get coverage for this important screening.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-25T22:48:59.784384",
+      "input": "Colonoscopy screening coverage Colorectal cancer screening patient age 100",
+      "output": "Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy",
+      "reasoning": "Searched vector store for: Colonoscopy screening coverage Colorectal cancer screening patient age 100"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-25T22:49:01.559816",
+      "input": "Policy: Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy, Patient age: 100, Procedure: Colonoscopy screening",
+      "output": "CRITERION: Patient has an abnormality discovered on barium enema and/or other imaging technique that is likely to be clinically significant | PATIENT: Colorectal cancer screening | MET: NO\n\nCRITERION: Patient has unexplained gastrointestinal (GI) bleeding | PATIENT: No indication of GI bleeding | MET: NO\n\nCRITERION: Patient has unexplained iron deficiency anemia | PATIENT: No indication of iron deficiency anemia | MET: NO\n\nCRITERION: Patient requires surveillance of colonic neoplasia | PATIENT: Colorectal cancer screening | MET: NO (this is a screening, not surveillance)\n\nCRITERION: Patient has chronic inflammatory bowel disease (IBD) of the colon | PATIENT: No indication of IBD | MET: NO\n\nCRITERION: Patient has clinically significant diarrhea of unexplained origin | PATIENT: No indication of diarrhea | MET: NO\n\nCRITERION: Patient requires intraoperative identification of the site of a lesion | PATIENT: Not applicable | MET: NO\n\nCRITERION: Patient has acute colonic ischemia/ischemic bowel disease | PATIENT: No indication of ischemia | MET: NO\n\nCRITERION: Patient has Streptococcus bovis (S. bovis) endocarditis or bacteremia | PATIENT: No indication of S. bovis | MET: NO\n\nCRITERION: Patient requires treatment of bleeding from lesions | PATIENT: No indication of bleeding | MET: NO\n\nCRITERION: Patient requires removal of a foreign body | PATIENT: No indication of foreign body | MET: NO\n\nCRITERION: Patient requires excision of colonic polyps | PATIENT: No indication of polyps | MET: NO\n\nCRITERION: Patient has pseudo-obstruction of the colon (Ogilvie\u2019s Syndrome) | PATIENT: No indication of pseudo-obstruction | MET: NO\n\nCRITERION: Patient requires evaluation of an unexplained, new-onset constipation | PATIENT: No indication of constipation | MET: NO\n\nCRITERION: Patient has an anorectal polyp (adenomatous polyp only) | PATIENT: No indication of anorectal polyp | MET: NO\n\nCRITERION: Patient requires palliative treatment of stenosing, bleeding neoplasms | PATIENT: No indication of neoplasms | MET: NO\n\nCRITERION: Patient is undergoing screening for colorectal cancer | PATIENT: Undergoing colorectal cancer screening | MET: YES\n\nHowever, according to the policy, this LCD addresses colonoscopies that are NOT performed for colorectal cancer screening. Colorectal cancer screening is a separate benefit with specific guidelines.\n\nOVERALL: NOT ELIGIBLE (under this specific LCD, but may be eligible under separate guidelines for colorectal cancer screening)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-25T22:49:01.854129",
+      "input": "CRITERION: Patient has an abnormality discovered on barium enema and/or other imaging technique that is likely to be clinically significant | PATIENT: Colorectal cancer screening | MET: NO\n\nCRITERION:",
+      "output": "DECISION: DENY\nREASON: The patient is undergoing colorectal cancer screening, which is a separate benefit with specific guidelines and not covered under this Local Coverage Determination (LCD).",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-25T22:49:02.394582",
+      "input": "DECISION: DENY\nREASON: The patient is undergoing colorectal cancer screening, which is a separate benefit with specific guidelines and not covered under this Local Coverage Determination (LCD).",
+      "output": "We've received a decision about your insurance claim for a colonoscopy screening. Unfortunately, the claim was denied because this type of screening has its own set of rules and isn't covered under the Colonoscopy/Sigmoidoscopy/Proctosigmoidoscopy policy. This policy has specific guidelines that don't include routine colorectal cancer screenings like the one you had. We'll help you understand your options and find out if there's another way to get coverage for this important screening.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

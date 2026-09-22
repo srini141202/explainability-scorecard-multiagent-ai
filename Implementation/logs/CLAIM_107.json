@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_107",
+  "claim": {
+    "claim_id": "CLAIM_107",
+    "patient_id": "7137d1ba-1fc0-45f4-0ed5-e4446f4109d2",
+    "age": 19,
+    "gender": "Male",
+    "diagnosis": "Lower back pain",
+    "procedure": "Physical therapy",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Epidural Steroid Injections for Pain Management",
+  "criteria_check": "CRITERION: Patient must have a diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have a diagnosis of post-laminectomy syndrome | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have a diagnosis of acute herpes zoster associated pain | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have radiculopathy, radicular pain and/or neurogenic claudication that is severe enough to greatly impact quality of life or function | PATIENT: Lower back pain, no information on severity or impact on quality of life | MET: NO\n\nCRITERION: Patient must have an objective pain scale or functional assessment performed at baseline | PATIENT: No information on objective pain scale or functional assessment | MET: NO\n\nCRITERION: Patient must have pain duration of at least 4 weeks | PATIENT: No information on pain duration | MET: NO\n\nCRITERION: Patient must have inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a noninvasive conservative care | MET: NO\n\nCRITERION: Procedure must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not an injection | MET: N/A\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which is part of a rehabilitation program | MET: YES\n\nCRITERION: Provider must be appropriately trained and credentialed | PATIENT: No information on provider qualifications | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's procedure request is for physical therapy, which is not an epidural steroid injection. The policy rules provided are for epidural steroid injections, not physical therapy. Therefore, the patient does not meet the criteria for epidural steroid injections. However, physical therapy may be a covered service under a different policy or guideline.",
+  "decision": "DECISION: DENY\nREASON: The patient's procedure request for physical therapy does not meet the criteria for epidural steroid injections, and there is insufficient information to determine eligibility for physical therapy under a different policy or guideline.",
+  "explanation": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve this treatment under our Epidural Steroid Injections for Pain Management policy. This policy does not cover physical therapy, and we don't have enough information to determine if you are eligible under a different policy. We will need more information to review your claim further.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-28T10:23:52.635778",
+      "input": "Physical therapy coverage Lower back pain patient age 19",
+      "output": "Epidural Steroid Injections for Pain Management",
+      "reasoning": "Searched vector store for: Physical therapy coverage Lower back pain patient age 19"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-28T10:23:54.886040",
+      "input": "Policy: Epidural Steroid Injections for Pain Management, Patient age: 19, Procedure: Physical therapy",
+      "output": "CRITERION: Patient must have a diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes, severe degenerative disc disease, producing foraminal or central spinal stenosis | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have a diagnosis of post-laminectomy syndrome | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have a diagnosis of acute herpes zoster associated pain | PATIENT: Lower back pain | MET: NO\n\nCRITERION: Patient must have radiculopathy, radicular pain and/or neurogenic claudication that is severe enough to greatly impact quality of life or function | PATIENT: Lower back pain, no information on severity or impact on quality of life | MET: NO\n\nCRITERION: Patient must have an objective pain scale or functional assessment performed at baseline | PATIENT: No information on objective pain scale or functional assessment | MET: NO\n\nCRITERION: Patient must have pain duration of at least 4 weeks | PATIENT: No information on pain duration | MET: NO\n\nCRITERION: Patient must have inability to tolerate noninvasive conservative care or medical documentation of failure to respond to 4 weeks of noninvasive conservative care | PATIENT: Procedure requested is physical therapy, which is a noninvasive conservative care | MET: NO\n\nCRITERION: Procedure must be performed under computed tomography (CT) or fluoroscopy image guidance with contrast | PATIENT: Procedure requested is physical therapy, not an injection | MET: N/A\n\nCRITERION: Patient must be part of an active rehabilitation program, home exercise program or functional restoration program | PATIENT: Procedure requested is physical therapy, which is part of a rehabilitation program | MET: YES\n\nCRITERION: Provider must be appropriately trained and credentialed | PATIENT: No information on provider qualifications | MET: NO\n\nOVERALL: NOT ELIGIBLE \n\nNote: The patient's procedure request is for physical therapy, which is not an epidural steroid injection. The policy rules provided are for epidural steroid injections, not physical therapy. Therefore, the patient does not meet the criteria for epidural steroid injections. However, physical therapy may be a covered service under a different policy or guideline.",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-28T10:23:55.137462",
+      "input": "CRITERION: Patient must have a diagnosis of lumbar, cervical or thoracic radiculopathy, radicular pain and/or neurogenic claudication due to central disc herniation, osteophyte or osteophyte complexes",
+      "output": "DECISION: DENY\nREASON: The patient's procedure request for physical therapy does not meet the criteria for epidural steroid injections, and there is insufficient information to determine eligibility for physical therapy under a different policy or guideline.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-28T10:23:55.518707",
+      "input": "DECISION: DENY\nREASON: The patient's procedure request for physical therapy does not meet the criteria for epidural steroid injections, and there is insufficient information to determine eligibility for physical therapy under a different policy or guideline.",
+      "output": "We have made a decision about your insurance claim for physical therapy to help with your lower back pain. Unfortunately, we are unable to approve this treatment under our Epidural Steroid Injections for Pain Management policy. This policy does not cover physical therapy, and we don't have enough information to determine if you are eligible under a different policy. We will need more information to review your claim further.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

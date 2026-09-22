@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_053",
+  "claim": {
+    "claim_id": "CLAIM_053",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Type 2 diabetes mellitus",
+    "procedure": "Diabetes self-management training",
+    "expected_decision": "APPROVE"
+  },
+  "policy_used": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+  "criteria_check": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is for Medicare Home Health Population | MET: YES (assuming the patient is a Medicare beneficiary)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections due to being physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, not insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes sufficient information concerning identified functional limitations | PATIENT: No information provided about the plan of care | MET: NO (due to lack of information)\n\nCRITERION: Patient must have evidence-based medicine addressing risks of acute and chronic complications of diabetes mellitus | PATIENT: Diagnosis of Type 2 diabetes mellitus, but no information about evidence-based medicine | MET: NO (due to lack of information)\n\nCRITERION: Patient must have monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information provided about monitoring of glucose and HbA1c levels | MET: NO (due to lack of information)\n\nCRITERION: Patient must have a treatment plan that considers patient characteristics/health status | PATIENT: No information provided about treatment plan | MET: NO (due to lack of information)\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: Age 30, which is below the typical eligibility age for Medicare | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+  "decision": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare Home Health benefit, specifically due to being below the typical eligibility age for Medicare and not meeting several other required criteria.",
+  "explanation": "We've made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim because you don't meet the requirements outlined in our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy. This policy typically applies to people who are eligible for Medicare, and you don't meet the age requirement or other necessary criteria. As a result, we are denying your claim for this service.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T07:46:30.978138",
+      "input": "Diabetes self-management training coverage Type 2 diabetes mellitus patient age 30",
+      "output": "Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus",
+      "reasoning": "Searched vector store for: Diabetes self-management training coverage Type 2 diabetes mellitus patient age 30"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T07:46:32.303800",
+      "input": "Policy: Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus, Patient age: 30, Procedure: Diabetes self-management training",
+      "output": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is for Medicare Home Health Population | MET: YES (assuming the patient is a Medicare beneficiary)\n\nCRITERION: Patient must have Type II Diabetes Mellitus | PATIENT: Type 2 diabetes mellitus | MET: YES\n\nCRITERION: Patient must require skilled nurse visits for administration of daily insulin injections due to being physically or mentally unable to self-inject insulin | PATIENT: Procedure requested is diabetes self-management training, not insulin injections | MET: NO\n\nCRITERION: Patient must have a plan of care that includes sufficient information concerning identified functional limitations | PATIENT: No information provided about the plan of care | MET: NO (due to lack of information)\n\nCRITERION: Patient must have evidence-based medicine addressing risks of acute and chronic complications of diabetes mellitus | PATIENT: Diagnosis of Type 2 diabetes mellitus, but no information about evidence-based medicine | MET: NO (due to lack of information)\n\nCRITERION: Patient must have monitoring of glucose and hemoglobin A1c (HbA1c) levels | PATIENT: No information provided about monitoring of glucose and HbA1c levels | MET: NO (due to lack of information)\n\nCRITERION: Patient must have a treatment plan that considers patient characteristics/health status | PATIENT: No information provided about treatment plan | MET: NO (due to lack of information)\n\nCRITERION: Patient must be eligible for the Medicare Home Health benefit | PATIENT: Age 30, which is below the typical eligibility age for Medicare | MET: NO\n\nOVERALL: NOT ELIGIBLE",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T07:46:32.610871",
+      "input": "CRITERION: Patient must be a Medicare beneficiary | PATIENT: Not explicitly stated as a Medicare beneficiary, but implied as the policy is for Medicare Home Health Population | MET: YES (assuming the ",
+      "output": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare Home Health benefit, specifically due to being below the typical eligibility age for Medicare and not meeting several other required criteria.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T07:46:33.022213",
+      "input": "DECISION: DENY\nREASON: The patient does not meet the eligibility criteria for the Medicare Home Health benefit, specifically due to being below the typical eligibility age for Medicare and not meeting several other required criteria.",
+      "output": "We've made a decision about your insurance claim for diabetes self-management training. Unfortunately, we are unable to approve your claim because you don't meet the requirements outlined in our \"Home Health Plans of Care: Monitoring Glucose Control in the Medicare Home Health Population with Type II Diabetes Mellitus\" policy. This policy typically applies to people who are eligible for Medicare, and you don't meet the age requirement or other necessary criteria. As a result, we are denying your claim for this service.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}

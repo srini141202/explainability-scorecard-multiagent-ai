@@ -1,0 +1,17 @@
+{
+  "claim_id": "B006",
+  "claim": {
+    "claim_id": "B006",
+    "age": 45,
+    "gender": "Male",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "system": "Baseline1_SingleAgent_NoXAI",
+  "decision": "APPROVE. The patient's diagnosis of chronic heart failure and prescribed procedure of cardiac rehabilitation are medically necessary and a standard treatment approach for this condition, aligning with our coverage guidelines.",
+  "agent_logs": [],
+  "policy_used": "",
+  "criteria_check": "",
+  "explanation": "APPROVE. The patient's diagnosis of chronic heart failure and prescribed procedure of cardiac rehabilitation are medically necessary and a standard treatment approach for this condition, aligning with our coverage guidelines."
+}

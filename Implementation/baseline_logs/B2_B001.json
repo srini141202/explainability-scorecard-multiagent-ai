@@ -1,0 +1,25 @@
+{
+  "claim_id": "B001",
+  "claim": {
+    "claim_id": "B001",
+    "age": 45,
+    "gender": "Female",
+    "diagnosis": "Routine breast cancer screening",
+    "procedure": "Mammography screening",
+    "expected_decision": "APPROVE"
+  },
+  "system": "Baseline2_SingleAgent_BasicLogging",
+  "decision": "**APPROVE**\n\nExplanation: The patient is a 45-year-old female undergoing routine breast cancer screening, which is a recommended preventive service. The procedure is mammography screening, which is a covered service under this policy for asymptomatic women. Since the patient is asymptomatic and the purpose is early detection of breast cancer, this meets the criteria for screening mammography as described in the policy. No prior authorization is required for routine screening mammography in this age group. Therefore, the claim is approved.",
+  "agent_logs": [
+    {
+      "agent": "SingleAgent",
+      "timestamp": "2026-08-10T02:41:20.908589",
+      "input": "Mammography screening Routine breast cancer screening",
+      "output": "**APPROVE**\n\nExplanation: The patient is a 45-year-old female undergoing routine breast cancer scree",
+      "reasoning": ""
+    }
+  ],
+  "policy_used": "Breast Imaging Mammography/Breast Echography (Sonography)/Breast MRI/Ductography",
+  "criteria_check": "",
+  "explanation": "**APPROVE**\n\nExplanation: The patient is a 45-year-old female undergoing routine breast cancer screening, which is a recommended preventive service. The procedure is mammography screening, which is a covered service under this policy for asymptomatic women. Since the patient is asymptomatic and the purpose is early detection of breast cancer, this meets the criteria for screening mammography as described in the policy. No prior authorization is required for routine screening mammography in this age group. Therefore, the claim is approved."
+}

@@ -1,0 +1,46 @@
+{
+  "claim_id": "CLAIM_054",
+  "claim": {
+    "claim_id": "CLAIM_054",
+    "patient_id": "bec077b5-9ac2-9ba2-c3e8-6377ebc72a49",
+    "age": 30,
+    "gender": "Female",
+    "diagnosis": "Chronic heart failure",
+    "procedure": "Cardiac rehabilitation",
+    "expected_decision": "REQUIRES_PRIOR_AUTH"
+  },
+  "policy_used": "Hospice Cardiopulmonary Conditions",
+  "criteria_check": "CRITERION: Age is not a factor in this policy, but the patient's overall health status is considered | PATIENT: 30 years old, female, with chronic heart failure | MET: YES (age is not a barrier, and health status is considered)\n\nCRITERION: Diagnosis of a cardiopulmonary condition | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided about the patient's prognosis | MET: NO (cannot determine without more information)\n\nCRITERION: Presence of secondary conditions | PATIENT: No secondary conditions mentioned | MET: NO (no secondary conditions mentioned)\n\nCRITERION: Presence of comorbid conditions | PATIENT: No comorbid conditions mentioned | MET: NO (no comorbid conditions mentioned)\n\nCRITERION: Documentation of structural/functional impairments and activity limitations | PATIENT: No documentation provided | MET: NO (no documentation provided)\n\nCRITERION: Requested procedure is cardiac rehabilitation | PATIENT: Requested cardiac rehabilitation | MET: YES ( cardiac rehabilitation is a relevant procedure)\n\nCRITERION: Overall health status, including functioning, physical illness, and mental well-being | PATIENT: No information provided about overall health status | MET: NO (cannot determine without more information)\n\nOVERALL: NOT ELIGIBLE (due to lack of information about prognosis, secondary conditions, comorbid conditions, and documentation of structural/functional impairments and activity limitations)",
+  "decision": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for cardiac rehabilitation cannot be determined without additional information about their prognosis, secondary conditions, comorbid conditions, and documentation of structural/functional impairments and activity limitations.",
+  "explanation": "We have reviewed your insurance claim for cardiac rehabilitation for your chronic heart failure. According to our Hospice Cardiopulmonary Conditions policy, we need more information about your overall health and any other conditions you may have to determine if this treatment is right for you. This additional information will help us understand your needs and make a decision about your claim. We will work with your healthcare team to gather this information and make a decision as soon as possible.",
+  "agent_logs": [
+    {
+      "agent": "Agent1_Retriever",
+      "timestamp": "2026-06-26T13:46:32.440011",
+      "input": "Cardiac rehabilitation coverage Chronic heart failure patient age 30",
+      "output": "Hospice Cardiopulmonary Conditions",
+      "reasoning": "Searched vector store for: Cardiac rehabilitation coverage Chronic heart failure patient age 30"
+    },
+    {
+      "agent": "Agent2_Interpreter",
+      "timestamp": "2026-06-26T13:46:33.742635",
+      "input": "Policy: Hospice Cardiopulmonary Conditions, Patient age: 30, Procedure: Cardiac rehabilitation",
+      "output": "CRITERION: Age is not a factor in this policy, but the patient's overall health status is considered | PATIENT: 30 years old, female, with chronic heart failure | MET: YES (age is not a barrier, and health status is considered)\n\nCRITERION: Diagnosis of a cardiopulmonary condition | PATIENT: Diagnosed with chronic heart failure | MET: YES\n\nCRITERION: Prognosis of 6 months or less | PATIENT: No information provided about the patient's prognosis | MET: NO (cannot determine without more information)\n\nCRITERION: Presence of secondary conditions | PATIENT: No secondary conditions mentioned | MET: NO (no secondary conditions mentioned)\n\nCRITERION: Presence of comorbid conditions | PATIENT: No comorbid conditions mentioned | MET: NO (no comorbid conditions mentioned)\n\nCRITERION: Documentation of structural/functional impairments and activity limitations | PATIENT: No documentation provided | MET: NO (no documentation provided)\n\nCRITERION: Requested procedure is cardiac rehabilitation | PATIENT: Requested cardiac rehabilitation | MET: YES ( cardiac rehabilitation is a relevant procedure)\n\nCRITERION: Overall health status, including functioning, physical illness, and mental well-being | PATIENT: No information provided about overall health status | MET: NO (cannot determine without more information)\n\nOVERALL: NOT ELIGIBLE (due to lack of information about prognosis, secondary conditions, comorbid conditions, and documentation of structural/functional impairments and activity limitations)",
+      "reasoning": "Checked each policy criterion against patient data"
+    },
+    {
+      "agent": "Agent3_Decision",
+      "timestamp": "2026-06-26T13:46:34.341682",
+      "input": "CRITERION: Age is not a factor in this policy, but the patient's overall health status is considered | PATIENT: 30 years old, female, with chronic heart failure | MET: YES (age is not a barrier, and h",
+      "output": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for cardiac rehabilitation cannot be determined without additional information about their prognosis, secondary conditions, comorbid conditions, and documentation of structural/functional impairments and activity limitations.",
+      "reasoning": "Made final decision based on criteria check from Agent 2"
+    },
+    {
+      "agent": "Agent4_Explanation",
+      "timestamp": "2026-06-26T13:46:34.965317",
+      "input": "DECISION: REQUIRES_PRIOR_AUTH\nREASON: The patient's eligibility for cardiac rehabilitation cannot be determined without additional information about their prognosis, secondary conditions, comorbid conditions, and documentation of structural/functional impairments and activity limitations.",
+      "output": "We have reviewed your insurance claim for cardiac rehabilitation for your chronic heart failure. According to our Hospice Cardiopulmonary Conditions policy, we need more information about your overall health and any other conditions you may have to determine if this treatment is right for you. This additional information will help us understand your needs and make a decision about your claim. We will work with your healthcare team to gather this information and make a decision as soon as possible.",
+      "reasoning": "Translated decision into patient-friendly language citing policy"
+    }
+  ]
+}
